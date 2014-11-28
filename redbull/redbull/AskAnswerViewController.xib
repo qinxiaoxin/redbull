@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AskAnswerViewController">
+            <connections>
+                <outlet property="indicator" destination="ATc-A5-bD8" id="JSN-hJ-9pE"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="Pyl-Mt-dDh" id="Uv3-xq-B9M"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyl-Mt-dDh">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-A5-bD8">
+                    <rect key="frame" x="290" y="290" width="37" height="37"/>
+                    <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Pyl-Mt-dDh" secondAttribute="trailing" id="JH9-2h-kCN"/>
+                <constraint firstItem="Pyl-Mt-dDh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ald-hV-hVr"/>
+                <constraint firstItem="ATc-A5-bD8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="290" id="jw7-lZ-PDn"/>
+                <constraint firstItem="ATc-A5-bD8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="nR6-9W-cJE"/>
+                <constraint firstAttribute="bottom" secondItem="Pyl-Mt-dDh" secondAttribute="bottom" id="orP-7L-PCJ"/>
+                <constraint firstItem="Pyl-Mt-dDh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rdE-Ly-dOP"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

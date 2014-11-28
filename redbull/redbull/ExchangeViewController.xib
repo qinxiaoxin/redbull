@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ExchangeViewController">
+            <connections>
+                <outlet property="indicator" destination="7aj-hL-Hjt" id="tsD-TS-EZ6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="webView" destination="cNI-2A-cZ7" id="M5I-aP-a6a"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-2A-cZ7">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </webView>
+                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7aj-hL-Hjt">
+                    <rect key="frame" x="290" y="290" width="37" height="37"/>
+                    <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </activityIndicatorView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="cNI-2A-cZ7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4aQ-Nd-Dvj"/>
+                <constraint firstAttribute="trailing" secondItem="cNI-2A-cZ7" secondAttribute="trailing" id="YIe-sv-Dly"/>
+                <constraint firstItem="7aj-hL-Hjt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="290" id="bph-7q-ygu"/>
+                <constraint firstItem="7aj-hL-Hjt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="dG3-6t-Kh7"/>
+                <constraint firstItem="cNI-2A-cZ7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hPp-FA-Uex"/>
+                <constraint firstAttribute="bottom" secondItem="cNI-2A-cZ7" secondAttribute="bottom" id="j1M-II-sl4"/>
+            </constraints>
+            <point key="canvasLocation" x="205" y="356"/>
+        </view>
+    </objects>
+</document>

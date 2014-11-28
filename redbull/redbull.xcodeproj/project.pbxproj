@@ -15,6 +15,20 @@
 		762FB86A1A25E64600F68BC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762FB8691A25E64600F68BC8 /* Images.xcassets */; };
 		762FB86D1A25E64600F68BC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762FB86B1A25E64600F68BC8 /* LaunchScreen.xib */; };
 		762FB8791A25E64600F68BC8 /* redbullTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FB8781A25E64600F68BC8 /* redbullTests.m */; };
+		7677CA051A26AF9A005675F0 /* RightShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA041A26AF9A005675F0 /* RightShareViewController.m */; };
+		7677CA141A26F997005675F0 /* GGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA0F1A26F997005675F0 /* GGTabBar.m */; };
+		7677CA151A26F997005675F0 /* GGTabBarAppearanceKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA111A26F997005675F0 /* GGTabBarAppearanceKeys.m */; };
+		7677CA161A26F997005675F0 /* GGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA131A26F997005675F0 /* GGTabBarController.m */; };
+		7677CA261A2703A2005675F0 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA241A2703A2005675F0 /* FirstViewController.m */; };
+		7677CA271A2703A2005675F0 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7677CA251A2703A2005675F0 /* FirstViewController.xib */; };
+		7677CA2B1A2703BC005675F0 /* AskAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA291A2703BC005675F0 /* AskAnswerViewController.m */; };
+		7677CA2C1A2703BC005675F0 /* AskAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7677CA2A1A2703BC005675F0 /* AskAnswerViewController.xib */; };
+		7677CA301A2703CF005675F0 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA2E1A2703CF005675F0 /* ExchangeViewController.m */; };
+		7677CA311A2703CF005675F0 /* ExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7677CA2F1A2703CF005675F0 /* ExchangeViewController.xib */; };
+		7677CA351A2703E2005675F0 /* TurnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA331A2703E2005675F0 /* TurnTableViewController.m */; };
+		7677CA361A2703E2005675F0 /* TurnTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7677CA341A2703E2005675F0 /* TurnTableViewController.xib */; };
+		7677CA3A1A270EC4005675F0 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA391A270EC4005675F0 /* Constant.m */; };
+		7677CA731A285646005675F0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA721A285646005675F0 /* Reachability.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +57,31 @@
 		762FB8771A25E64600F68BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		762FB8781A25E64600F68BC8 /* redbullTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = redbullTests.m; sourceTree = "<group>"; };
 		7677CA021A25F65B005675F0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		7677CA031A26AF9A005675F0 /* RightShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightShareViewController.h; sourceTree = "<group>"; };
+		7677CA041A26AF9A005675F0 /* RightShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightShareViewController.m; sourceTree = "<group>"; };
+		7677CA0D1A26F997005675F0 /* GGTabBar-Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGTabBar-Private.h"; sourceTree = "<group>"; };
+		7677CA0E1A26F997005675F0 /* GGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTabBar.h; sourceTree = "<group>"; };
+		7677CA0F1A26F997005675F0 /* GGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTabBar.m; sourceTree = "<group>"; };
+		7677CA101A26F997005675F0 /* GGTabBarAppearanceKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTabBarAppearanceKeys.h; sourceTree = "<group>"; };
+		7677CA111A26F997005675F0 /* GGTabBarAppearanceKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTabBarAppearanceKeys.m; sourceTree = "<group>"; };
+		7677CA121A26F997005675F0 /* GGTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTabBarController.h; sourceTree = "<group>"; };
+		7677CA131A26F997005675F0 /* GGTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTabBarController.m; sourceTree = "<group>"; };
+		7677CA231A2703A2005675F0 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
+		7677CA241A2703A2005675F0 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		7677CA251A2703A2005675F0 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
+		7677CA281A2703BC005675F0 /* AskAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskAnswerViewController.h; sourceTree = "<group>"; };
+		7677CA291A2703BC005675F0 /* AskAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskAnswerViewController.m; sourceTree = "<group>"; };
+		7677CA2A1A2703BC005675F0 /* AskAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskAnswerViewController.xib; sourceTree = "<group>"; };
+		7677CA2D1A2703CF005675F0 /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
+		7677CA2E1A2703CF005675F0 /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
+		7677CA2F1A2703CF005675F0 /* ExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeViewController.xib; sourceTree = "<group>"; };
+		7677CA321A2703E2005675F0 /* TurnTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TurnTableViewController.h; sourceTree = "<group>"; };
+		7677CA331A2703E2005675F0 /* TurnTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TurnTableViewController.m; sourceTree = "<group>"; };
+		7677CA341A2703E2005675F0 /* TurnTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TurnTableViewController.xib; sourceTree = "<group>"; };
+		7677CA381A270EC4005675F0 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		7677CA391A270EC4005675F0 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
+		7677CA711A285646005675F0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		7677CA721A285646005675F0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,14 +123,17 @@
 		762FB8581A25E64600F68BC8 /* redbull */ = {
 			isa = PBXGroup;
 			children = (
+				7677CA701A285467005675F0 /* Tools */,
+				7677CA0B1A26E8DD005675F0 /* Control */,
+				7677CA0A1A26E8D7005675F0 /* View */,
+				7677CA091A26E8CE005675F0 /* Model */,
 				762FB85D1A25E64600F68BC8 /* AppDelegate.h */,
 				762FB85E1A25E64600F68BC8 /* AppDelegate.m */,
 				762FB8631A25E64600F68BC8 /* ViewController.h */,
 				762FB8641A25E64600F68BC8 /* ViewController.m */,
+				7677CA031A26AF9A005675F0 /* RightShareViewController.h */,
+				7677CA041A26AF9A005675F0 /* RightShareViewController.m */,
 				762FB8661A25E64600F68BC8 /* Main.storyboard */,
-				762FB8691A25E64600F68BC8 /* Images.xcassets */,
-				762FB86B1A25E64600F68BC8 /* LaunchScreen.xib */,
-				762FB8601A25E64600F68BC8 /* redbull.xcdatamodeld */,
 				762FB8591A25E64600F68BC8 /* Supporting Files */,
 			);
 			path = redbull;
@@ -100,6 +142,9 @@
 		762FB8591A25E64600F68BC8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				762FB86B1A25E64600F68BC8 /* LaunchScreen.xib */,
+				762FB8691A25E64600F68BC8 /* Images.xcassets */,
+				762FB8601A25E64600F68BC8 /* redbull.xcdatamodeld */,
 				762FB85A1A25E64600F68BC8 /* Info.plist */,
 				762FB85B1A25E64600F68BC8 /* main.m */,
 				7677CA021A25F65B005675F0 /* PrefixHeader.pch */,
@@ -122,6 +167,65 @@
 				762FB8771A25E64600F68BC8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7677CA091A26E8CE005675F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7677CA381A270EC4005675F0 /* Constant.h */,
+				7677CA391A270EC4005675F0 /* Constant.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7677CA0A1A26E8D7005675F0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7677CA0C1A26F997005675F0 /* GGTabBar */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		7677CA0B1A26E8DD005675F0 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+				7677CA231A2703A2005675F0 /* FirstViewController.h */,
+				7677CA241A2703A2005675F0 /* FirstViewController.m */,
+				7677CA251A2703A2005675F0 /* FirstViewController.xib */,
+				7677CA281A2703BC005675F0 /* AskAnswerViewController.h */,
+				7677CA291A2703BC005675F0 /* AskAnswerViewController.m */,
+				7677CA2A1A2703BC005675F0 /* AskAnswerViewController.xib */,
+				7677CA2D1A2703CF005675F0 /* ExchangeViewController.h */,
+				7677CA2E1A2703CF005675F0 /* ExchangeViewController.m */,
+				7677CA2F1A2703CF005675F0 /* ExchangeViewController.xib */,
+				7677CA321A2703E2005675F0 /* TurnTableViewController.h */,
+				7677CA331A2703E2005675F0 /* TurnTableViewController.m */,
+				7677CA341A2703E2005675F0 /* TurnTableViewController.xib */,
+			);
+			name = Control;
+			sourceTree = "<group>";
+		};
+		7677CA0C1A26F997005675F0 /* GGTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				7677CA0D1A26F997005675F0 /* GGTabBar-Private.h */,
+				7677CA0E1A26F997005675F0 /* GGTabBar.h */,
+				7677CA0F1A26F997005675F0 /* GGTabBar.m */,
+				7677CA101A26F997005675F0 /* GGTabBarAppearanceKeys.h */,
+				7677CA111A26F997005675F0 /* GGTabBarAppearanceKeys.m */,
+				7677CA121A26F997005675F0 /* GGTabBarController.h */,
+				7677CA131A26F997005675F0 /* GGTabBarController.m */,
+			);
+			path = GGTabBar;
+			sourceTree = "<group>";
+		};
+		7677CA701A285467005675F0 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				7677CA711A285646005675F0 /* Reachability.h */,
+				7677CA721A285646005675F0 /* Reachability.m */,
+			);
+			name = Tools;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,9 +309,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7677CA361A2703E2005675F0 /* TurnTableViewController.xib in Resources */,
 				762FB8681A25E64600F68BC8 /* Main.storyboard in Resources */,
+				7677CA2C1A2703BC005675F0 /* AskAnswerViewController.xib in Resources */,
 				762FB86D1A25E64600F68BC8 /* LaunchScreen.xib in Resources */,
 				762FB86A1A25E64600F68BC8 /* Images.xcassets in Resources */,
+				7677CA271A2703A2005675F0 /* FirstViewController.xib in Resources */,
+				7677CA311A2703CF005675F0 /* ExchangeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,10 +333,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7677CA351A2703E2005675F0 /* TurnTableViewController.m in Sources */,
 				762FB85F1A25E64600F68BC8 /* AppDelegate.m in Sources */,
+				7677CA261A2703A2005675F0 /* FirstViewController.m in Sources */,
+				7677CA151A26F997005675F0 /* GGTabBarAppearanceKeys.m in Sources */,
+				7677CA161A26F997005675F0 /* GGTabBarController.m in Sources */,
+				7677CA3A1A270EC4005675F0 /* Constant.m in Sources */,
 				762FB85C1A25E64600F68BC8 /* main.m in Sources */,
 				762FB8651A25E64600F68BC8 /* ViewController.m in Sources */,
+				7677CA2B1A2703BC005675F0 /* AskAnswerViewController.m in Sources */,
 				762FB8621A25E64600F68BC8 /* redbull.xcdatamodeld in Sources */,
+				7677CA731A285646005675F0 /* Reachability.m in Sources */,
+				7677CA051A26AF9A005675F0 /* RightShareViewController.m in Sources */,
+				7677CA141A26F997005675F0 /* GGTabBar.m in Sources */,
+				7677CA301A2703CF005675F0 /* ExchangeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +468,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wenyue Bao (J7P4MV2B4B)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/redbull/PrefixHeader.pch";
 				INFOPLIST_FILE = redbull/Info.plist;
@@ -364,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Wenyue Bao (J7P4MV2B4B)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/redbull/PrefixHeader.pch";
 				INFOPLIST_FILE = redbull/Info.plist;

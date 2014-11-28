@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -21,22 +22,72 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="J4m-Ax-4pp">
+                                <rect key="frame" x="282" y="281" width="37" height="37"/>
+                                <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="iLe-pT-moY" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="7eS-u0-Mfp"/>
-                            <constraint firstItem="iLe-pT-moY" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="LGp-aP-BpF"/>
-                            <constraint firstItem="iLe-pT-moY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="sp5-23-qGv"/>
-                            <constraint firstAttribute="trailing" secondItem="iLe-pT-moY" secondAttribute="trailing" id="wLH-kz-T5I"/>
+                            <constraint firstItem="iLe-pT-moY" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="3ht-vM-K66"/>
+                            <constraint firstItem="iLe-pT-moY" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="8B4-Ax-D0D"/>
+                            <constraint firstAttribute="trailing" secondItem="iLe-pT-moY" secondAttribute="trailing" id="Ayj-0f-5e3"/>
+                            <constraint firstItem="J4m-Ax-4pp" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="281" id="I5Z-cm-Xe0"/>
+                            <constraint firstItem="iLe-pT-moY" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="MMX-C4-3L4"/>
+                            <constraint firstItem="J4m-Ax-4pp" firstAttribute="centerX" secondItem="iLe-pT-moY" secondAttribute="centerX" id="xjo-W9-iXh"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <connections>
+                        <outlet property="indicator" destination="J4m-Ax-4pp" id="LBf-4o-mDD"/>
                         <outlet property="webView" destination="iLe-pT-moY" id="Ijf-Bb-PcL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="292" y="366"/>
+            <point key="canvasLocation" x="-160" y="380"/>
+        </scene>
+        <!--Right Share View Controller-->
+        <scene sceneID="6Cw-os-ZM8">
+            <objects>
+                <viewController id="1Jm-qs-SsI" customClass="RightShareViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ved-13-ZMe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Eci-a3-raT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DdC-Kf-o3u">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shareboard_bg" translatesAutoresizingMaskIntoConstraints="NO" id="oTG-6C-GsS">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      功能中心" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XRE-nR-FoP">
+                                <rect key="frame" x="0.0" y="-1" width="600" height="40"/>
+                                <color key="backgroundColor" red="0.094117656349999995" green="0.1215686351" blue="0.1411764771" alpha="1" colorSpace="deviceRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oTG-6C-GsS" firstAttribute="bottom" secondItem="Eci-a3-raT" secondAttribute="top" id="10l-cF-QS0"/>
+                            <constraint firstItem="XRE-nR-FoP" firstAttribute="leading" secondItem="oTG-6C-GsS" secondAttribute="leading" id="6xS-1N-yTs"/>
+                            <constraint firstItem="Eci-a3-raT" firstAttribute="top" secondItem="XRE-nR-FoP" secondAttribute="bottom" constant="561" id="7Ve-W7-tqc"/>
+                            <constraint firstItem="XRE-nR-FoP" firstAttribute="top" secondItem="DdC-Kf-o3u" secondAttribute="topMargin" constant="-1" id="KZ1-Rp-fMc"/>
+                            <constraint firstItem="oTG-6C-GsS" firstAttribute="leading" secondItem="DdC-Kf-o3u" secondAttribute="leading" id="dZQ-9X-hLv"/>
+                            <constraint firstItem="oTG-6C-GsS" firstAttribute="trailing" secondItem="XRE-nR-FoP" secondAttribute="trailing" id="fFa-Th-6V0"/>
+                            <constraint firstAttribute="trailing" secondItem="oTG-6C-GsS" secondAttribute="trailing" id="uzj-7i-lxD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3z8-dN-c6B" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666" y="380"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="shareboard_bg" width="400" height="600"/>
+    </resources>
 </document>

@@ -8,6 +8,13 @@
 
 #import "AppDelegate.h"
 
+#import "GGTabBarController.h"
+
+#import "FirstViewController.h"
+#import "AskAnswerViewController.h"
+#import "ExchangeViewController.h"
+#import "TurnTableViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +24,20 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+//    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+//    
+//    GGTabBarController *tabBar = [[GGTabBarController alloc] init];
+//    
+//    FirstViewController *vc1 = [[FirstViewController alloc] init];
+//    AskAnswerViewController *vc2 = [[AskAnswerViewController alloc] init];
+//    ExchangeViewController *vc3 = [[ExchangeViewController alloc] init];
+//    TurnTableViewController *vc4 = [[TurnTableViewController alloc] init];
+//    
+//    tabBar.viewControllers = @[vc1, vc2, vc3, vc4];
+//    self.window.rootViewController = tabBar;
+//    self.window.backgroundColor = [UIColor colorWithRed:44 / 255.f green:44 / 255.f blue:44 / 255.f alpha:1.f];
+//    [self.window makeKeyAndVisible];
+    
     return YES;
 }
 
