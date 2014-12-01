@@ -12,6 +12,7 @@
 @interface GGTabBarController () <GGTabBarDelegate>
 @property (nonatomic, strong) UIView *presentationView;
 @property (nonatomic, strong) GGTabBar *tabBarView;
+@property (nonatomic, strong) UINavigationBar *navBar;
 @property (nonatomic, assign) BOOL isFirstAppear;
 @end
 
@@ -26,10 +27,20 @@
     _tabBarView.delegate = self;
 
     _presentationView = [[UIView alloc] init];
+    CGRect frame = CGRectMake(0, 44, self.view.frame.size.width, self.view.frame.size.height);
+    _presentationView.frame = frame;
     _presentationView.translatesAutoresizingMaskIntoConstraints = NO;
-
+    
+    //set navigation bar
+    _navBar = [[UINavigationBar alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+    _navBar.tintColor = [UIColor blackColor];
+    //创建UINavigationItem
+    UINavigationItem * navigationBarTitle = [[UINavigationItem alloc] initWithTitle:@"自定义的UINavigationBar"];
+    [_navBar pushNavigationItem: navigationBarTitle animated:YES];
+    
     [self.view addSubview:_tabBarView];
     [self.view addSubview:_presentationView];
+    [self.view addSubview:_navBar];
 }
 
 - (void)viewWillLayoutSubviews
@@ -54,6 +65,7 @@
         [self selectViewController:[_viewControllers firstObject]];
     }
 }
+
 
 #pragma mark - Delegation
 
@@ -82,27 +94,22 @@
 - (void)selectViewController:(UIViewController *)viewController
 {
     UIView *presentedView = [_presentationView.subviews firstObject];
+    
     if (presentedView) {
         [presentedView removeFromSuperview];
     }
     
     viewController.view.translatesAutoresizingMaskIntoConstraints = NO;
+    
     [_presentationView addSubview:viewController.view];
     [self fitView:viewController.view intoView:_presentationView];
 }
-
 
 #pragma mark - Layout
 
 - (void)layoutTabBarView
 {
-    NSDictionary *viewsDictionary = @{@"tabbar_view" : _tabBarView,
-                                    @"presentation_view" : _presentationView};
-
-    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tabbar_view]|"
-                                                                      options:0
-                                                                      metrics:nil
-                                                                        views:viewsDictionary]];
+    NSDictionary *viewsDictionary = @{@"presentation_view" : _presentationView,@"tabbar_view" : _tabBarView};
 
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[presentation_view]|"
                                                                       options:0
@@ -110,6 +117,11 @@
                                                                         views:viewsDictionary]];
 
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[presentation_view][tabbar_view]|"
+                                                                      options:0
+                                                                      metrics:nil
+                                                                        views:viewsDictionary]];
+    
+    [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[tabbar_view]|"
                                                                       options:0
                                                                       metrics:nil
                                                                         views:viewsDictionary]];

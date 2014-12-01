@@ -15,7 +15,6 @@
 		762FB86A1A25E64600F68BC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762FB8691A25E64600F68BC8 /* Images.xcassets */; };
 		762FB86D1A25E64600F68BC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762FB86B1A25E64600F68BC8 /* LaunchScreen.xib */; };
 		762FB8791A25E64600F68BC8 /* redbullTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FB8781A25E64600F68BC8 /* redbullTests.m */; };
-		7677CA051A26AF9A005675F0 /* RightShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA041A26AF9A005675F0 /* RightShareViewController.m */; };
 		7677CA141A26F997005675F0 /* GGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA0F1A26F997005675F0 /* GGTabBar.m */; };
 		7677CA151A26F997005675F0 /* GGTabBarAppearanceKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA111A26F997005675F0 /* GGTabBarAppearanceKeys.m */; };
 		7677CA161A26F997005675F0 /* GGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA131A26F997005675F0 /* GGTabBarController.m */; };
@@ -57,8 +56,6 @@
 		762FB8771A25E64600F68BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		762FB8781A25E64600F68BC8 /* redbullTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = redbullTests.m; sourceTree = "<group>"; };
 		7677CA021A25F65B005675F0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
-		7677CA031A26AF9A005675F0 /* RightShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightShareViewController.h; sourceTree = "<group>"; };
-		7677CA041A26AF9A005675F0 /* RightShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightShareViewController.m; sourceTree = "<group>"; };
 		7677CA0D1A26F997005675F0 /* GGTabBar-Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGTabBar-Private.h"; sourceTree = "<group>"; };
 		7677CA0E1A26F997005675F0 /* GGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTabBar.h; sourceTree = "<group>"; };
 		7677CA0F1A26F997005675F0 /* GGTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGTabBar.m; sourceTree = "<group>"; };
@@ -123,17 +120,11 @@
 		762FB8581A25E64600F68BC8 /* redbull */ = {
 			isa = PBXGroup;
 			children = (
-				7677CA701A285467005675F0 /* Tools */,
-				7677CA0B1A26E8DD005675F0 /* Control */,
-				7677CA0A1A26E8D7005675F0 /* View */,
 				7677CA091A26E8CE005675F0 /* Model */,
-				762FB85D1A25E64600F68BC8 /* AppDelegate.h */,
-				762FB85E1A25E64600F68BC8 /* AppDelegate.m */,
-				762FB8631A25E64600F68BC8 /* ViewController.h */,
-				762FB8641A25E64600F68BC8 /* ViewController.m */,
-				7677CA031A26AF9A005675F0 /* RightShareViewController.h */,
-				7677CA041A26AF9A005675F0 /* RightShareViewController.m */,
-				762FB8661A25E64600F68BC8 /* Main.storyboard */,
+				7677CA0A1A26E8D7005675F0 /* View */,
+				7677CA0B1A26E8DD005675F0 /* Control */,
+				763F314B1A2C0F5C004CE6AE /* Access */,
+				7677CA701A285467005675F0 /* Tools */,
 				762FB8591A25E64600F68BC8 /* Supporting Files */,
 			);
 			path = redbull;
@@ -142,6 +133,7 @@
 		762FB8591A25E64600F68BC8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				762FB8661A25E64600F68BC8 /* Main.storyboard */,
 				762FB86B1A25E64600F68BC8 /* LaunchScreen.xib */,
 				762FB8691A25E64600F68BC8 /* Images.xcassets */,
 				762FB8601A25E64600F68BC8 /* redbull.xcdatamodeld */,
@@ -167,6 +159,17 @@
 				762FB8771A25E64600F68BC8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		763F314B1A2C0F5C004CE6AE /* Access */ = {
+			isa = PBXGroup;
+			children = (
+				762FB85D1A25E64600F68BC8 /* AppDelegate.h */,
+				762FB85E1A25E64600F68BC8 /* AppDelegate.m */,
+				762FB8631A25E64600F68BC8 /* ViewController.h */,
+				762FB8641A25E64600F68BC8 /* ViewController.m */,
+			);
+			name = Access;
 			sourceTree = "<group>";
 		};
 		7677CA091A26E8CE005675F0 /* Model */ = {
@@ -344,7 +347,6 @@
 				7677CA2B1A2703BC005675F0 /* AskAnswerViewController.m in Sources */,
 				762FB8621A25E64600F68BC8 /* redbull.xcdatamodeld in Sources */,
 				7677CA731A285646005675F0 /* Reachability.m in Sources */,
-				7677CA051A26AF9A005675F0 /* RightShareViewController.m in Sources */,
 				7677CA141A26F997005675F0 /* GGTabBar.m in Sources */,
 				7677CA301A2703CF005675F0 /* ExchangeViewController.m in Sources */,
 			);

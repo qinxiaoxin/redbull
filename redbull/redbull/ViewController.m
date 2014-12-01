@@ -7,16 +7,13 @@
 //
 
 #import "ViewController.h"
-#import "RightShareViewController.h"
 
 @interface ViewController ()<UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
-@property (strong, nonatomic) UIButton *shareButton;
 
-@property (strong, nonatomic) RightShareViewController *rsvc;
 
 @end
 
@@ -40,51 +37,13 @@
     _webView.scrollView.decelerationRate = UIScrollViewDecelerationRateFast;
     
     //add share button
-//    _shareButton = [[UIButton alloc] initWithFrame:CGRectMake(self.view.frame.size.width - 100, 0, 100, 100)];
-//    [_shareButton addTarget:self action:@selector(slideViewRSVC:) forControlEvents:UIControlEventTouchUpInside];
-//    [self.webView addSubview:_shareButton];
+
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-//- (void)slideViewRSVC:(id)sender
-//{
-//    UIButton *button = (UIButton *)sender;
-//    
-//    if(!button.selected){
-//        button.selected = YES;
-//        [self showRightViewController];
-//    }else{
-//        button.selected = NO;
-//        [self hideRightViewController];
-//    }
-//}
-
-//- (void)showRightViewController
-//{
-//    
-//    CGRect frame = self.view.bounds;
-//    frame.origin.x = -kMenuDisplayedWidth; //240
-//    [UIView animateWithDuration:kMenuSlideDuration animations:^{
-//        self.view.frame = frame;
-//    } completion:^(BOOL finished) {
-//        
-//    }];
-//}
-//
-//- (void)hideRightViewController
-//{
-//    CGRect frame = self.view.bounds;
-//    frame.origin.x = 0;
-//    [UIView animateWithDuration:kMenuSlideDuration animations:^{
-//        self.view.frame = frame;
-//    } completion:^(BOOL finished) {
-//        
-//    }];
-//}
 
 #pragma mark - UIWebViewDelegate Methods
 

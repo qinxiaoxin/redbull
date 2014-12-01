@@ -22,7 +22,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dfr-g0-8sM">
-                    <rect key="frame" x="290" y="290" width="37" height="37"/>
+                    <rect key="frame" x="145" y="290" width="37" height="37"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
             </subviews>
@@ -31,7 +31,7 @@
                 <constraint firstAttribute="bottom" secondItem="oTx-F4-QLf" secondAttribute="bottom" id="Gcf-7a-3BK"/>
                 <constraint firstItem="oTx-F4-QLf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="J2N-cu-bag"/>
                 <constraint firstAttribute="trailing" secondItem="oTx-F4-QLf" secondAttribute="trailing" id="Tjo-8J-OQr"/>
-                <constraint firstItem="dfr-g0-8sM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="290" id="fPx-gA-VOT"/>
+                <constraint firstItem="dfr-g0-8sM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="fPx-gA-VOT"/>
                 <constraint firstItem="dfr-g0-8sM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="hEy-x9-5AF"/>
             </constraints>
         </view>

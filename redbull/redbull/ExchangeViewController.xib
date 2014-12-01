@@ -22,14 +22,14 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7aj-hL-Hjt">
-                    <rect key="frame" x="290" y="290" width="37" height="37"/>
+                    <rect key="frame" x="145" y="290" width="37" height="37"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
             </subviews>
             <constraints>
                 <constraint firstItem="cNI-2A-cZ7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="4aQ-Nd-Dvj"/>
                 <constraint firstAttribute="trailing" secondItem="cNI-2A-cZ7" secondAttribute="trailing" id="YIe-sv-Dly"/>
-                <constraint firstItem="7aj-hL-Hjt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="290" id="bph-7q-ygu"/>
+                <constraint firstItem="7aj-hL-Hjt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="bph-7q-ygu"/>
                 <constraint firstItem="7aj-hL-Hjt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="dG3-6t-Kh7"/>
                 <constraint firstItem="cNI-2A-cZ7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="hPp-FA-Uex"/>
                 <constraint firstAttribute="bottom" secondItem="cNI-2A-cZ7" secondAttribute="bottom" id="j1M-II-sl4"/>

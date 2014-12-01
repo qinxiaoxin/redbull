@@ -22,17 +22,17 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-A5-bD8">
-                    <rect key="frame" x="290" y="290" width="37" height="37"/>
+                    <rect key="frame" x="145" y="290" width="37" height="37"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Pyl-Mt-dDh" secondAttribute="trailing" id="JH9-2h-kCN"/>
-                <constraint firstItem="Pyl-Mt-dDh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ald-hV-hVr"/>
-                <constraint firstItem="ATc-A5-bD8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="290" id="jw7-lZ-PDn"/>
-                <constraint firstItem="ATc-A5-bD8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="nR6-9W-cJE"/>
-                <constraint firstAttribute="bottom" secondItem="Pyl-Mt-dDh" secondAttribute="bottom" id="orP-7L-PCJ"/>
-                <constraint firstItem="Pyl-Mt-dDh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rdE-Ly-dOP"/>
+                <constraint firstAttribute="trailing" secondItem="Pyl-Mt-dDh" secondAttribute="trailing" id="8X3-S6-PMi"/>
+                <constraint firstAttribute="bottom" secondItem="Pyl-Mt-dDh" secondAttribute="bottom" id="Hb3-yx-f1z"/>
+                <constraint firstItem="ATc-A5-bD8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="LTP-zQ-da2"/>
+                <constraint firstItem="ATc-A5-bD8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="OS5-D0-NR0"/>
+                <constraint firstItem="Pyl-Mt-dDh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Uxb-EA-knE"/>
+                <constraint firstItem="Pyl-Mt-dDh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vqf-Tx-PGC"/>
             </constraints>
         </view>
     </objects>
