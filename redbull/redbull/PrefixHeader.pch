@@ -11,6 +11,10 @@
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+#define ScreenHeight   [[UIScreen mainScreen] applicationFrame].size.height //应用程序的屏幕高度
+#define ScreenWidth    [[UIScreen mainScreen] applicationFrame].size.width  //应用程序的屏幕宽度
+#define FSystenVersion            ([[[UIDevice currentDevice] systemVersion] floatValue])//当前版本
+#define hll_color(r,g,b,a)  [UIColor colorWithRed:(float)r/255.f green:(float)g/255.f blue:(float)b/255.f  alpha:a]
 
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
@@ -19,5 +23,7 @@
 #import "Constant.h"
 
 #import "Reachability.h"
+
+#import "UIViewExt.h"
 
 #endif
