@@ -41,6 +41,7 @@
                 <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="uVk-SG-aZ1"/>
                 <constraint firstAttribute="bottom" secondItem="6R4-9l-2Ag" secondAttribute="bottom" id="xlp-wF-fc5"/>
             </constraints>
+            <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <variation key="default">
                 <mask key="constraints">
                     <exclude reference="57r-1c-ShC"/>

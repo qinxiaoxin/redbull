@@ -7,6 +7,7 @@
 //
 
 #import "FirstViewController.h"
+#import "LoginViewController.h"
 
 @interface FirstViewController ()<UIWebViewDelegate>
 
@@ -24,6 +25,8 @@
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil
                                                         image:[UIImage imageNamed:@"camera_pressed"]
                                                 selectedImage:[UIImage imageNamed:@"camera_normal"]];
+        
+
     }
     return self;
 }
@@ -36,7 +39,11 @@
     _webView.delegate = self;
     
     //
-    
+    UIButton* loginButton=[UIButton buttonWithType:UIButtonTypeCustom];
+    loginButton.frame=CGRectMake(0, 0, 44, 44);
+    [loginButton setTitle:@"登录" forState:UIControlStateNormal];
+    [loginButton addTarget:self action:@selector(loginClick) forControlEvents:UIControlEventTouchUpInside];
+    self.navigationController.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:loginButton];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -74,14 +81,11 @@
     [_indicator stopAnimating];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+#pragma mark - click
+- (void)loginClick
+{
+    LoginViewController *loginVC = [[LoginViewController alloc] init];
+    [self.navigationController pushViewController:loginVC animated:YES];
 }
-*/
 
 @end

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4BC900581A2C524000A1B24B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC900571A2C524000A1B24B /* LoginViewController.m */; };
+		4BC9005B1A2C539C00A1B24B /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9005A1A2C539C00A1B24B /* UIViewExt.m */; };
+		4BC900601A2C592A00A1B24B /* UIKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9005D1A2C592A00A1B24B /* UIKeyboardView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		4BC900611A2C592A00A1B24B /* UIKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9005F1A2C592A00A1B24B /* UIKeyboardViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		762FB85C1A25E64600F68BC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FB85B1A25E64600F68BC8 /* main.m */; };
 		762FB85F1A25E64600F68BC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FB85E1A25E64600F68BC8 /* AppDelegate.m */; };
 		762FB8621A25E64600F68BC8 /* redbull.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 762FB8601A25E64600F68BC8 /* redbull.xcdatamodeld */; };
@@ -41,6 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4BC900561A2C524000A1B24B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		4BC900571A2C524000A1B24B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		4BC900591A2C539C00A1B24B /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
+		4BC9005A1A2C539C00A1B24B /* UIViewExt.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIViewExt.m; sourceTree = "<group>"; };
+		4BC9005C1A2C592A00A1B24B /* UIKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKeyboardView.h; sourceTree = "<group>"; };
+		4BC9005D1A2C592A00A1B24B /* UIKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKeyboardView.m; sourceTree = "<group>"; };
+		4BC9005E1A2C592A00A1B24B /* UIKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKeyboardViewController.h; sourceTree = "<group>"; };
+		4BC9005F1A2C592A00A1B24B /* UIKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKeyboardViewController.m; sourceTree = "<group>"; };
 		762FB8561A25E64600F68BC8 /* redbull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = redbull.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		762FB85A1A25E64600F68BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		762FB85B1A25E64600F68BC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +111,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4BC900551A2C520B00A1B24B /* login */ = {
+			isa = PBXGroup;
+			children = (
+				4BC900561A2C524000A1B24B /* LoginViewController.h */,
+				4BC900571A2C524000A1B24B /* LoginViewController.m */,
+			);
+			name = login;
+			sourceTree = "<group>";
+		};
+		4BC900621A2C596400A1B24B /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				4BC900631A2C598C00A1B24B /* keyboard */,
+			);
+			name = extension;
+			sourceTree = "<group>";
+		};
+		4BC900631A2C598C00A1B24B /* keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4BC9005C1A2C592A00A1B24B /* UIKeyboardView.h */,
+				4BC9005D1A2C592A00A1B24B /* UIKeyboardView.m */,
+				4BC9005E1A2C592A00A1B24B /* UIKeyboardViewController.h */,
+				4BC9005F1A2C592A00A1B24B /* UIKeyboardViewController.m */,
+			);
+			name = keyboard;
+			sourceTree = "<group>";
+		};
 		762FB84D1A25E64600F68BC8 = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +163,7 @@
 				7677CA091A26E8CE005675F0 /* Model */,
 				7677CA0A1A26E8D7005675F0 /* View */,
 				7677CA0B1A26E8DD005675F0 /* Control */,
+				4BC900621A2C596400A1B24B /* extension */,
 				763F314B1A2C0F5C004CE6AE /* Access */,
 				7677CA701A285467005675F0 /* Tools */,
 				762FB8591A25E64600F68BC8 /* Supporting Files */,
@@ -192,6 +233,7 @@
 		7677CA0B1A26E8DD005675F0 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				4BC900551A2C520B00A1B24B /* login */,
 				7677CA231A2703A2005675F0 /* FirstViewController.h */,
 				7677CA241A2703A2005675F0 /* FirstViewController.m */,
 				7677CA251A2703A2005675F0 /* FirstViewController.xib */,
@@ -227,6 +269,8 @@
 			children = (
 				7677CA711A285646005675F0 /* Reachability.h */,
 				7677CA721A285646005675F0 /* Reachability.m */,
+				4BC900591A2C539C00A1B24B /* UIViewExt.h */,
+				4BC9005A1A2C539C00A1B24B /* UIViewExt.m */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -340,8 +384,11 @@
 				762FB85F1A25E64600F68BC8 /* AppDelegate.m in Sources */,
 				7677CA261A2703A2005675F0 /* FirstViewController.m in Sources */,
 				7677CA151A26F997005675F0 /* GGTabBarAppearanceKeys.m in Sources */,
+				4BC900581A2C524000A1B24B /* LoginViewController.m in Sources */,
+				4BC900601A2C592A00A1B24B /* UIKeyboardView.m in Sources */,
 				7677CA161A26F997005675F0 /* GGTabBarController.m in Sources */,
 				7677CA3A1A270EC4005675F0 /* Constant.m in Sources */,
+				4BC9005B1A2C539C00A1B24B /* UIViewExt.m in Sources */,
 				762FB85C1A25E64600F68BC8 /* main.m in Sources */,
 				762FB8651A25E64600F68BC8 /* ViewController.m in Sources */,
 				7677CA2B1A2703BC005675F0 /* AskAnswerViewController.m in Sources */,
@@ -349,6 +396,7 @@
 				7677CA731A285646005675F0 /* Reachability.m in Sources */,
 				7677CA141A26F997005675F0 /* GGTabBar.m in Sources */,
 				7677CA301A2703CF005675F0 /* ExchangeViewController.m in Sources */,
+				4BC900611A2C592A00A1B24B /* UIKeyboardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
