@@ -2,7 +2,7 @@
 //  AskAnswerViewController.m
 //  redbull
 //
-//  Created by Xin Qin on 11/27/14.
+//  Created by Xin Qin on 12/1/14.
 //  Copyright (c) 2014 Xin Qin. All rights reserved.
 //
 
@@ -10,9 +10,8 @@
 
 @interface AskAnswerViewController ()<UIWebViewDelegate>
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
-
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
@@ -69,6 +68,7 @@
 {
     [_indicator stopAnimating];
 }
+
 
 /*
 #pragma mark - Navigation

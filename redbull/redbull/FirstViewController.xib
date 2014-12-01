@@ -22,10 +22,10 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MTJ-Ic-Cxo">
-                    <rect key="frame" x="145" y="290" width="37" height="37"/>
+                    <rect key="frame" x="145" y="246" width="37" height="37"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqM-8c-tRx">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QqM-8c-tRx" customClass="Navbar">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                     <items>
                         <navigationItem title="1" id="AB6-Ag-68h"/>
@@ -33,45 +33,17 @@
                 </navigationBar>
             </subviews>
             <constraints>
-                <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="centerX" secondItem="6R4-9l-2Ag" secondAttribute="centerX" id="2Qt-jb-4AX"/>
-                <constraint firstAttribute="trailing" secondItem="6R4-9l-2Ag" secondAttribute="trailing" id="57r-1c-ShC"/>
-                <constraint firstItem="6R4-9l-2Ag" firstAttribute="trailing" secondItem="QqM-8c-tRx" secondAttribute="trailing" id="IjT-Nl-viV"/>
-                <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="290" id="JtO-KG-ycE"/>
-                <constraint firstAttribute="trailing" secondItem="6R4-9l-2Ag" secondAttribute="trailing" id="KeR-LL-xqv"/>
-                <constraint firstItem="6R4-9l-2Ag" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Qo0-kx-PaI"/>
-                <constraint firstItem="6R4-9l-2Ag" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="RJj-Vk-eqf"/>
-                <constraint firstItem="6R4-9l-2Ag" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Szp-rW-KZS"/>
-                <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="281" id="d6H-J9-Aoa"/>
-                <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="exb-uX-gAf"/>
-                <constraint firstItem="6R4-9l-2Ag" firstAttribute="leading" secondItem="QqM-8c-tRx" secondAttribute="leading" id="iWb-ro-xec"/>
-                <constraint firstItem="6R4-9l-2Ag" firstAttribute="top" secondItem="QqM-8c-tRx" secondAttribute="bottom" id="kBl-dQ-yhC"/>
-                <constraint firstAttribute="bottom" secondItem="6R4-9l-2Ag" secondAttribute="bottom" id="kz4-An-fYt"/>
-                <constraint firstItem="QqM-8c-tRx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="r92-bk-Dvq"/>
-                <constraint firstAttribute="bottom" secondItem="6R4-9l-2Ag" secondAttribute="bottom" id="xlp-wF-fc5"/>
-                <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="y8T-IH-CvQ"/>
+                <constraint firstItem="6R4-9l-2Ag" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="4uS-hq-TbQ"/>
+                <constraint firstItem="QqM-8c-tRx" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5h0-kR-yhH"/>
+                <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="6q3-oy-N2h"/>
+                <constraint firstItem="QqM-8c-tRx" firstAttribute="leading" secondItem="6R4-9l-2Ag" secondAttribute="leading" id="AqR-ZW-QzR"/>
+                <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="246" id="LfI-2q-9dy"/>
+                <constraint firstItem="6R4-9l-2Ag" firstAttribute="trailing" secondItem="QqM-8c-tRx" secondAttribute="trailing" id="Oz0-JL-sii"/>
+                <constraint firstItem="6R4-9l-2Ag" firstAttribute="top" secondItem="QqM-8c-tRx" secondAttribute="bottom" id="Q4C-au-gbw"/>
+                <constraint firstAttribute="trailing" secondItem="QqM-8c-tRx" secondAttribute="trailing" id="WIB-c8-qiz"/>
+                <constraint firstAttribute="bottom" secondItem="6R4-9l-2Ag" secondAttribute="bottom" id="pDm-9h-H4m"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="57r-1c-ShC"/>
-                    <exclude reference="RJj-Vk-eqf"/>
-                    <exclude reference="Szp-rW-KZS"/>
-                    <exclude reference="xlp-wF-fc5"/>
-                    <exclude reference="2Qt-jb-4AX"/>
-                    <exclude reference="JtO-KG-ycE"/>
-                    <exclude reference="d6H-J9-Aoa"/>
-                </mask>
-            </variation>
-            <variation key="widthClass=regular">
-                <mask key="constraints">
-                    <include reference="57r-1c-ShC"/>
-                    <include reference="RJj-Vk-eqf"/>
-                    <include reference="Szp-rW-KZS"/>
-                    <include reference="xlp-wF-fc5"/>
-                    <include reference="2Qt-jb-4AX"/>
-                    <include reference="d6H-J9-Aoa"/>
-                </mask>
-            </variation>
             <point key="canvasLocation" x="235" y="341"/>
         </view>
     </objects>

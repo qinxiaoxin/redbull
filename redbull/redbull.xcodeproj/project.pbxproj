@@ -25,14 +25,14 @@
 		7677CA161A26F997005675F0 /* GGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA131A26F997005675F0 /* GGTabBarController.m */; };
 		7677CA261A2703A2005675F0 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA241A2703A2005675F0 /* FirstViewController.m */; };
 		7677CA271A2703A2005675F0 /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7677CA251A2703A2005675F0 /* FirstViewController.xib */; };
-		7677CA2B1A2703BC005675F0 /* AskAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA291A2703BC005675F0 /* AskAnswerViewController.m */; };
-		7677CA2C1A2703BC005675F0 /* AskAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7677CA2A1A2703BC005675F0 /* AskAnswerViewController.xib */; };
 		7677CA301A2703CF005675F0 /* ExchangeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA2E1A2703CF005675F0 /* ExchangeViewController.m */; };
 		7677CA311A2703CF005675F0 /* ExchangeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7677CA2F1A2703CF005675F0 /* ExchangeViewController.xib */; };
 		7677CA351A2703E2005675F0 /* TurnTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA331A2703E2005675F0 /* TurnTableViewController.m */; };
 		7677CA361A2703E2005675F0 /* TurnTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7677CA341A2703E2005675F0 /* TurnTableViewController.xib */; };
 		7677CA3A1A270EC4005675F0 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA391A270EC4005675F0 /* Constant.m */; };
 		7677CA731A285646005675F0 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA721A285646005675F0 /* Reachability.m */; };
+		76A300C81A2C76C80067F1A5 /* AskAnswerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A300C61A2C76C80067F1A5 /* AskAnswerViewController.m */; };
+		76A300C91A2C76C80067F1A5 /* AskAnswerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76A300C71A2C76C80067F1A5 /* AskAnswerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,9 +81,6 @@
 		7677CA231A2703A2005675F0 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		7677CA241A2703A2005675F0 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		7677CA251A2703A2005675F0 /* FirstViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
-		7677CA281A2703BC005675F0 /* AskAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskAnswerViewController.h; sourceTree = "<group>"; };
-		7677CA291A2703BC005675F0 /* AskAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskAnswerViewController.m; sourceTree = "<group>"; };
-		7677CA2A1A2703BC005675F0 /* AskAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskAnswerViewController.xib; sourceTree = "<group>"; };
 		7677CA2D1A2703CF005675F0 /* ExchangeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExchangeViewController.h; sourceTree = "<group>"; };
 		7677CA2E1A2703CF005675F0 /* ExchangeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExchangeViewController.m; sourceTree = "<group>"; };
 		7677CA2F1A2703CF005675F0 /* ExchangeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExchangeViewController.xib; sourceTree = "<group>"; };
@@ -94,6 +91,9 @@
 		7677CA391A270EC4005675F0 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		7677CA711A285646005675F0 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		7677CA721A285646005675F0 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		76A300C51A2C76C80067F1A5 /* AskAnswerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AskAnswerViewController.h; sourceTree = "<group>"; };
+		76A300C61A2C76C80067F1A5 /* AskAnswerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AskAnswerViewController.m; sourceTree = "<group>"; };
+		76A300C71A2C76C80067F1A5 /* AskAnswerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AskAnswerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -250,9 +250,9 @@
 				7677CA231A2703A2005675F0 /* FirstViewController.h */,
 				7677CA241A2703A2005675F0 /* FirstViewController.m */,
 				7677CA251A2703A2005675F0 /* FirstViewController.xib */,
-				7677CA281A2703BC005675F0 /* AskAnswerViewController.h */,
-				7677CA291A2703BC005675F0 /* AskAnswerViewController.m */,
-				7677CA2A1A2703BC005675F0 /* AskAnswerViewController.xib */,
+				76A300C51A2C76C80067F1A5 /* AskAnswerViewController.h */,
+				76A300C61A2C76C80067F1A5 /* AskAnswerViewController.m */,
+				76A300C71A2C76C80067F1A5 /* AskAnswerViewController.xib */,
 				7677CA2D1A2703CF005675F0 /* ExchangeViewController.h */,
 				7677CA2E1A2703CF005675F0 /* ExchangeViewController.m */,
 				7677CA2F1A2703CF005675F0 /* ExchangeViewController.xib */,
@@ -370,8 +370,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7677CA361A2703E2005675F0 /* TurnTableViewController.xib in Resources */,
+				76A300C91A2C76C80067F1A5 /* AskAnswerViewController.xib in Resources */,
 				762FB8681A25E64600F68BC8 /* Main.storyboard in Resources */,
-				7677CA2C1A2703BC005675F0 /* AskAnswerViewController.xib in Resources */,
 				762FB86D1A25E64600F68BC8 /* LaunchScreen.xib in Resources */,
 				762FB86A1A25E64600F68BC8 /* Images.xcassets in Resources */,
 				7677CA271A2703A2005675F0 /* FirstViewController.xib in Resources */,
@@ -404,10 +404,10 @@
 				4BC9005B1A2C539C00A1B24B /* UIViewExt.m in Sources */,
 				762FB85C1A25E64600F68BC8 /* main.m in Sources */,
 				762FB8651A25E64600F68BC8 /* ViewController.m in Sources */,
-				7677CA2B1A2703BC005675F0 /* AskAnswerViewController.m in Sources */,
 				762FB8621A25E64600F68BC8 /* redbull.xcdatamodeld in Sources */,
 				7677CA731A285646005675F0 /* Reachability.m in Sources */,
 				763F31571A2C56E1004CE6AE /* Navbar.m in Sources */,
+				76A300C81A2C76C80067F1A5 /* AskAnswerViewController.m in Sources */,
 				7677CA141A26F997005675F0 /* GGTabBar.m in Sources */,
 				7677CA301A2703CF005675F0 /* ExchangeViewController.m in Sources */,
 				4BC900611A2C592A00A1B24B /* UIKeyboardViewController.m in Sources */,

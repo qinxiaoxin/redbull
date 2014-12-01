@@ -22,10 +22,10 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dfr-g0-8sM">
-                    <rect key="frame" x="145" y="290" width="37" height="37"/>
+                    <rect key="frame" x="145" y="246" width="37" height="37"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t9l-kx-KZT">
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t9l-kx-KZT" customClass="Navbar">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                     <items>
                         <navigationItem title="4" id="GZ8-sd-2ez"/>
@@ -33,15 +33,15 @@
                 </navigationBar>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="oTx-F4-QLf" secondAttribute="trailing" id="6TP-Vc-bKE"/>
-                <constraint firstItem="dfr-g0-8sM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="8Uz-YM-gyd"/>
-                <constraint firstItem="oTx-F4-QLf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H4K-qk-6xo"/>
-                <constraint firstItem="t9l-kx-KZT" firstAttribute="leading" secondItem="oTx-F4-QLf" secondAttribute="leading" id="cWm-iI-nXt"/>
-                <constraint firstAttribute="bottom" secondItem="oTx-F4-QLf" secondAttribute="bottom" id="eiQ-zJ-rDS"/>
-                <constraint firstItem="oTx-F4-QLf" firstAttribute="trailing" secondItem="t9l-kx-KZT" secondAttribute="trailing" id="hbG-se-P45"/>
-                <constraint firstItem="oTx-F4-QLf" firstAttribute="top" secondItem="t9l-kx-KZT" secondAttribute="bottom" id="xmN-h9-Jd3"/>
-                <constraint firstItem="dfr-g0-8sM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="y25-ax-YQf"/>
-                <constraint firstItem="t9l-kx-KZT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="z3z-cy-xOc"/>
+                <constraint firstItem="t9l-kx-KZT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="65H-R3-RIH"/>
+                <constraint firstItem="dfr-g0-8sM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="246" id="9qW-On-CKv"/>
+                <constraint firstItem="t9l-kx-KZT" firstAttribute="trailing" secondItem="oTx-F4-QLf" secondAttribute="trailing" id="DSS-bG-Xcl"/>
+                <constraint firstItem="oTx-F4-QLf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="MFM-NM-gjT"/>
+                <constraint firstItem="oTx-F4-QLf" firstAttribute="top" secondItem="t9l-kx-KZT" secondAttribute="bottom" id="Ngi-TQ-eVv"/>
+                <constraint firstItem="t9l-kx-KZT" firstAttribute="leading" secondItem="oTx-F4-QLf" secondAttribute="leading" id="fR6-AA-Xmt"/>
+                <constraint firstAttribute="bottom" secondItem="oTx-F4-QLf" secondAttribute="bottom" id="jty-TQ-LEV"/>
+                <constraint firstItem="dfr-g0-8sM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="oaU-VS-Sky"/>
+                <constraint firstAttribute="trailing" secondItem="oTx-F4-QLf" secondAttribute="trailing" id="uGg-G0-pRv"/>
             </constraints>
         </view>
     </objects>

@@ -98,7 +98,7 @@
 
 - (void)layoutTabBarView
 {
-    NSDictionary *viewsDictionary = @{@"presentation_view" : _presentationView,@"tabbar_view" : _tabBarView};
+    NSDictionary *viewsDictionary = @{@"tabbar_view" : _tabBarView,@"presentation_view" : _presentationView};
 
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[presentation_view]|"
                                                                       options:0

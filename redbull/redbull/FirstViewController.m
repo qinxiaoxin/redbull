@@ -25,8 +25,6 @@
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil
                                                         image:[UIImage imageNamed:@"camera_pressed"]
                                                 selectedImage:[UIImage imageNamed:@"camera_normal"]];
-        
-
     }
     return self;
 }
