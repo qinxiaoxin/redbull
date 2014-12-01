@@ -18,22 +18,32 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pyl-Mt-dDh">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="ATc-A5-bD8">
                     <rect key="frame" x="145" y="290" width="37" height="37"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UVJ-Ah-rec">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="2" id="uLC-2y-hq5"/>
+                    </items>
+                </navigationBar>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="Pyl-Mt-dDh" secondAttribute="trailing" id="8X3-S6-PMi"/>
-                <constraint firstAttribute="bottom" secondItem="Pyl-Mt-dDh" secondAttribute="bottom" id="Hb3-yx-f1z"/>
-                <constraint firstItem="ATc-A5-bD8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="LTP-zQ-da2"/>
-                <constraint firstItem="ATc-A5-bD8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="OS5-D0-NR0"/>
-                <constraint firstItem="Pyl-Mt-dDh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Uxb-EA-knE"/>
-                <constraint firstItem="Pyl-Mt-dDh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Vqf-Tx-PGC"/>
+                <constraint firstItem="UVJ-Ah-rec" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1cZ-8p-fs2"/>
+                <constraint firstItem="Pyl-Mt-dDh" firstAttribute="trailing" secondItem="UVJ-Ah-rec" secondAttribute="trailing" id="9Sd-6o-4OE"/>
+                <constraint firstAttribute="bottom" secondItem="Pyl-Mt-dDh" secondAttribute="bottom" id="DTk-83-qcU"/>
+                <constraint firstItem="ATc-A5-bD8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="Jlc-Pg-si7"/>
+                <constraint firstAttribute="trailing" secondItem="Pyl-Mt-dDh" secondAttribute="trailing" id="hlj-u1-1lx"/>
+                <constraint firstItem="UVJ-Ah-rec" firstAttribute="leading" secondItem="Pyl-Mt-dDh" secondAttribute="leading" id="jAy-JT-yiO"/>
+                <constraint firstItem="Pyl-Mt-dDh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="mHo-Dx-lLp"/>
+                <constraint firstItem="ATc-A5-bD8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="oDp-ra-qaC"/>
+                <constraint firstItem="Pyl-Mt-dDh" firstAttribute="top" secondItem="UVJ-Ah-rec" secondAttribute="bottom" id="vc2-po-ZzV"/>
             </constraints>
+            <point key="canvasLocation" x="353" y="343"/>
         </view>
     </objects>
 </document>

@@ -13,11 +13,16 @@
 #define EXCHANGE_PAGE   @"http://www.redbullclub.cn/index.php?s=IOS/shop"
 #define TURNTABLE_PAGE  @"http://www.redbullclub.cn/index.php?s=IOS/event"
 
-#define kMenuFullWidth 320.0f
-#define kMenuDisplayedWidth 240.0f
-#define kMenuBounceOffset 10.0f
-#define kMenuBounceDuration .3f
-#define kMenuSlideDuration .3f
+#define kMenuFullWidth          320.0f
+#define kMenuDisplayedWidth     240.0f
+#define kMenuBounceOffset       10.0f
+#define kMenuBounceDuration     .3f
+#define kMenuSlideDuration      .3f
+
+#define NAVIGATIONBAR_HEIGHT    44.f
+
+
+#define TITLE_NAVGATIONBAR      @"红牛能量部落"
 
 @interface Constant : NSObject
 

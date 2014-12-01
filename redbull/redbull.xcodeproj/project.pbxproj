@@ -15,6 +15,7 @@
 		762FB86A1A25E64600F68BC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762FB8691A25E64600F68BC8 /* Images.xcassets */; };
 		762FB86D1A25E64600F68BC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762FB86B1A25E64600F68BC8 /* LaunchScreen.xib */; };
 		762FB8791A25E64600F68BC8 /* redbullTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FB8781A25E64600F68BC8 /* redbullTests.m */; };
+		763F31571A2C56E1004CE6AE /* Navbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 763F31561A2C56E1004CE6AE /* Navbar.m */; };
 		7677CA141A26F997005675F0 /* GGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA0F1A26F997005675F0 /* GGTabBar.m */; };
 		7677CA151A26F997005675F0 /* GGTabBarAppearanceKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA111A26F997005675F0 /* GGTabBarAppearanceKeys.m */; };
 		7677CA161A26F997005675F0 /* GGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA131A26F997005675F0 /* GGTabBarController.m */; };
@@ -55,6 +56,8 @@
 		762FB8721A25E64600F68BC8 /* redbullTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = redbullTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		762FB8771A25E64600F68BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		762FB8781A25E64600F68BC8 /* redbullTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = redbullTests.m; sourceTree = "<group>"; };
+		763F31551A2C56E1004CE6AE /* Navbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Navbar.h; sourceTree = "<group>"; };
+		763F31561A2C56E1004CE6AE /* Navbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Navbar.m; sourceTree = "<group>"; };
 		7677CA021A25F65B005675F0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7677CA0D1A26F997005675F0 /* GGTabBar-Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGTabBar-Private.h"; sourceTree = "<group>"; };
 		7677CA0E1A26F997005675F0 /* GGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTabBar.h; sourceTree = "<group>"; };
@@ -172,6 +175,15 @@
 			name = Access;
 			sourceTree = "<group>";
 		};
+		763F31541A2C56D3004CE6AE /* NavBar */ = {
+			isa = PBXGroup;
+			children = (
+				763F31551A2C56E1004CE6AE /* Navbar.h */,
+				763F31561A2C56E1004CE6AE /* Navbar.m */,
+			);
+			name = NavBar;
+			sourceTree = "<group>";
+		};
 		7677CA091A26E8CE005675F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -184,6 +196,7 @@
 		7677CA0A1A26E8D7005675F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				763F31541A2C56D3004CE6AE /* NavBar */,
 				7677CA0C1A26F997005675F0 /* GGTabBar */,
 			);
 			name = View;
@@ -347,6 +360,7 @@
 				7677CA2B1A2703BC005675F0 /* AskAnswerViewController.m in Sources */,
 				762FB8621A25E64600F68BC8 /* redbull.xcdatamodeld in Sources */,
 				7677CA731A285646005675F0 /* Reachability.m in Sources */,
+				763F31571A2C56E1004CE6AE /* Navbar.m in Sources */,
 				7677CA141A26F997005675F0 /* GGTabBar.m in Sources */,
 				7677CA301A2703CF005675F0 /* ExchangeViewController.m in Sources */,
 			);

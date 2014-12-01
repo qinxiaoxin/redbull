@@ -18,21 +18,30 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oTx-F4-QLf">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="44" width="600" height="556"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dfr-g0-8sM">
                     <rect key="frame" x="145" y="290" width="37" height="37"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="t9l-kx-KZT">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                    <items>
+                        <navigationItem title="4" id="GZ8-sd-2ez"/>
+                    </items>
+                </navigationBar>
             </subviews>
             <constraints>
-                <constraint firstItem="oTx-F4-QLf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="5mU-iy-2wT"/>
-                <constraint firstAttribute="bottom" secondItem="oTx-F4-QLf" secondAttribute="bottom" id="Gcf-7a-3BK"/>
-                <constraint firstItem="oTx-F4-QLf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="J2N-cu-bag"/>
-                <constraint firstAttribute="trailing" secondItem="oTx-F4-QLf" secondAttribute="trailing" id="Tjo-8J-OQr"/>
-                <constraint firstItem="dfr-g0-8sM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="fPx-gA-VOT"/>
-                <constraint firstItem="dfr-g0-8sM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="hEy-x9-5AF"/>
+                <constraint firstAttribute="trailing" secondItem="oTx-F4-QLf" secondAttribute="trailing" id="6TP-Vc-bKE"/>
+                <constraint firstItem="dfr-g0-8sM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="290" id="8Uz-YM-gyd"/>
+                <constraint firstItem="oTx-F4-QLf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="H4K-qk-6xo"/>
+                <constraint firstItem="t9l-kx-KZT" firstAttribute="leading" secondItem="oTx-F4-QLf" secondAttribute="leading" id="cWm-iI-nXt"/>
+                <constraint firstAttribute="bottom" secondItem="oTx-F4-QLf" secondAttribute="bottom" id="eiQ-zJ-rDS"/>
+                <constraint firstItem="oTx-F4-QLf" firstAttribute="trailing" secondItem="t9l-kx-KZT" secondAttribute="trailing" id="hbG-se-P45"/>
+                <constraint firstItem="oTx-F4-QLf" firstAttribute="top" secondItem="t9l-kx-KZT" secondAttribute="bottom" id="xmN-h9-Jd3"/>
+                <constraint firstItem="dfr-g0-8sM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="y25-ax-YQf"/>
+                <constraint firstItem="t9l-kx-KZT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="z3z-cy-xOc"/>
             </constraints>
         </view>
     </objects>
