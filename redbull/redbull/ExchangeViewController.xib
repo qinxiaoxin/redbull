@@ -18,30 +18,21 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cNI-2A-cZ7">
-                    <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="7aj-hL-Hjt">
                     <rect key="frame" x="145" y="246" width="37" height="37"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJa-Dq-Iki" customClass="Navbar">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                    <items>
-                        <navigationItem title="3" id="Uor-kx-REd"/>
-                    </items>
-                </navigationBar>
             </subviews>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="cNI-2A-cZ7" secondAttribute="trailing" id="5ez-Tp-vRd"/>
-                <constraint firstItem="cNI-2A-cZ7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Bgo-n2-ehf"/>
-                <constraint firstItem="cNI-2A-cZ7" firstAttribute="top" secondItem="gJa-Dq-Iki" secondAttribute="bottom" id="Yry-96-wVy"/>
-                <constraint firstItem="gJa-Dq-Iki" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Yrz-UC-4Le"/>
-                <constraint firstItem="7aj-hL-Hjt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="246" id="lbT-yl-y4K"/>
-                <constraint firstItem="gJa-Dq-Iki" firstAttribute="trailing" secondItem="cNI-2A-cZ7" secondAttribute="trailing" id="nPC-qq-u45"/>
-                <constraint firstAttribute="bottom" secondItem="cNI-2A-cZ7" secondAttribute="bottom" id="nZ9-cb-Fvg"/>
-                <constraint firstItem="gJa-Dq-Iki" firstAttribute="leading" secondItem="cNI-2A-cZ7" secondAttribute="leading" id="uR6-eI-OlE"/>
-                <constraint firstItem="7aj-hL-Hjt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="yil-ar-jPm"/>
+                <constraint firstAttribute="trailing" secondItem="cNI-2A-cZ7" secondAttribute="trailing" id="MHi-2r-Zxq"/>
+                <constraint firstAttribute="bottom" secondItem="cNI-2A-cZ7" secondAttribute="bottom" id="VLY-zD-BbN"/>
+                <constraint firstItem="cNI-2A-cZ7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Wrq-7x-F3B"/>
+                <constraint firstItem="cNI-2A-cZ7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Z4t-16-zaV"/>
+                <constraint firstItem="7aj-hL-Hjt" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="246" id="xKE-oI-UTZ"/>
+                <constraint firstItem="7aj-hL-Hjt" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="zwT-RG-9aZ"/>
             </constraints>
             <point key="canvasLocation" x="205" y="356"/>
         </view>

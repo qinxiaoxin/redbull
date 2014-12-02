@@ -18,15 +18,9 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U4y-bb-g1e">
-                    <rect key="frame" x="0.0" y="44" width="600" height="556"/>
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y2r-hK-Fum" customClass="Navbar">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                    <items>
-                        <navigationItem title="2" id="49V-H2-Uhj"/>
-                    </items>
-                </navigationBar>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="tIM-XK-KV9">
                     <rect key="frame" x="145" y="246" width="37" height="37"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -34,15 +28,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="trailing" secondItem="U4y-bb-g1e" secondAttribute="trailing" id="21d-8k-tUn"/>
-                <constraint firstItem="Y2r-hK-Fum" firstAttribute="leading" secondItem="U4y-bb-g1e" secondAttribute="leading" id="5r1-2w-PQ3"/>
-                <constraint firstItem="tIM-XK-KV9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="5yv-Xb-SOp"/>
-                <constraint firstItem="U4y-bb-g1e" firstAttribute="top" secondItem="Y2r-hK-Fum" secondAttribute="bottom" id="NY1-cg-FWe"/>
-                <constraint firstAttribute="bottom" secondItem="U4y-bb-g1e" secondAttribute="bottom" id="Ypn-pV-3io"/>
-                <constraint firstItem="Y2r-hK-Fum" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aQp-Xl-qZT"/>
-                <constraint firstItem="Y2r-hK-Fum" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="e16-Ac-Hhh"/>
-                <constraint firstItem="U4y-bb-g1e" firstAttribute="trailing" secondItem="Y2r-hK-Fum" secondAttribute="trailing" id="eTb-ej-jW0"/>
-                <constraint firstItem="tIM-XK-KV9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="246" id="ilS-5M-dtR"/>
+                <constraint firstItem="U4y-bb-g1e" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="2yr-78-Mx0"/>
+                <constraint firstAttribute="trailing" secondItem="U4y-bb-g1e" secondAttribute="trailing" id="3PI-rg-FFk"/>
+                <constraint firstItem="tIM-XK-KV9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="246" id="7Y3-aR-iqM"/>
+                <constraint firstItem="tIM-XK-KV9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="RX5-FF-vFw"/>
+                <constraint firstAttribute="bottom" secondItem="U4y-bb-g1e" secondAttribute="bottom" id="b7d-pq-SLJ"/>
+                <constraint firstItem="U4y-bb-g1e" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="xz3-MF-qZO"/>
             </constraints>
         </view>
     </objects>

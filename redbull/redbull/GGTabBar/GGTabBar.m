@@ -39,7 +39,7 @@ static const NSInteger kMarginSeparatorOffsetTag = 8000;
         _separators = [[NSMutableArray alloc] init];
         _marginSeparators = [[NSMutableArray alloc] init];
         _viewControllers = viewControllers;
-        self.tabBarHeight = CGFLOAT_MIN;
+        self.tabBarHeight = 50.f;//CGFLOAT_MIN
         self.translatesAutoresizingMaskIntoConstraints = NO;
         [self initSubViewsWithControllers:_viewControllers];
 

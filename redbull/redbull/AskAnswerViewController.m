@@ -22,8 +22,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil
-                                                        image:[UIImage imageNamed:@"camera_pressed"]
-                                                selectedImage:[UIImage imageNamed:@"camera_normal"]];
+                                                        image:[UIImage imageNamed:@"02.jpg"]
+                                                selectedImage:[UIImage imageNamed:@"02-1.jpg"]];
     }
     return self;
 }

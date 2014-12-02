@@ -15,6 +15,8 @@
 #import "ExchangeViewController.h"
 #import "TurnTableViewController.h"
 
+#import "Navbar.h"
+
 @interface AppDelegate ()
 
 @end
@@ -29,15 +31,17 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     GGTabBarController *tabBar = [[GGTabBarController alloc] init];
-    
     FirstViewController *vc1 = [[FirstViewController alloc] init];
     AskAnswerViewController *vc2 = [[AskAnswerViewController alloc] init];
     ExchangeViewController *vc3 = [[ExchangeViewController alloc] init];
     TurnTableViewController *vc4 = [[TurnTableViewController alloc] init];
-    
     tabBar.viewControllers = @[vc1, vc2, vc3, vc4];
-    self.window.rootViewController = tabBar;
-    self.window.backgroundColor = [UIColor colorWithRed:44 / 255.f green:44 / 255.f blue:44 / 255.f alpha:1.f];
+    
+    UINavigationController *nav = [[UINavigationController alloc] initWithNavigationBarClass:[Navbar class] toolbarClass:nil];
+    nav.viewControllers = @[tabBar];
+    
+    self.window.rootViewController = nav;
+    self.window.backgroundColor = [UIColor colorWithRed:18 / 255.f green:18 / 255.f blue:18 / 255.f alpha:1.f];
     [self.window makeKeyAndVisible];
     
     return YES;

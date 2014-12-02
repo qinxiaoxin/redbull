@@ -8,6 +8,11 @@
 
 #import "FirstViewController.h"
 #import "LoginViewController.h"
+#import "GGTabBarController.h"
+
+#import "Navbar.h"
+
+#import "LoginViewController.h"
 
 @interface FirstViewController ()<UIWebViewDelegate>
 
@@ -23,8 +28,8 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.tabBarItem = [[UITabBarItem alloc] initWithTitle:nil
-                                                        image:[UIImage imageNamed:@"camera_pressed"]
-                                                selectedImage:[UIImage imageNamed:@"camera_normal"]];
+                                                        image:[UIImage imageNamed:@"01.jpg"]
+                                                selectedImage:[UIImage imageNamed:@"01-1.jpg"]];
     }
     return self;
 }
@@ -36,12 +41,12 @@
     //委托协议
     _webView.delegate = self;
     
-    //
-    UIButton* loginButton=[UIButton buttonWithType:UIButtonTypeCustom];
-    loginButton.frame=CGRectMake(0, 0, 44, 44);
-    [loginButton setTitle:@"登录" forState:UIControlStateNormal];
-    [loginButton addTarget:self action:@selector(loginClick) forControlEvents:UIControlEventTouchUpInside];
-    self.navigationController.navigationItem.leftBarButtonItem=[[UIBarButtonItem alloc]initWithCustomView:loginButton];
+    NSLog(@"%@",self.navigationController);
+    
+    //登录
+    [self.navigationItem setNewTitle:@"红牛部落"];
+    [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) title:@"登录"];
+    [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -54,6 +59,17 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)loginClick:(id)sender
+{
+    LoginViewController *loginViewController = [[LoginViewController alloc] init];
+    [self.navigationController pushViewController:loginViewController animated:YES];
+}
+
+- (void)shareClick:(id)sender
+{
+    NSLog(@"share Umeng");
 }
 
 #pragma mark - UIWebViewDelegate Methods

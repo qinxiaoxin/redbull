@@ -9,6 +9,8 @@
 #import "GGTabBarController.h"
 #import "GGTabBar.h"
 
+//#import "Navbar.h"
+
 @interface GGTabBarController () <GGTabBarDelegate>
 @property (nonatomic, strong) UIView *presentationView;
 @property (nonatomic, strong) GGTabBar *tabBarView;
@@ -28,6 +30,11 @@
 
     _presentationView = [[UIView alloc] init];
     _presentationView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+//    //登录
+//    [self.navigationItem setNewTitle:@"红牛部落"];
+//    [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) title:@"登录"];
+//    [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
     
     [self.view addSubview:_tabBarView];
     [self.view addSubview:_presentationView];

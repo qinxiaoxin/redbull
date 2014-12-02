@@ -54,7 +54,7 @@
 		4BC9005D1A2C592A00A1B24B /* UIKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKeyboardView.m; sourceTree = "<group>"; };
 		4BC9005E1A2C592A00A1B24B /* UIKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKeyboardViewController.h; sourceTree = "<group>"; };
 		4BC9005F1A2C592A00A1B24B /* UIKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKeyboardViewController.m; sourceTree = "<group>"; };
-		762FB8561A25E64600F68BC8 /* redbull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = redbull.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		762FB8561A25E64600F68BC8 /* 红牛能量部落.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "红牛能量部落.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		762FB85A1A25E64600F68BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		762FB85B1A25E64600F68BC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		762FB85D1A25E64600F68BC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -154,7 +154,7 @@
 		762FB8571A25E64600F68BC8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				762FB8561A25E64600F68BC8 /* redbull.app */,
+				762FB8561A25E64600F68BC8 /* 红牛能量部落.app */,
 				762FB8721A25E64600F68BC8 /* redbullTests.xctest */,
 			);
 			name = Products;
@@ -305,7 +305,7 @@
 			);
 			name = redbull;
 			productName = redbull;
-			productReference = 762FB8561A25E64600F68BC8 /* redbull.app */;
+			productReference = 762FB8561A25E64600F68BC8 /* 红牛能量部落.app */;
 			productType = "com.apple.product-type.application";
 		};
 		762FB8711A25E64600F68BC8 /* redbullTests */ = {
@@ -538,7 +538,7 @@
 				INFOPLIST_FILE = redbull/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "红牛能量部落";
 				PROVISIONING_PROFILE = "97cb7d1f-207b-47ed-bcc8-350158e4d4e2";
 			};
 			name = Debug;
@@ -553,7 +553,7 @@
 				INFOPLIST_FILE = redbull/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "红牛能量部落";
 				PROVISIONING_PROFILE = "97cb7d1f-207b-47ed-bcc8-350158e4d4e2";
 			};
 			name = Release;
