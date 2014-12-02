@@ -40,13 +40,6 @@
     
     //委托协议
     _webView.delegate = self;
-    
-    NSLog(@"%@",self.navigationController);
-    
-    //登录
-    [self.navigationItem setNewTitle:@"红牛部落"];
-    [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) title:@"登录"];
-    [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -61,10 +54,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+#pragma mark - Action
+
 - (void)loginClick:(id)sender
 {
     LoginViewController *loginViewController = [[LoginViewController alloc] init];
-    [self.navigationController pushViewController:loginViewController animated:YES];
+    [self presentViewController:loginViewController animated:YES completion:^{
+        
+    }];
 }
 
 - (void)shareClick:(id)sender
@@ -93,13 +91,6 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [_indicator stopAnimating];
-}
-
-#pragma mark - click
-- (void)loginClick
-{
-    LoginViewController *loginVC = [[LoginViewController alloc] init];
-    [self.navigationController pushViewController:loginVC animated:YES];
 }
 
 @end

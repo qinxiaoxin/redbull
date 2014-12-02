@@ -9,7 +9,12 @@
 #import "GGTabBarController.h"
 #import "GGTabBar.h"
 
-//#import "Navbar.h"
+#import "FirstViewController.h"
+#import "AskAnswerViewController.h"
+#import "ExchangeViewController.h"
+#import "TurnTableViewController.h"
+
+#import "Navbar.h"
 
 @interface GGTabBarController () <GGTabBarDelegate>
 @property (nonatomic, strong) UIView *presentationView;
@@ -30,11 +35,6 @@
 
     _presentationView = [[UIView alloc] init];
     _presentationView.translatesAutoresizingMaskIntoConstraints = NO;
-    
-//    //登录
-//    [self.navigationItem setNewTitle:@"红牛部落"];
-//    [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) title:@"登录"];
-//    [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
     
     [self.view addSubview:_tabBarView];
     [self.view addSubview:_presentationView];
@@ -89,6 +89,29 @@
 
 - (void)selectViewController:(UIViewController *)viewController
 {
+    
+    if ([viewController isKindOfClass:[FirstViewController class]]) {
+        [self.navigationItem setNewTitle:@"红牛部落"];
+        [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) title:@"登录"];
+        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
+        self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:25 / 255.f green:29 / 255.f blue:30 / 255.f alpha:1.f];
+    }else if ([viewController isKindOfClass:[AskAnswerViewController class]]){
+        self.navigationItem.leftBarButtonItem = nil;
+        [self.navigationItem setNewTitle:@"有问有答"];
+        self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
+        
+    }else if ([viewController isKindOfClass:[ExchangeViewController class]]){
+        self.navigationItem.leftBarButtonItem = nil;
+        [self.navigationItem setNewTitle:@"能量值兑换"];
+        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
+        self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:25 / 255.f green:29 / 255.f blue:30 / 255.f alpha:1.f];
+    }else if ([viewController isKindOfClass:[TurnTableViewController class]]){
+        [self.navigationItem setNewTitle:@"红牛部落"];
+        [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) title:@"登录"];
+        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
+        self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:25 / 255.f green:29 / 255.f blue:30 / 255.f alpha:1.f];
+    }
+    
     UIView *presentedView = [_presentationView.subviews firstObject];
     
     if (presentedView) {
