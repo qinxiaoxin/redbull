@@ -101,8 +101,7 @@
         [params setObject:username forKey:@"username"];
         [params setObject:password forKey:@"password"];
         
-        NSString *urlPath = @"http://www.redbullclub.cn/index.php?s=User/doLoginForIos";
-        [httpClient postPath:urlPath
+        [httpClient postPath:LOGIN_POSTPATH
                   parameters:params
                      success:^(AFHTTPRequestOperation *operation, id responseObject)
          {
