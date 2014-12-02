@@ -16,6 +16,8 @@
 
 #import "Navbar.h"
 
+#import "LoginViewController.h"
+
 @interface GGTabBarController () <GGTabBarDelegate>
 @property (nonatomic, strong) UIView *presentationView;
 @property (nonatomic, strong) GGTabBar *tabBarView;
@@ -161,6 +163,23 @@
                                                                           metrics:nil
                                                                             views:viewsDictioanry]];
 }
+
+
+#pragma mark - Action
+
+- (void)loginClick:(id)sender
+{
+    LoginViewController *loginViewController = [[LoginViewController alloc] init];
+    [self presentViewController:loginViewController animated:YES completion:^{
+        
+    }];
+}
+
+- (void)shareClick:(id)sender
+{
+    NSLog(@"share Umeng");
+}
+
 
 #pragma mark - Debug
 

@@ -8,11 +8,6 @@
 
 #import "FirstViewController.h"
 #import "LoginViewController.h"
-#import "GGTabBarController.h"
-
-#import "Navbar.h"
-
-#import "LoginViewController.h"
 
 @interface FirstViewController ()<UIWebViewDelegate>
 
@@ -54,21 +49,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-
-#pragma mark - Action
-
-- (void)loginClick:(id)sender
-{
-    LoginViewController *loginViewController = [[LoginViewController alloc] init];
-    [self presentViewController:loginViewController animated:YES completion:^{
-        
-    }];
-}
-
-- (void)shareClick:(id)sender
-{
-    NSLog(@"share Umeng");
-}
 
 #pragma mark - UIWebViewDelegate Methods
 
