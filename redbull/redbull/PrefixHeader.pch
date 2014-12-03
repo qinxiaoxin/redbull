@@ -26,4 +26,6 @@
 
 #import "UIViewExt.h"
 
+#import "AppDelegate.h"
+
 #endif

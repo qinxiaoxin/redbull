@@ -18,10 +18,13 @@
 
 #import "LoginViewController.h"
 
-@interface GGTabBarController () <GGTabBarDelegate>
+#import "DDMenuController.h"
+
+@interface GGTabBarController () <GGTabBarDelegate,DDMenuControllerDelegate>
 @property (nonatomic, strong) UIView *presentationView;
 @property (nonatomic, strong) GGTabBar *tabBarView;
 @property (nonatomic, assign) BOOL isFirstAppear;
+
 @end
 
 @implementation GGTabBarController
@@ -65,6 +68,15 @@
     }
 }
 
+
+#pragma mark - DDMenuControllerDelegate implements
+
+- (void)menuController:(DDMenuController *)controller willShowViewController:(UIViewController *)controller1
+{
+    
+}
+
+
 #pragma mark - Delegation
 
 - (void)tabBar:(GGTabBar *)tabBar didPressButton:(UIButton *)button atIndex:(NSUInteger)tabIndex
@@ -91,7 +103,6 @@
 
 - (void)selectViewController:(UIViewController *)viewController
 {
-    
     if ([viewController isKindOfClass:[FirstViewController class]]) {
         [self.navigationItem setNewTitle:@"红牛部落"];
         [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) title:@"登录"];
@@ -100,6 +111,7 @@
     }else if ([viewController isKindOfClass:[AskAnswerViewController class]]){
         self.navigationItem.leftBarButtonItem = nil;
         [self.navigationItem setNewTitle:@"有问有答"];
+        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
         self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
         
     }else if ([viewController isKindOfClass:[ExchangeViewController class]]){
@@ -125,6 +137,32 @@
     [_presentationView addSubview:viewController.view];
     [self fitView:viewController.view intoView:_presentationView];
 }
+
+
+#pragma mark - Action
+
+- (void)loginClick:(id)sender
+{
+    //是否已经登陆 如果登录slide menu left，or slide menu right
+    
+    if (/* DISABLES CODE */ (1) == 1) {
+        DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+        [menuController showLeftController:YES];
+    }else{
+        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        [self presentViewController:loginViewController animated:YES completion:^{
+            
+        }];
+    }
+}
+
+- (void)shareClick:(id)sender
+{
+    NSLog(@"Umeng !!!");
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+    [menuController showRightController:YES];
+}
+
 
 #pragma mark - Layout
 
@@ -162,22 +200,6 @@
                                                                           options:0
                                                                           metrics:nil
                                                                             views:viewsDictioanry]];
-}
-
-
-#pragma mark - Action
-
-- (void)loginClick:(id)sender
-{
-    LoginViewController *loginViewController = [[LoginViewController alloc] init];
-    [self presentViewController:loginViewController animated:YES completion:^{
-        
-    }];
-}
-
-- (void)shareClick:(id)sender
-{
-    NSLog(@"share Umeng");
 }
 
 

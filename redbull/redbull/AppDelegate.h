@@ -7,9 +7,10 @@
 //
 
 
-
+@class DDMenuController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (strong, nonatomic) DDMenuController *menuControler;
 @property (strong, nonatomic) UIWindow *window;
 
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;

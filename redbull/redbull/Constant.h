@@ -15,14 +15,14 @@
 
 #define LOGIN_POSTPATH  @"http://www.redbullclub.cn/index.php?s=User/doLoginForIos" //登陆postPath
 
-#define kMenuFullWidth          320.0f
-#define kMenuDisplayedWidth     240.0f
-#define kMenuBounceOffset       10.0f
-#define kMenuBounceDuration     .3f
-#define kMenuSlideDuration      .3f
+#define kMenuFullWidth                  320.0f
+#define kMenuDisplayedWidth             240.0f
+#define kMenuOverlayWidth (self.view.bounds.size.width - kMenuDisplayedWidth)
+#define kMenuBounceOffset               10.0f
+#define kMenuBounceDuration             .3f
+#define kMenuSlideDuration              .3f
 
-#define NAVIGATIONBAR_HEIGHT    44.f
-
+#define NAVIGATIONBAR_HEIGHT            44.f
 
 #define TITLE_NAVGATIONBAR      @"红牛能量部落"
 

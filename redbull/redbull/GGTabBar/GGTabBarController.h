@@ -17,6 +17,7 @@
 @property (nonatomic, weak) id <GGTabBarControllerDelegate> delegate;
 @property (nonatomic, strong) NSDictionary *tabBarAppearanceSettings;
 @property (nonatomic, assign) BOOL debug;
+
 @end
 
 @protocol GGTabBarControllerDelegate <NSObject>

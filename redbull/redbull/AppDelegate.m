@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 
 #import "GGTabBarController.h"
+#import "LeftViewController.h"
+#import "RightViewController.h"
 
 #import "FirstViewController.h"
 #import "AskAnswerViewController.h"
@@ -16,6 +18,8 @@
 #import "TurnTableViewController.h"
 
 #import "Navbar.h"
+
+#import "DDMenuController.h"
 
 @interface AppDelegate ()
 
@@ -30,17 +34,26 @@
     //不使用main board的tabbar
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    GGTabBarController *tabBar = [[GGTabBarController alloc] init];
     FirstViewController *vc1 = [[FirstViewController alloc] init];
     AskAnswerViewController *vc2 = [[AskAnswerViewController alloc] init];
     ExchangeViewController *vc3 = [[ExchangeViewController alloc] init];
     TurnTableViewController *vc4 = [[TurnTableViewController alloc] init];
-    tabBar.viewControllers = @[vc1, vc2, vc3, vc4];
     
-    UINavigationController *nav = [[UINavigationController alloc] initWithNavigationBarClass:[Navbar class] toolbarClass:nil];
-    nav.viewControllers = @[tabBar];
+    GGTabBarController *ggTabBarController = [[GGTabBarController alloc] init];
+    ggTabBarController.viewControllers = @[vc1, vc2, vc3, vc4];
     
-    self.window.rootViewController = nav;
+    UINavigationController *navController = [[UINavigationController alloc] initWithNavigationBarClass:[Navbar class] toolbarClass:nil];
+    navController.viewControllers = @[ggTabBarController];
+
+    DDMenuController *rootController = [[DDMenuController alloc] initWithRootViewController:navController];
+    _menuControler = rootController;
+    
+    LeftViewController *leftViewController = [[LeftViewController alloc] init];
+    rootController.leftViewController = leftViewController;
+    RightViewController *rightViewController = [[RightViewController alloc] init];
+    rootController.rightViewController = rightViewController;
+    
+    self.window.rootViewController = rootController;
     self.window.backgroundColor = [UIColor colorWithRed:18 / 255.f green:18 / 255.f blue:18 / 255.f alpha:1.f];
     [self.window makeKeyAndVisible];
     

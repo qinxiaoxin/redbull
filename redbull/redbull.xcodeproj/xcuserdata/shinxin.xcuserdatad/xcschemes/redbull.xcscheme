@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "762FB8551A25E64600F68BC8"
-               BuildableName = "redbull.app"
+               BuildableName = "&#x7ea2;&#x725b;&#x80fd;&#x91cf;&#x90e8;&#x843d;.app"
                BlueprintName = "redbull"
                ReferencedContainer = "container:redbull.xcodeproj">
             </BuildableReference>
@@ -57,7 +57,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "762FB8551A25E64600F68BC8"
-            BuildableName = "redbull.app"
+            BuildableName = "&#x7ea2;&#x725b;&#x80fd;&#x91cf;&#x90e8;&#x843d;.app"
             BlueprintName = "redbull"
             ReferencedContainer = "container:redbull.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "762FB8551A25E64600F68BC8"
-            BuildableName = "redbull.app"
+            BuildableName = "&#x7ea2;&#x725b;&#x80fd;&#x91cf;&#x90e8;&#x843d;.app"
             BlueprintName = "redbull"
             ReferencedContainer = "container:redbull.xcodeproj">
          </BuildableReference>
@@ -94,7 +94,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "762FB8551A25E64600F68BC8"
-            BuildableName = "redbull.app"
+            BuildableName = "&#x7ea2;&#x725b;&#x80fd;&#x91cf;&#x90e8;&#x843d;.app"
             BlueprintName = "redbull"
             ReferencedContainer = "container:redbull.xcodeproj">
          </BuildableReference>

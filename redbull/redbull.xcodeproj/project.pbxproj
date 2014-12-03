@@ -39,6 +39,11 @@
 		762FB86D1A25E64600F68BC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762FB86B1A25E64600F68BC8 /* LaunchScreen.xib */; };
 		762FB8791A25E64600F68BC8 /* redbullTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FB8781A25E64600F68BC8 /* redbullTests.m */; };
 		763F31571A2C56E1004CE6AE /* Navbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 763F31561A2C56E1004CE6AE /* Navbar.m */; };
+		765EFFD51A2DE4C200DCCC86 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765EFFD31A2DE4C200DCCC86 /* LeftViewController.m */; };
+		765EFFD61A2DE4C200DCCC86 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765EFFD41A2DE4C200DCCC86 /* LeftViewController.xib */; };
+		765EFFDA1A2DE4D600DCCC86 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765EFFD81A2DE4D600DCCC86 /* RightViewController.m */; };
+		765EFFDB1A2DE4D600DCCC86 /* RightViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765EFFD91A2DE4D600DCCC86 /* RightViewController.xib */; };
+		765EFFE61A2ED2BC00DCCC86 /* DDMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765EFFE51A2ED2BC00DCCC86 /* DDMenuController.m */; };
 		7677CA141A26F997005675F0 /* GGTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA0F1A26F997005675F0 /* GGTabBar.m */; };
 		7677CA151A26F997005675F0 /* GGTabBarAppearanceKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA111A26F997005675F0 /* GGTabBarAppearanceKeys.m */; };
 		7677CA161A26F997005675F0 /* GGTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7677CA131A26F997005675F0 /* GGTabBarController.m */; };
@@ -113,7 +118,7 @@
 		4BC9005D1A2C592A00A1B24B /* UIKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKeyboardView.m; sourceTree = "<group>"; };
 		4BC9005E1A2C592A00A1B24B /* UIKeyboardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIKeyboardViewController.h; sourceTree = "<group>"; };
 		4BC9005F1A2C592A00A1B24B /* UIKeyboardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIKeyboardViewController.m; sourceTree = "<group>"; };
-		762FB8561A25E64600F68BC8 /* redbull.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = redbull.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		762FB8561A25E64600F68BC8 /* 红牛能量部落.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "红牛能量部落.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		762FB85A1A25E64600F68BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		762FB85B1A25E64600F68BC8 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		762FB85D1A25E64600F68BC8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +134,14 @@
 		762FB8781A25E64600F68BC8 /* redbullTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = redbullTests.m; sourceTree = "<group>"; };
 		763F31551A2C56E1004CE6AE /* Navbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Navbar.h; sourceTree = "<group>"; };
 		763F31561A2C56E1004CE6AE /* Navbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Navbar.m; sourceTree = "<group>"; };
+		765EFFD21A2DE4C200DCCC86 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		765EFFD31A2DE4C200DCCC86 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		765EFFD41A2DE4C200DCCC86 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
+		765EFFD71A2DE4D600DCCC86 /* RightViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RightViewController.h; sourceTree = "<group>"; };
+		765EFFD81A2DE4D600DCCC86 /* RightViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RightViewController.m; sourceTree = "<group>"; };
+		765EFFD91A2DE4D600DCCC86 /* RightViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RightViewController.xib; sourceTree = "<group>"; };
+		765EFFE41A2ED2BC00DCCC86 /* DDMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDMenuController.h; sourceTree = "<group>"; };
+		765EFFE51A2ED2BC00DCCC86 /* DDMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDMenuController.m; sourceTree = "<group>"; };
 		7677CA021A25F65B005675F0 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		7677CA0D1A26F997005675F0 /* GGTabBar-Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GGTabBar-Private.h"; sourceTree = "<group>"; };
 		7677CA0E1A26F997005675F0 /* GGTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGTabBar.h; sourceTree = "<group>"; };
@@ -269,7 +282,7 @@
 		762FB8571A25E64600F68BC8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				762FB8561A25E64600F68BC8 /* redbull.app */,
+				762FB8561A25E64600F68BC8 /* 红牛能量部落.app */,
 				762FB8721A25E64600F68BC8 /* redbullTests.xctest */,
 			);
 			name = Products;
@@ -340,6 +353,47 @@
 			name = NavBar;
 			sourceTree = "<group>";
 		};
+		765EFFD01A2DE3F800DCCC86 /* NavTabChildVC */ = {
+			isa = PBXGroup;
+			children = (
+				7677CA231A2703A2005675F0 /* FirstViewController.h */,
+				7677CA241A2703A2005675F0 /* FirstViewController.m */,
+				7677CA251A2703A2005675F0 /* FirstViewController.xib */,
+				76A300C51A2C76C80067F1A5 /* AskAnswerViewController.h */,
+				76A300C61A2C76C80067F1A5 /* AskAnswerViewController.m */,
+				76A300C71A2C76C80067F1A5 /* AskAnswerViewController.xib */,
+				7677CA2D1A2703CF005675F0 /* ExchangeViewController.h */,
+				7677CA2E1A2703CF005675F0 /* ExchangeViewController.m */,
+				7677CA2F1A2703CF005675F0 /* ExchangeViewController.xib */,
+				7677CA321A2703E2005675F0 /* TurnTableViewController.h */,
+				7677CA331A2703E2005675F0 /* TurnTableViewController.m */,
+				7677CA341A2703E2005675F0 /* TurnTableViewController.xib */,
+			);
+			name = NavTabChildVC;
+			sourceTree = "<group>";
+		};
+		765EFFD11A2DE43100DCCC86 /* SlideMenuVC */ = {
+			isa = PBXGroup;
+			children = (
+				765EFFD21A2DE4C200DCCC86 /* LeftViewController.h */,
+				765EFFD31A2DE4C200DCCC86 /* LeftViewController.m */,
+				765EFFD41A2DE4C200DCCC86 /* LeftViewController.xib */,
+				765EFFD71A2DE4D600DCCC86 /* RightViewController.h */,
+				765EFFD81A2DE4D600DCCC86 /* RightViewController.m */,
+				765EFFD91A2DE4D600DCCC86 /* RightViewController.xib */,
+			);
+			name = SlideMenuVC;
+			sourceTree = "<group>";
+		};
+		765EFFE31A2ED2AD00DCCC86 /* DDMenuController */ = {
+			isa = PBXGroup;
+			children = (
+				765EFFE41A2ED2BC00DCCC86 /* DDMenuController.h */,
+				765EFFE51A2ED2BC00DCCC86 /* DDMenuController.m */,
+			);
+			name = DDMenuController;
+			sourceTree = "<group>";
+		};
 		7677CA091A26E8CE005675F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -361,19 +415,10 @@
 		7677CA0B1A26E8DD005675F0 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				765EFFE31A2ED2AD00DCCC86 /* DDMenuController */,
+				765EFFD11A2DE43100DCCC86 /* SlideMenuVC */,
+				765EFFD01A2DE3F800DCCC86 /* NavTabChildVC */,
 				4BC900551A2C520B00A1B24B /* login */,
-				7677CA231A2703A2005675F0 /* FirstViewController.h */,
-				7677CA241A2703A2005675F0 /* FirstViewController.m */,
-				7677CA251A2703A2005675F0 /* FirstViewController.xib */,
-				76A300C51A2C76C80067F1A5 /* AskAnswerViewController.h */,
-				76A300C61A2C76C80067F1A5 /* AskAnswerViewController.m */,
-				76A300C71A2C76C80067F1A5 /* AskAnswerViewController.xib */,
-				7677CA2D1A2703CF005675F0 /* ExchangeViewController.h */,
-				7677CA2E1A2703CF005675F0 /* ExchangeViewController.m */,
-				7677CA2F1A2703CF005675F0 /* ExchangeViewController.xib */,
-				7677CA321A2703E2005675F0 /* TurnTableViewController.h */,
-				7677CA331A2703E2005675F0 /* TurnTableViewController.m */,
-				7677CA341A2703E2005675F0 /* TurnTableViewController.xib */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -420,7 +465,7 @@
 			);
 			name = redbull;
 			productName = redbull;
-			productReference = 762FB8561A25E64600F68BC8 /* redbull.app */;
+			productReference = 762FB8561A25E64600F68BC8 /* 红牛能量部落.app */;
 			productType = "com.apple.product-type.application";
 		};
 		762FB8711A25E64600F68BC8 /* redbullTests */ = {
@@ -456,7 +501,6 @@
 					};
 					762FB8711A25E64600F68BC8 = {
 						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 762FB8551A25E64600F68BC8;
 					};
 				};
 			};
@@ -485,10 +529,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7677CA361A2703E2005675F0 /* TurnTableViewController.xib in Resources */,
+				765EFFD61A2DE4C200DCCC86 /* LeftViewController.xib in Resources */,
 				76A300C91A2C76C80067F1A5 /* AskAnswerViewController.xib in Resources */,
 				762FB8681A25E64600F68BC8 /* Main.storyboard in Resources */,
 				762FB86D1A25E64600F68BC8 /* LaunchScreen.xib in Resources */,
 				762FB86A1A25E64600F68BC8 /* Images.xcassets in Resources */,
+				765EFFDB1A2DE4D600DCCC86 /* RightViewController.xib in Resources */,
 				7677CA271A2703A2005675F0 /* FirstViewController.xib in Resources */,
 				7677CA311A2703CF005675F0 /* ExchangeViewController.xib in Resources */,
 			);
@@ -513,6 +559,8 @@
 				4BBDAB841A2D8E2E00DEF6FB /* AFPropertyListRequestOperation.m in Sources */,
 				7677CA351A2703E2005675F0 /* TurnTableViewController.m in Sources */,
 				4BBDAB851A2D8E2E00DEF6FB /* AFURLConnectionOperation.m in Sources */,
+				765EFFDA1A2DE4D600DCCC86 /* RightViewController.m in Sources */,
+				765EFFE61A2ED2BC00DCCC86 /* DDMenuController.m in Sources */,
 				762FB85F1A25E64600F68BC8 /* AppDelegate.m in Sources */,
 				7677CA261A2703A2005675F0 /* FirstViewController.m in Sources */,
 				7677CA151A26F997005675F0 /* GGTabBarAppearanceKeys.m in Sources */,
@@ -535,6 +583,7 @@
 				4BBDABA41A2D8E3A00DEF6FB /* SBJsonStreamWriter.m in Sources */,
 				7677CA731A285646005675F0 /* Reachability.m in Sources */,
 				4BBDAB9E1A2D8E3A00DEF6FB /* SBJsonParser.m in Sources */,
+				765EFFD51A2DE4C200DCCC86 /* LeftViewController.m in Sources */,
 				4BBDAB9F1A2D8E3A00DEF6FB /* SBJsonStreamParser.m in Sources */,
 				4BBDABA71A2D8E3A00DEF6FB /* SBJsonWriter.m in Sources */,
 				763F31571A2C56E1004CE6AE /* Navbar.m in Sources */,
@@ -672,8 +721,8 @@
 				INFOPLIST_FILE = redbull/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = redbull;
-				PROVISIONING_PROFILE = "97cb7d1f-207b-47ed-bcc8-350158e4d4e2";
+				PRODUCT_NAME = "红牛能量部落";
+				PROVISIONING_PROFILE = "aa1646d9-7bf5-4b20-8998-3b4e48c491ea";
 			};
 			name = Debug;
 		};
@@ -682,20 +731,19 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wenyue Bao (J7P4MV2B4B)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: RedBull Vitamin Drink Co.,Ltd. (F9CR2NGCY7)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/redbull/PrefixHeader.pch";
 				INFOPLIST_FILE = redbull/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = redbull;
-				PROVISIONING_PROFILE = "97cb7d1f-207b-47ed-bcc8-350158e4d4e2";
+				PRODUCT_NAME = "红牛能量部落";
+				PROVISIONING_PROFILE = "aa1646d9-7bf5-4b20-8998-3b4e48c491ea";
 			};
 			name = Release;
 		};
 		762FB8801A25E64600F68BC8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -707,14 +755,12 @@
 				INFOPLIST_FILE = redbullTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/redbull.app/redbull";
 			};
 			name = Debug;
 		};
 		762FB8811A25E64600F68BC8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -722,7 +768,6 @@
 				INFOPLIST_FILE = redbullTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/redbull.app/redbull";
 			};
 			name = Release;
 		};
