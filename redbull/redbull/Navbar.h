@@ -44,8 +44,8 @@
 
 #define BackItemOffset UIEdgeInsetsMake(0, 5, 0, 0)
 #define ItemLeftMargin 10
-#define ItemWidth 52
-#define ItemHeight SysNavbarHeight
+#define ItemWidth 35
+#define ItemHeight 35
 #define ItemTextFont 12
 #define ItemTextNormalColot [UIColor whiteColor]
 #define ItemTextSelectedColot [UIColor colorWithWhite:0.7 alpha:1]

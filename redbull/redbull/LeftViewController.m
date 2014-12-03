@@ -7,8 +7,11 @@
 //
 
 #import "LeftViewController.h"
+#import "PortraitBGView.h"
 
 @interface LeftViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *portraitImageView;
 
 @end
 
@@ -17,6 +20,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    //set view color
+    self.view.backgroundColor = [UIColor colorWithRed:33 / 255.f green:33 / 255.f blue:35 / 255.f alpha:1.f];
+    
+    //set portrait bg color
+//    self.portraitBGView.backgroundColor = [UIColor colorWithRed:47 / 255.f green:47 / 255.f blue:49 / 255.f alpha:1.f];
+    
+    //portrait 圆角
+    _portraitImageView.layer.borderColor = [UIColor colorWithRed:47 / 255.f green:47 / 255.f blue:49 / 255.f alpha:1.f].CGColor;
+    _portraitImageView.layer.cornerRadius = 40.f;
+    _portraitImageView.layer.masksToBounds = YES;
+    
 }
 
 - (void)didReceiveMemoryWarning {

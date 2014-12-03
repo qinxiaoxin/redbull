@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftViewController">
             <connections>
+                <outlet property="portraitImageView" destination="rbf-1p-FNS" id="eci-ep-93d"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -15,21 +16,84 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="个人信息" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KuM-9G-1Ct">
-                    <rect key="frame" x="100" y="289" width="68" height="21"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face" translatesAutoresizingMaskIntoConstraints="NO" id="rbf-1p-FNS">
+                    <rect key="frame" x="360" y="50" width="80" height="80"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="21" id="ZWV-4A-cKJ"/>
+                        <constraint firstAttribute="width" constant="80" id="NBa-TL-9ZH"/>
+                        <constraint firstAttribute="height" constant="80" id="xo2-MM-dYR"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zKW-ll-VuU">
+                    <rect key="frame" x="300" y="158" width="200" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="5Nz-hq-1Ae"/>
+                    </constraints>
+                    <state key="normal" title="编辑资料">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="it7-a5-4h1">
+                    <rect key="frame" x="300" y="196" width="200" height="30"/>
+                    <state key="normal" title="修改密码">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbr-f3-zj4">
+                    <rect key="frame" x="300" y="234" width="200" height="30"/>
+                    <state key="normal" title="收货地址管理">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ow-A3-mCH">
+                    <rect key="frame" x="300" y="272" width="200" height="30"/>
+                    <state key="normal" title="我的能量值">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V2y-3p-KiY">
+                    <rect key="frame" x="300" y="310" width="200" height="30"/>
+                    <state key="normal" title="已兑换礼品">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwM-4U-64t">
+                    <rect key="frame" x="300" y="348" width="200" height="30"/>
+                    <state key="normal" title="退出登录">
+                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.094117656349999995" green="0.1215686351" blue="0.1411764771" alpha="1" colorSpace="deviceRGB"/>
             <constraints>
-                <constraint firstItem="KuM-9G-1Ct" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="289" id="Z6n-GM-PFS"/>
-                <constraint firstItem="KuM-9G-1Ct" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="100" id="y0B-ph-N06"/>
+                <constraint firstItem="it7-a5-4h1" firstAttribute="top" secondItem="zKW-ll-VuU" secondAttribute="bottom" constant="8" symbolic="YES" id="1TI-WQ-IGD"/>
+                <constraint firstItem="0ow-A3-mCH" firstAttribute="top" secondItem="Vbr-f3-zj4" secondAttribute="bottom" constant="8" symbolic="YES" id="3I4-7p-PWs"/>
+                <constraint firstItem="V2y-3p-KiY" firstAttribute="top" secondItem="0ow-A3-mCH" secondAttribute="bottom" constant="8" symbolic="YES" id="6G3-oX-JEw"/>
+                <constraint firstItem="zKW-ll-VuU" firstAttribute="trailing" secondItem="it7-a5-4h1" secondAttribute="trailing" id="7gx-Pg-XY9"/>
+                <constraint firstItem="Vbr-f3-zj4" firstAttribute="trailing" secondItem="it7-a5-4h1" secondAttribute="trailing" id="9Rh-EG-Am1"/>
+                <constraint firstItem="0ow-A3-mCH" firstAttribute="trailing" secondItem="V2y-3p-KiY" secondAttribute="trailing" id="9lt-dg-9NQ"/>
+                <constraint firstItem="UwM-4U-64t" firstAttribute="leading" secondItem="V2y-3p-KiY" secondAttribute="leading" id="CvS-Ib-GPX"/>
+                <constraint firstItem="zKW-ll-VuU" firstAttribute="leading" secondItem="it7-a5-4h1" secondAttribute="leading" id="Eev-sN-XO3"/>
+                <constraint firstAttribute="trailing" secondItem="zKW-ll-VuU" secondAttribute="trailing" constant="100" id="FgZ-Pb-5EF"/>
+                <constraint firstItem="zKW-ll-VuU" firstAttribute="top" secondItem="rbf-1p-FNS" secondAttribute="bottom" constant="28" id="I2u-vt-eM0"/>
+                <constraint firstItem="0ow-A3-mCH" firstAttribute="leading" secondItem="V2y-3p-KiY" secondAttribute="leading" id="cw7-wC-YXj"/>
+                <constraint firstItem="rbf-1p-FNS" firstAttribute="centerX" secondItem="zKW-ll-VuU" secondAttribute="centerX" id="d2j-rr-Wqb"/>
+                <constraint firstItem="UwM-4U-64t" firstAttribute="top" secondItem="V2y-3p-KiY" secondAttribute="bottom" constant="8" symbolic="YES" id="e1b-RU-hZq"/>
+                <constraint firstItem="0ow-A3-mCH" firstAttribute="leading" secondItem="Vbr-f3-zj4" secondAttribute="leading" id="gDF-B8-dV5"/>
+                <constraint firstItem="Vbr-f3-zj4" firstAttribute="top" secondItem="it7-a5-4h1" secondAttribute="bottom" constant="8" symbolic="YES" id="gvD-km-qOs"/>
+                <constraint firstItem="0ow-A3-mCH" firstAttribute="trailing" secondItem="Vbr-f3-zj4" secondAttribute="trailing" id="n3C-1M-z0e"/>
+                <constraint firstItem="Vbr-f3-zj4" firstAttribute="leading" secondItem="it7-a5-4h1" secondAttribute="leading" id="pN6-Vz-nI1"/>
+                <constraint firstItem="rbf-1p-FNS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="uMs-dS-J4H"/>
+                <constraint firstItem="UwM-4U-64t" firstAttribute="trailing" secondItem="V2y-3p-KiY" secondAttribute="trailing" id="xNb-mR-pbU"/>
             </constraints>
         </view>
     </objects>
+    <resources>
+        <image name="face" width="40" height="40"/>
+    </resources>
 </document>

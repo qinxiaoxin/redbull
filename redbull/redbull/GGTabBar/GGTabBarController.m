@@ -20,7 +20,7 @@
 
 #import "DDMenuController.h"
 
-@interface GGTabBarController () <GGTabBarDelegate,DDMenuControllerDelegate>
+@interface GGTabBarController () <GGTabBarDelegate>
 @property (nonatomic, strong) UIView *presentationView;
 @property (nonatomic, strong) GGTabBar *tabBarView;
 @property (nonatomic, assign) BOOL isFirstAppear;
@@ -69,14 +69,6 @@
 }
 
 
-#pragma mark - DDMenuControllerDelegate implements
-
-- (void)menuController:(DDMenuController *)controller willShowViewController:(UIViewController *)controller1
-{
-    
-}
-
-
 #pragma mark - Delegation
 
 - (void)tabBar:(GGTabBar *)tabBar didPressButton:(UIButton *)button atIndex:(NSUInteger)tabIndex
@@ -104,25 +96,25 @@
 - (void)selectViewController:(UIViewController *)viewController
 {
     if ([viewController isKindOfClass:[FirstViewController class]]) {
-        [self.navigationItem setNewTitle:@"红牛部落"];
-        [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) title:@"登录"];
-        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
+        [self.navigationItem setNewTitle:@"红牛能量部落"];
+        [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) image:@"face"];
+        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) image:@"share"];
         self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:25 / 255.f green:29 / 255.f blue:30 / 255.f alpha:1.f];
     }else if ([viewController isKindOfClass:[AskAnswerViewController class]]){
         self.navigationItem.leftBarButtonItem = nil;
         [self.navigationItem setNewTitle:@"有问有答"];
-        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
+        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:)  image:@"share_white"];
         self.navigationController.navigationBar.backgroundColor = [UIColor redColor];
         
     }else if ([viewController isKindOfClass:[ExchangeViewController class]]){
         self.navigationItem.leftBarButtonItem = nil;
         [self.navigationItem setNewTitle:@"能量值兑换"];
-        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
+        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:)  image:@"share"];
         self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:25 / 255.f green:29 / 255.f blue:30 / 255.f alpha:1.f];
     }else if ([viewController isKindOfClass:[TurnTableViewController class]]){
-        [self.navigationItem setNewTitle:@"红牛部落"];
-        [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) title:@"登录"];
-        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) title:@"分享"];
+        [self.navigationItem setNewTitle:@"红牛能量部落"];
+        [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) image:@"face"];
+        [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:)  image:@"share"];
         self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:25 / 255.f green:29 / 255.f blue:30 / 255.f alpha:1.f];
     }
     
@@ -158,7 +150,6 @@
 
 - (void)shareClick:(id)sender
 {
-    NSLog(@"Umeng !!!");
     DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
     [menuController showRightController:YES];
 }

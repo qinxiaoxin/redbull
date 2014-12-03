@@ -26,6 +26,8 @@
 
 #define TITLE_NAVGATIONBAR      @"红牛能量部落"
 
+#define PI 3.14159265358979323846
+
 @interface Constant : NSObject
 
 @end

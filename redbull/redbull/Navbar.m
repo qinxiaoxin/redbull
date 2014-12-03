@@ -94,7 +94,9 @@
         
         [button setTitleColor:ItemTextSelectedColot forState:UIControlStateHighlighted];
         [button setTitleColor:ItemTextSelectedColot forState:UIControlStateSelected];
-        button.frame =CGRectMake(0, 0, ItemWidth, ItemHeight);
+        button.frame = CGRectMake(0, 0, ItemWidth, ItemHeight);
+        button.layer.cornerRadius = ItemWidth / 2;
+        button.layer.masksToBounds = YES;
     }
   
     return self;
