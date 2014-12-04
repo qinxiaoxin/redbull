@@ -9,6 +9,12 @@
 #import "LeftViewController.h"
 #import "PortraitBGView.h"
 
+#import "PersonalDetailViewController.h"
+
+#import "DDMenuController.h"
+
+#import "Navbar.h"
+
 @interface LeftViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *portraitImageView;
@@ -37,6 +43,78 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - Action & Target
+
+- (IBAction)editData:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
+    pdvc.webURL = PROFILE_URL;
+    pdvc.navigationBarTitle = PROFILE_NAV;
+//    UINavigationController *navController = [[UINavigationController alloc] initWithNavigationBarClass:[Navbar class] toolbarClass:nil];
+//    navController.viewControllers = @[pdvc];
+//    [menuController setRootController:navController animated:YES];
+    [menuController presentViewController:pdvc animated:YES completion:^{
+        
+    }];
+}
+- (IBAction)modifyCode:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
+    pdvc.webURL = PASSWORD_URL;
+    pdvc.navigationBarTitle = PASSWORD_NAV;
+//    UINavigationController *navController = [[UINavigationController alloc] initWithNavigationBarClass:[Navbar class] toolbarClass:nil];
+//    navController.viewControllers = @[pdvc];
+//    [menuController setRootController:navController animated:YES];
+    [menuController presentViewController:pdvc animated:YES completion:^{
+        
+    }];
+}
+- (IBAction)receiveAddressManage:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
+    pdvc.webURL = ADDRESS_URL;
+    pdvc.navigationBarTitle = ADDRESS_NAV;
+//    UINavigationController *navController = [[UINavigationController alloc] initWithNavigationBarClass:[Navbar class] toolbarClass:nil];
+//    navController.viewControllers = @[pdvc];
+//    [menuController setRootController:navController animated:YES];
+    [menuController presentViewController:pdvc animated:YES completion:^{
+        
+    }];
+}
+- (IBAction)myPower:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
+    pdvc.webURL = SCORE_URL;
+    pdvc.navigationBarTitle = SCORE_NAV;
+//    UINavigationController *navController = [[UINavigationController alloc] initWithNavigationBarClass:[Navbar class] toolbarClass:nil];
+//    navController.viewControllers = @[pdvc];
+//    [menuController setRootController:navController animated:YES];
+    [menuController presentViewController:pdvc animated:YES completion:^{
+        
+    }];
+}
+- (IBAction)exchangeGift:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
+    pdvc.webURL = PRESENT_URL;
+    pdvc.navigationBarTitle = PRESENT_NAV;
+//    UINavigationController *navController = [[UINavigationController alloc] initWithNavigationBarClass:[Navbar class] toolbarClass:nil];
+//    navController.viewControllers = @[pdvc];
+//    [menuController setRootController:navController animated:YES];
+    [menuController presentViewController:pdvc animated:YES completion:^{
+        
+    }];
+}
+- (IBAction)signOut:(id)sender
+{
+    NSLog(@"退出登录");
 }
 
 /*

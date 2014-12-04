@@ -138,7 +138,7 @@
     //是否已经登陆 如果登录slide menu left，or slide menu right
     
     if (/* DISABLES CODE */ (1) == 1) {
-        DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+        DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
         [menuController showLeftController:YES];
     }else{
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
@@ -150,7 +150,7 @@
 
 - (void)shareClick:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
     [menuController showRightController:YES];
 }
 

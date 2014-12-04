@@ -22,17 +22,17 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="MTJ-Ic-Cxo">
-                    <rect key="frame" x="145" y="246" width="37" height="37"/>
+                    <rect key="frame" x="145" y="200" width="37" height="37"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
             </subviews>
             <constraints>
-                <constraint firstItem="6R4-9l-2Ag" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="1Pg-ao-eWf"/>
-                <constraint firstItem="6R4-9l-2Ag" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6jz-JZ-WO3"/>
-                <constraint firstAttribute="bottom" secondItem="6R4-9l-2Ag" secondAttribute="bottom" id="LUp-t3-oHH"/>
-                <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="V4e-0b-2Mf"/>
-                <constraint firstAttribute="trailing" secondItem="6R4-9l-2Ag" secondAttribute="trailing" id="dCr-r2-jM5"/>
-                <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="246" id="djS-Pk-Mga"/>
+                <constraint firstAttribute="bottom" secondItem="6R4-9l-2Ag" secondAttribute="bottom" id="Dpv-iX-aQD"/>
+                <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="W5i-zI-rrj"/>
+                <constraint firstItem="6R4-9l-2Ag" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="YsS-VO-apU"/>
+                <constraint firstItem="6R4-9l-2Ag" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="kqR-CI-WAh"/>
+                <constraint firstItem="MTJ-Ic-Cxo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="mLU-eR-mlx"/>
+                <constraint firstAttribute="trailing" secondItem="6R4-9l-2Ag" secondAttribute="trailing" id="nBs-M9-rES"/>
             </constraints>
             <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
             <point key="canvasLocation" x="235" y="341"/>

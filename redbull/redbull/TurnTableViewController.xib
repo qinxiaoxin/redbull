@@ -22,17 +22,17 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </webView>
                 <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="dfr-g0-8sM">
-                    <rect key="frame" x="145" y="246" width="37" height="37"/>
+                    <rect key="frame" x="145" y="200" width="37" height="37"/>
                     <color key="color" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                 </activityIndicatorView>
             </subviews>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="oTx-F4-QLf" secondAttribute="bottom" id="1Cs-t7-jUw"/>
-                <constraint firstItem="oTx-F4-QLf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="2BC-aq-pO4"/>
-                <constraint firstItem="dfr-g0-8sM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="246" id="4Zt-h2-Bxz"/>
-                <constraint firstItem="oTx-F4-QLf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AhG-IA-RiN"/>
-                <constraint firstItem="dfr-g0-8sM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="M21-7R-6Sa"/>
-                <constraint firstAttribute="trailing" secondItem="oTx-F4-QLf" secondAttribute="trailing" id="aTo-Xc-l0M"/>
+                <constraint firstItem="oTx-F4-QLf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1fC-Hy-H4q"/>
+                <constraint firstItem="dfr-g0-8sM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="Hez-fX-XeG"/>
+                <constraint firstItem="dfr-g0-8sM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="145" id="KU6-Nt-pOW"/>
+                <constraint firstItem="oTx-F4-QLf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="OS0-D0-tC7"/>
+                <constraint firstAttribute="trailing" secondItem="oTx-F4-QLf" secondAttribute="trailing" id="bw9-oC-0tA"/>
+                <constraint firstAttribute="bottom" secondItem="oTx-F4-QLf" secondAttribute="bottom" id="f8m-gB-F4D"/>
             </constraints>
         </view>
     </objects>

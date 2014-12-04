@@ -40,6 +40,8 @@
 		762FB8791A25E64600F68BC8 /* redbullTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FB8781A25E64600F68BC8 /* redbullTests.m */; };
 		763F31571A2C56E1004CE6AE /* Navbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 763F31561A2C56E1004CE6AE /* Navbar.m */; };
 		765E00541A2F331B00DCCC86 /* PortraitBGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E00531A2F331B00DCCC86 /* PortraitBGView.m */; };
+		765E00591A2FEDB600DCCC86 /* PersonalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E00571A2FEDB600DCCC86 /* PersonalDetailViewController.m */; };
+		765E005A1A2FEDB600DCCC86 /* PersonalDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E00581A2FEDB600DCCC86 /* PersonalDetailViewController.xib */; };
 		765EFFD51A2DE4C200DCCC86 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765EFFD31A2DE4C200DCCC86 /* LeftViewController.m */; };
 		765EFFD61A2DE4C200DCCC86 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765EFFD41A2DE4C200DCCC86 /* LeftViewController.xib */; };
 		765EFFDA1A2DE4D600DCCC86 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765EFFD81A2DE4D600DCCC86 /* RightViewController.m */; };
@@ -137,6 +139,9 @@
 		763F31561A2C56E1004CE6AE /* Navbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Navbar.m; sourceTree = "<group>"; };
 		765E00521A2F331B00DCCC86 /* PortraitBGView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PortraitBGView.h; sourceTree = "<group>"; };
 		765E00531A2F331B00DCCC86 /* PortraitBGView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PortraitBGView.m; sourceTree = "<group>"; };
+		765E00561A2FEDB600DCCC86 /* PersonalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDetailViewController.h; sourceTree = "<group>"; };
+		765E00571A2FEDB600DCCC86 /* PersonalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDetailViewController.m; sourceTree = "<group>"; };
+		765E00581A2FEDB600DCCC86 /* PersonalDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalDetailViewController.xib; sourceTree = "<group>"; };
 		765EFFD21A2DE4C200DCCC86 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		765EFFD31A2DE4C200DCCC86 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		765EFFD41A2DE4C200DCCC86 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
@@ -365,6 +370,16 @@
 			name = PortraitBGView;
 			sourceTree = "<group>";
 		};
+		765E00551A2FED6A00DCCC86 /* PersonalDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				765E00561A2FEDB600DCCC86 /* PersonalDetailViewController.h */,
+				765E00571A2FEDB600DCCC86 /* PersonalDetailViewController.m */,
+				765E00581A2FEDB600DCCC86 /* PersonalDetailViewController.xib */,
+			);
+			name = PersonalDetailVC;
+			sourceTree = "<group>";
+		};
 		765EFFD01A2DE3F800DCCC86 /* NavTabChildVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -428,6 +443,7 @@
 		7677CA0B1A26E8DD005675F0 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				765E00551A2FED6A00DCCC86 /* PersonalDetailVC */,
 				765EFFE31A2ED2AD00DCCC86 /* DDMenuController */,
 				765EFFD11A2DE43100DCCC86 /* SlideMenuVC */,
 				765EFFD01A2DE3F800DCCC86 /* NavTabChildVC */,
@@ -547,6 +563,7 @@
 				762FB8681A25E64600F68BC8 /* Main.storyboard in Resources */,
 				762FB86D1A25E64600F68BC8 /* LaunchScreen.xib in Resources */,
 				762FB86A1A25E64600F68BC8 /* Images.xcassets in Resources */,
+				765E005A1A2FEDB600DCCC86 /* PersonalDetailViewController.xib in Resources */,
 				765EFFDB1A2DE4D600DCCC86 /* RightViewController.xib in Resources */,
 				7677CA271A2703A2005675F0 /* FirstViewController.xib in Resources */,
 				7677CA311A2703CF005675F0 /* ExchangeViewController.xib in Resources */,
@@ -582,6 +599,7 @@
 				4BC900601A2C592A00A1B24B /* UIKeyboardView.m in Sources */,
 				7677CA161A26F997005675F0 /* GGTabBarController.m in Sources */,
 				7677CA3A1A270EC4005675F0 /* Constant.m in Sources */,
+				765E00591A2FEDB600DCCC86 /* PersonalDetailViewController.m in Sources */,
 				4BC9005B1A2C539C00A1B24B /* UIViewExt.m in Sources */,
 				762FB85C1A25E64600F68BC8 /* main.m in Sources */,
 				4BBDAB831A2D8E2E00DEF6FB /* AFNetworkActivityIndicatorManager.m in Sources */,
