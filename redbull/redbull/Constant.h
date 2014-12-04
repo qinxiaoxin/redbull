@@ -27,6 +27,20 @@
 
 #define PI 3.14159265358979323846
 
+#define PROFILE_URL                 @"http://www.redbullclub.cn/index.php?s=M/profile"
+#define PASSWORD_URL                @"http://www.redbullclub.cn/index.php?s=M/password"
+#define ADDRESS_URL                 @"http://www.redbullclub.cn/index.php?s=M/address"
+#define SCORE_URL                   @"http://www.redbullclub.cn/index.php?s=M/score"
+#define PRESENT_URL                 @"http://www.redbullclub.cn/index.php?s=M/present"
+//#define SIGNOUT_URL                 @""
+
+#define PROFILE_NAV                 @"编辑资料"
+#define PASSWORD_NAV                @"修改密码"
+#define ADDRESS_NAV                 @"收货地址管理"
+#define SCORE_NAV                   @"我的能量值"
+#define PRESENT_NAV                 @"已兑换礼品"
+
+
 @interface Constant : NSObject
 
 @end

@@ -49,7 +49,7 @@
 
 - (IBAction)editData:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
     PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
     pdvc.webURL = PROFILE_URL;
     pdvc.navigationBarTitle = PROFILE_NAV;
@@ -62,7 +62,7 @@
 }
 - (IBAction)modifyCode:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
     PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
     pdvc.webURL = PASSWORD_URL;
     pdvc.navigationBarTitle = PASSWORD_NAV;
@@ -75,7 +75,7 @@
 }
 - (IBAction)receiveAddressManage:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
     PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
     pdvc.webURL = ADDRESS_URL;
     pdvc.navigationBarTitle = ADDRESS_NAV;
@@ -88,7 +88,7 @@
 }
 - (IBAction)myPower:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
     PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
     pdvc.webURL = SCORE_URL;
     pdvc.navigationBarTitle = SCORE_NAV;
@@ -101,7 +101,7 @@
 }
 - (IBAction)exchangeGift:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
     PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
     pdvc.webURL = PRESENT_URL;
     pdvc.navigationBarTitle = PRESENT_NAV;

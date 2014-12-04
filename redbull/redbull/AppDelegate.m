@@ -46,7 +46,7 @@
     navController.viewControllers = @[ggTabBarController];
 
     DDMenuController *rootController = [[DDMenuController alloc] initWithRootViewController:navController];
-    _menuController = rootController;
+    _menuControler = rootController;
     
     LeftViewController *leftViewController = [[LeftViewController alloc] init];
     rootController.leftViewController = leftViewController;
