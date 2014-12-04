@@ -149,19 +149,19 @@
 {
     //是否已经登陆
     NSLog(@"islogin-->%d",_isLogin);
-//    if (_isLogin) {
-//        DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
-//        [menuController showLeftController:YES];
-//    }else{
-//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
-//        loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
-//        [self presentViewController:loginViewController animated:YES completion:^{
-//            
-//        }];
-//    }
+    if (_isLogin) {
+        DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+        [menuController showLeftController:YES];
+    }else{
+        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
+        [self presentViewController:loginViewController animated:YES completion:^{
+            
+        }];
+    }
     
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
-    [menuController showLeftController:YES];
+//    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+//    [menuController showLeftController:YES];
     
 }
 
