@@ -27,11 +27,11 @@
 
 #define PI 3.14159265358979323846
 
-#define PROFILE_URL                 @"http://www.redbullclub.cn/index.php?s=M/profile"
-#define PASSWORD_URL                @"http://www.redbullclub.cn/index.php?s=M/password"
-#define ADDRESS_URL                 @"http://www.redbullclub.cn/index.php?s=M/address"
-#define SCORE_URL                   @"http://www.redbullclub.cn/index.php?s=M/score"
-#define PRESENT_URL                 @"http://www.redbullclub.cn/index.php?s=M/present"
+#define PROFILE_URL                 @"http://www.redbullclub.cn/index.php?s=IOS/profile"
+#define PASSWORD_URL                @"http://www.redbullclub.cn/index.php?s=IOS/password"
+#define ADDRESS_URL                 @"http://www.redbullclub.cn/index.php?s=IOS/address"
+#define SCORE_URL                   @"http://www.redbullclub.cn/index.php?s=IOS/score"
+#define PRESENT_URL                 @"http://www.redbullclub.cn/index.php?s=IOS/present"
 //#define SIGNOUT_URL                 @""
 
 #define PROFILE_NAV                 @"编辑资料"
