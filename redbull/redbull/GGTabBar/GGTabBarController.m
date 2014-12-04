@@ -66,6 +66,16 @@
         _isFirstAppear = YES;
         [self selectViewController:[_viewControllers firstObject]];
     }
+    //--------------------lc.增加-----------------
+    //判断是否登陆
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSString *name = [userDefault objectForKey:@"name"];
+    if (name == nil) {
+        NSLog(@"启动判断有没有name--->%@",name);
+        //code..
+        
+    }
+
 }
 
 
