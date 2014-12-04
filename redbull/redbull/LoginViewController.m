@@ -35,15 +35,20 @@
 
 #pragma mark - UI
 - (void)_initView {
-    self.view.backgroundColor = hll_color(200, 200, 200, 1);
-    
-    UIView *logView = [[UIView alloc] initWithFrame:CGRectMake(5, FSystenVersion>=7.0?64:44, ScreenWidth - 10, 230)];
+    self.view.backgroundColor = hll_color(1, 1, 1, 0.7);
+    UIView *logView = [[UIView alloc] initWithFrame:CGRectMake(15, FSystenVersion>=7.0?64:44, ScreenWidth - 30, 230)];
     logView.backgroundColor = hll_color(240, 240, 240, 1);
     [self.view addSubview:logView];
     
     UIView *redline = [[UIView alloc] initWithFrame:CGRectMake(0, 0, logView.width, 3)];
     redline.backgroundColor = hll_color(252, 74, 57, 1);
     [logView addSubview:redline];
+    
+    UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    cancelBtn.frame = CGRectMake(redline.right-15, redline.top-5, 20, 20);
+    [cancelBtn setBackgroundImage:[UIImage imageNamed:@"cancel.png"] forState:UIControlStateNormal];
+    [cancelBtn addTarget:self action:@selector(cancelBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [logView addSubview:cancelBtn];
     
     UIImageView *titleImage = [[UIImageView alloc] init];
     titleImage.frame = CGRectMake(logView.width/2-50, redline.bottom+5, 15, 15);
@@ -72,6 +77,7 @@
     registerBtn.frame = CGRectMake(_passwordTextField.left, _passwordTextField.bottom+20, _passwordTextField.width/2-10, 30);
     [registerBtn setBackgroundColor:hll_color(253, 185, 61, 1)];
     [registerBtn setTitle:@"立即注册" forState:UIControlStateNormal];
+    [registerBtn addTarget:self action:@selector(registerClick) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:registerBtn];
     
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -80,7 +86,6 @@
     [loginBtn setTitle:@"登陆" forState:UIControlStateNormal];
     [loginBtn addTarget:self action:@selector(loginClick) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:loginBtn];
-    
 }
 
 #pragma mark - action
@@ -93,39 +98,81 @@
         UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"账号密码不能为空"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
     }else {
-        AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@""]];
-        httpClient.parameterEncoding = AFJSONParameterEncoding;
-        [httpClient setDefaultHeader:@"Accept" value:@"text/json"];
-        
-        NSMutableDictionary *params = [NSMutableDictionary dictionary];
-        [params setObject:username forKey:@"username"];
-        [params setObject:password forKey:@"password"];
-        
-        [httpClient postPath:LOGIN_POSTPATH
-                  parameters:params
-                     success:^(AFHTTPRequestOperation *operation, id responseObject)
-         {
-             NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
-             SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
-             NSError *error = nil;
-             NSDictionary *dic=[[NSDictionary alloc]init];
-             dic = [jsonParser objectWithString:responseStr error:&error];
-             NSLog(@"请求成功---->%@",dic);
-             NSLog(@"%@",[dic objectForKey:@"errordesc"]);
-             
+        [self post];
+    }
+}
+
+- (void)registerClick
+{
+    
+}
+
+- (void)cancelBtnClick
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)post
+{
+    NSString *username = _usernameTextField.text;
+    NSString *password = _passwordTextField.text;
+    
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@""]];
+    httpClient.parameterEncoding = AFJSONParameterEncoding;
+    [httpClient setDefaultHeader:@"Accept" value:@"text/json"];
+    
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:username forKey:@"username"];
+    [params setObject:password forKey:@"password"];
+    
+    [httpClient postPath:LOGIN_POSTPATH
+              parameters:params
+                 success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+         SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+         NSError *error = nil;
+         NSDictionary *dic=[[NSDictionary alloc]init];
+         dic = [jsonParser objectWithString:responseStr error:&error];
+         NSLog(@"请求成功---->%@",dic);
+         NSLog(@"%@",[dic objectForKey:@"errordesc"]);
+         
+         if ([[dic objectForKey:@"status"]intValue]==1) {
+             NSLog(@"登陆成功---->%@",[dic objectForKey:@"status"]);
+
              NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
              [userDefaults setObject:username forKey:@"name"];
              [userDefaults setObject:password forKey:@"password"];
              [userDefaults synchronize];
              
-             //...
-             
-             
+             [self dismissViewControllerAnimated:YES completion:nil];
+         }else {
+             NSLog(@"登陆失败---->%@",[dic objectForKey:@"status"]);
+
+             UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"message:@"登陆失败"  delegate:nil cancelButtonTitle:@"确定"otherButtonTitles:nil];
+             [alert show];
+
          }
-                     failure:^(AFHTTPRequestOperation *operation, NSError *error)
-         {
-             NSLog(@"失败");
-         }];
-    }
+     }
+                 failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"message:@"网络错误"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+         [alert show];
+     }];
 }
+
+//---------------------------------------------------------------------------------------------------------------
+//注销情况
+- (void) test
+{
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    //移除UserDefaults中存储的用户信息
+    [userDefaults removeObjectForKey:@"name"];
+    [userDefaults removeObjectForKey:@"password"];
+    [userDefaults synchronize];
+
+    //注销后需改变的code..
+
+}
+
 @end

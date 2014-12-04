@@ -24,6 +24,7 @@
 @property (nonatomic, strong) UIView *presentationView;
 @property (nonatomic, strong) GGTabBar *tabBarView;
 @property (nonatomic, assign) BOOL isFirstAppear;
+@property (nonatomic, assign) BOOL isLogin;
 
 @end
 
@@ -66,6 +67,17 @@
         _isFirstAppear = YES;
         [self selectViewController:[_viewControllers firstObject]];
     }
+    //--------------------lc.增加-----------------
+    //判断是否登陆
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSString *name = [userDefault objectForKey:@"name"];
+    if (name == nil) {
+        NSLog(@"启动判断有没有name--->%@",name);
+        _isLogin = NO;
+    }else{
+        _isLogin = YES;
+    }
+
 }
 
 
@@ -136,12 +148,13 @@
 - (void)loginClick:(id)sender
 {
     //是否已经登陆 如果登录slide menu left，or slide menu right
-    
-    if (/* DISABLES CODE */ (1) == 1) {
-        DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    NSLog(@"islogin-->%d",_isLogin);
+    if (_isLogin) {
+        DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
         [menuController showLeftController:YES];
     }else{
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
         [self presentViewController:loginViewController animated:YES completion:^{
             
         }];
@@ -150,7 +163,7 @@
 
 - (void)shareClick:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuController;
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
     [menuController showRightController:YES];
 }
 
