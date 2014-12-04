@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B0910531A30353A005BB2A8 /* cancel.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0910521A30353A005BB2A8 /* cancel.png */; };
 		4BBDAB7F1A2D8E2E00DEF6FB /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB6D1A2D8E2E00DEF6FB /* AFHTTPClient.m */; };
 		4BBDAB801A2D8E2E00DEF6FB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB6F1A2D8E2E00DEF6FB /* AFHTTPRequestOperation.m */; };
 		4BBDAB811A2D8E2E00DEF6FB /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB711A2D8E2E00DEF6FB /* AFImageRequestOperation.m */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4B0910521A30353A005BB2A8 /* cancel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cancel.png; sourceTree = "<group>"; };
 		4BBDAB6C1A2D8E2E00DEF6FB /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		4BBDAB6D1A2D8E2E00DEF6FB /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		4BBDAB6E1A2D8E2E00DEF6FB /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -189,6 +191,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4B0910511A30353A005BB2A8 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				4B0910521A30353A005BB2A8 /* cancel.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		4BBDAB6B1A2D8E2E00DEF6FB /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,6 +318,7 @@
 		762FB8591A25E64600F68BC8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4B0910511A30353A005BB2A8 /* image */,
 				762FB8661A25E64600F68BC8 /* Main.storyboard */,
 				762FB86B1A25E64600F68BC8 /* LaunchScreen.xib */,
 				762FB8691A25E64600F68BC8 /* Images.xcassets */,
@@ -544,6 +555,7 @@
 				7677CA361A2703E2005675F0 /* TurnTableViewController.xib in Resources */,
 				765EFFD61A2DE4C200DCCC86 /* LeftViewController.xib in Resources */,
 				76A300C91A2C76C80067F1A5 /* AskAnswerViewController.xib in Resources */,
+				4B0910531A30353A005BB2A8 /* cancel.png in Resources */,
 				762FB8681A25E64600F68BC8 /* Main.storyboard in Resources */,
 				762FB86D1A25E64600F68BC8 /* LaunchScreen.xib in Resources */,
 				762FB86A1A25E64600F68BC8 /* Images.xcassets in Resources */,

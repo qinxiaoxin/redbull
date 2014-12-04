@@ -12,7 +12,6 @@
 #define ASK_PAGE        @"http://www.redbullclub.cn/index.php?s=IOS/vote"
 #define EXCHANGE_PAGE   @"http://www.redbullclub.cn/index.php?s=IOS/shop"
 #define TURNTABLE_PAGE  @"http://www.redbullclub.cn/index.php?s=IOS/event"
-
 #define LOGIN_POSTPATH  @"http://www.redbullclub.cn/index.php?s=User/doLoginForIos" //登陆postPath
 
 #define kMenuFullWidth                  320.0f

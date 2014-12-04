@@ -35,15 +35,20 @@
 
 #pragma mark - UI
 - (void)_initView {
-    self.view.backgroundColor = hll_color(200, 200, 200, 1);
-    
-    UIView *logView = [[UIView alloc] initWithFrame:CGRectMake(5, FSystenVersion>=7.0?64:44, ScreenWidth - 10, 230)];
+    self.view.backgroundColor = hll_color(1, 1, 1, 0.7);
+    UIView *logView = [[UIView alloc] initWithFrame:CGRectMake(15, FSystenVersion>=7.0?64:44, ScreenWidth - 30, 230)];
     logView.backgroundColor = hll_color(240, 240, 240, 1);
     [self.view addSubview:logView];
     
     UIView *redline = [[UIView alloc] initWithFrame:CGRectMake(0, 0, logView.width, 3)];
     redline.backgroundColor = hll_color(252, 74, 57, 1);
     [logView addSubview:redline];
+    
+    UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    cancelBtn.frame = CGRectMake(redline.right-15, redline.top-5, 20, 20);
+    [cancelBtn setBackgroundImage:[UIImage imageNamed:@"cancel.png"] forState:UIControlStateNormal];
+    [cancelBtn addTarget:self action:@selector(cancelBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    [logView addSubview:cancelBtn];
     
     UIImageView *titleImage = [[UIImageView alloc] init];
     titleImage.frame = CGRectMake(logView.width/2-50, redline.bottom+5, 15, 15);
@@ -72,6 +77,7 @@
     registerBtn.frame = CGRectMake(_passwordTextField.left, _passwordTextField.bottom+20, _passwordTextField.width/2-10, 30);
     [registerBtn setBackgroundColor:hll_color(253, 185, 61, 1)];
     [registerBtn setTitle:@"立即注册" forState:UIControlStateNormal];
+    [registerBtn addTarget:self action:@selector(registerClick) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:registerBtn];
     
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -80,7 +86,6 @@
     [loginBtn setTitle:@"登陆" forState:UIControlStateNormal];
     [loginBtn addTarget:self action:@selector(loginClick) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:loginBtn];
-    
 }
 
 #pragma mark - action
@@ -95,6 +100,16 @@
     }else {
         [self post];
     }
+}
+
+- (void)registerClick
+{
+    
+}
+
+- (void)cancelBtnClick
+{
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)post
@@ -129,11 +144,14 @@
              [userDefaults setObject:username forKey:@"name"];
              [userDefaults setObject:password forKey:@"password"];
              [userDefaults synchronize];
+             
+             [self dismissViewControllerAnimated:YES completion:nil];
          }else {
              NSLog(@"登陆失败---->%@",[dic objectForKey:@"status"]);
 
              UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"message:@"登陆失败"  delegate:nil cancelButtonTitle:@"确定"otherButtonTitles:nil];
              [alert show];
+
          }
      }
                  failure:^(AFHTTPRequestOperation *operation, NSError *error)
@@ -143,6 +161,7 @@
      }];
 }
 
+//---------------------------------------------------------------------------------------------------------------
 //注销情况
 - (void) test
 {
@@ -153,7 +172,7 @@
     [userDefaults synchronize];
 
     //注销后需改变的code..
-    
+
 }
 
 @end
