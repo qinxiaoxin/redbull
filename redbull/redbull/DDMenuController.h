@@ -26,6 +26,8 @@
 
 #import <UIKit/UIKit.h>
 
+#import "EAIntroView.h"
+
 typedef enum {
     DDMenuPanDirectionLeft = 0,
     DDMenuPanDirectionRight,
@@ -38,7 +40,7 @@ typedef enum {
 } DDMenuPanCompletion;
 
 @protocol DDMenuControllerDelegate;
-@interface DDMenuController : UIViewController <UIGestureRecognizerDelegate>{
+@interface DDMenuController : UIViewController <UIGestureRecognizerDelegate,EAIntroDelegate>{
     
     id _tap;
     id _pan;

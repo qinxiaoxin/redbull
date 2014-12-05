@@ -42,6 +42,8 @@
 		765E00541A2F331B00DCCC86 /* PortraitBGView.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E00531A2F331B00DCCC86 /* PortraitBGView.m */; };
 		765E00591A2FEDB600DCCC86 /* PersonalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E00571A2FEDB600DCCC86 /* PersonalDetailViewController.m */; };
 		765E005A1A2FEDB600DCCC86 /* PersonalDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E00581A2FEDB600DCCC86 /* PersonalDetailViewController.xib */; };
+		765E00601A3158A300DCCC86 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E005D1A3158A300DCCC86 /* EAIntroPage.m */; };
+		765E00611A3158A300DCCC86 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E005F1A3158A300DCCC86 /* EAIntroView.m */; };
 		765EFFD51A2DE4C200DCCC86 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765EFFD31A2DE4C200DCCC86 /* LeftViewController.m */; };
 		765EFFD61A2DE4C200DCCC86 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765EFFD41A2DE4C200DCCC86 /* LeftViewController.xib */; };
 		765EFFDA1A2DE4D600DCCC86 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765EFFD81A2DE4D600DCCC86 /* RightViewController.m */; };
@@ -142,6 +144,10 @@
 		765E00561A2FEDB600DCCC86 /* PersonalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDetailViewController.h; sourceTree = "<group>"; };
 		765E00571A2FEDB600DCCC86 /* PersonalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDetailViewController.m; sourceTree = "<group>"; };
 		765E00581A2FEDB600DCCC86 /* PersonalDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalDetailViewController.xib; sourceTree = "<group>"; };
+		765E005C1A3158A300DCCC86 /* EAIntroPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroPage.h; sourceTree = "<group>"; };
+		765E005D1A3158A300DCCC86 /* EAIntroPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroPage.m; sourceTree = "<group>"; };
+		765E005E1A3158A300DCCC86 /* EAIntroView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EAIntroView.h; sourceTree = "<group>"; };
+		765E005F1A3158A300DCCC86 /* EAIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroView.m; sourceTree = "<group>"; };
 		765EFFD21A2DE4C200DCCC86 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		765EFFD31A2DE4C200DCCC86 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		765EFFD41A2DE4C200DCCC86 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
@@ -380,6 +386,17 @@
 			name = PersonalDetailVC;
 			sourceTree = "<group>";
 		};
+		765E005B1A3158A300DCCC86 /* EAIntroView */ = {
+			isa = PBXGroup;
+			children = (
+				765E005C1A3158A300DCCC86 /* EAIntroPage.h */,
+				765E005D1A3158A300DCCC86 /* EAIntroPage.m */,
+				765E005E1A3158A300DCCC86 /* EAIntroView.h */,
+				765E005F1A3158A300DCCC86 /* EAIntroView.m */,
+			);
+			path = EAIntroView;
+			sourceTree = "<group>";
+		};
 		765EFFD01A2DE3F800DCCC86 /* NavTabChildVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -433,6 +450,7 @@
 		7677CA0A1A26E8D7005675F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				765E005B1A3158A300DCCC86 /* EAIntroView */,
 				765E004E1A2F327D00DCCC86 /* PortraitBGView */,
 				763F31541A2C56D3004CE6AE /* NavBar */,
 				7677CA0C1A26F997005675F0 /* GGTabBar */,
@@ -593,6 +611,7 @@
 				765EFFE61A2ED2BC00DCCC86 /* DDMenuController.m in Sources */,
 				762FB85F1A25E64600F68BC8 /* AppDelegate.m in Sources */,
 				7677CA261A2703A2005675F0 /* FirstViewController.m in Sources */,
+				765E00601A3158A300DCCC86 /* EAIntroPage.m in Sources */,
 				7677CA151A26F997005675F0 /* GGTabBarAppearanceKeys.m in Sources */,
 				4BC900581A2C524000A1B24B /* LoginViewController.m in Sources */,
 				4BBDABA61A2D8E3A00DEF6FB /* SBJsonStreamWriterState.m in Sources */,
@@ -604,6 +623,7 @@
 				762FB85C1A25E64600F68BC8 /* main.m in Sources */,
 				4BBDAB831A2D8E2E00DEF6FB /* AFNetworkActivityIndicatorManager.m in Sources */,
 				762FB8651A25E64600F68BC8 /* ViewController.m in Sources */,
+				765E00611A3158A300DCCC86 /* EAIntroView.m in Sources */,
 				4BBDAB871A2D8E2E00DEF6FB /* UIImageView+AFNetworking.m in Sources */,
 				4BBDAB861A2D8E2E00DEF6FB /* AFXMLRequestOperation.m in Sources */,
 				4BBDABA31A2D8E3A00DEF6FB /* SBJsonStreamTokeniser.m in Sources */,
