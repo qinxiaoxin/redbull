@@ -35,12 +35,6 @@
     _portraitImageView.layer.cornerRadius = 40.f;
     _portraitImageView.layer.masksToBounds = YES;
     
-    //portrait bg circle view
-    CircleView *portraitBGView = [[CircleView alloc] initWithFrame:CGRectMake(_portraitImageView.frame.origin.x - 5, _portraitImageView.frame.origin.y - 5, _portraitImageView.frame.size.width + 10, _portraitImageView.frame.size.height + 10)];
-    portraitBGView.translatesAutoresizingMaskIntoConstraints = NO;
-    [self.view addSubview:portraitBGView];
-    [self.view sendSubviewToBack:portraitBGView];
-    
 }
 
 - (void)didReceiveMemoryWarning {
