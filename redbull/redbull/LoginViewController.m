@@ -45,10 +45,10 @@
     [logView addSubview:redline];
     
     UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    cancelBtn.frame = CGRectMake(redline.right-15, redline.top-5, 20, 20);
-    [cancelBtn setBackgroundImage:[UIImage imageNamed:@"cancel.png"] forState:UIControlStateNormal];
+    cancelBtn.frame = CGRectMake(redline.right - 17, redline.top + 33, 60, 60);
+    [cancelBtn setBackgroundImage:[UIImage imageNamed:@"cancel"] forState:UIControlStateNormal];
     [cancelBtn addTarget:self action:@selector(cancelBtnClick) forControlEvents:UIControlEventTouchUpInside];
-    [logView addSubview:cancelBtn];
+    [self.view addSubview:cancelBtn];
     
     UIImageView *titleImage = [[UIImageView alloc] init];
     titleImage.frame = CGRectMake(logView.width/2-50, redline.bottom+5, 15, 15);
@@ -56,9 +56,10 @@
     titleImage.image = [UIImage imageNamed:@""];
     [logView addSubview:titleImage];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(titleImage.right+5, titleImage.top+3, 90, 10)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(logView.width / 2 - 45, titleImage.top + 5, 90, 10)];
     titleLabel.text = @"用户登录";
     titleLabel.textColor = hll_color(210, 40, 39, 1);
+    titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [logView addSubview:titleLabel];
     
     _usernameTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, titleLabel.bottom +20, logView.width-40, 30)];
