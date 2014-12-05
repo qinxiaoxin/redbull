@@ -11,7 +11,7 @@
 #import "SBJson.h"
 
 @interface LoginViewController ()
-
+@property (nonatomic, assign) BOOL isLogin;
 @end
 
 @implementation LoginViewController
@@ -125,12 +125,13 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:username forKey:@"username"];
     [params setObject:password forKey:@"password"];
-    
-    [httpClient postPath:LOGIN_POSTPATH
+  
+    [httpClient getPath:LOGIN_POSTPATH
               parameters:params
                  success:^(AFHTTPRequestOperation *operation, id responseObject)
      {
          NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+         NSLog(@"返回结果:%@",responseStr);
          SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
          NSError *error = nil;
          NSDictionary *dic=[[NSDictionary alloc]init];
@@ -138,7 +139,16 @@
          NSLog(@"请求成功---->%@",dic);
          NSLog(@"%@",[dic objectForKey:@"errordesc"]);
          
-         if ([[dic objectForKey:@"status"]intValue]==1) {
+         int loginCode = 0;
+         NSDictionary  *resultDataString = [dic objectForKey:@"data"];
+         if(resultDataString != NULL  &&  ![@""  isEqualToString:resultDataString]){
+             NSString *codeStr = [[resultDataString objectForKey:@"status"]  stringValue];
+             if([@"1" isEqualToString:codeStr]){
+                 loginCode = 1;
+             }
+         }
+         
+         if (loginCode == 1) {
              NSLog(@"登陆成功---->%@",[dic objectForKey:@"status"]);
 
              NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
@@ -146,6 +156,7 @@
              [userDefaults setObject:password forKey:@"password"];
              [userDefaults synchronize];
              
+             _isLogin = YES;
              [self dismissViewControllerAnimated:YES completion:nil];
          }else {
              NSLog(@"登陆失败---->%@",[dic objectForKey:@"status"]);
