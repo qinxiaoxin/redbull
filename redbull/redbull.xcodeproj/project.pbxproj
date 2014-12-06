@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30E5F3A01A32D2D1002384AA /* BRWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E5F39F1A32D2D1002384AA /* BRWebView.m */; };
+		30E5F3A31A3373F2002384AA /* BRTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E5F3A21A3373F2002384AA /* BRTabViewController.m */; };
 		4BBDAB7F1A2D8E2E00DEF6FB /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB6D1A2D8E2E00DEF6FB /* AFHTTPClient.m */; };
 		4BBDAB801A2D8E2E00DEF6FB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB6F1A2D8E2E00DEF6FB /* AFHTTPRequestOperation.m */; };
 		4BBDAB811A2D8E2E00DEF6FB /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB711A2D8E2E00DEF6FB /* AFImageRequestOperation.m */; };
@@ -75,6 +77,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30E5F39E1A32D2D1002384AA /* BRWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRWebView.h; sourceTree = "<group>"; };
+		30E5F39F1A32D2D1002384AA /* BRWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRWebView.m; sourceTree = "<group>"; };
+		30E5F3A11A3373F2002384AA /* BRTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTabViewController.h; sourceTree = "<group>"; };
+		30E5F3A21A3373F2002384AA /* BRTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTabViewController.m; sourceTree = "<group>"; };
 		4BBDAB6C1A2D8E2E00DEF6FB /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		4BBDAB6D1A2D8E2E00DEF6FB /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		4BBDAB6E1A2D8E2E00DEF6FB /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -200,6 +206,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		30E5F39B1A32D1F6002384AA /* PrivateView */ = {
+			isa = PBXGroup;
+			children = (
+				30E5F39E1A32D2D1002384AA /* BRWebView.h */,
+				30E5F39F1A32D2D1002384AA /* BRWebView.m */,
+			);
+			name = PrivateView;
+			sourceTree = "<group>";
+		};
 		4BBDAB6B1A2D8E2E00DEF6FB /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -412,6 +427,8 @@
 				7677CA321A2703E2005675F0 /* TurnTableViewController.h */,
 				7677CA331A2703E2005675F0 /* TurnTableViewController.m */,
 				7677CA341A2703E2005675F0 /* TurnTableViewController.xib */,
+				30E5F3A11A3373F2002384AA /* BRTabViewController.h */,
+				30E5F3A21A3373F2002384AA /* BRTabViewController.m */,
 			);
 			name = NavTabChildVC;
 			sourceTree = "<group>";
@@ -450,6 +467,7 @@
 		7677CA0A1A26E8D7005675F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				30E5F39B1A32D1F6002384AA /* PrivateView */,
 				765E00661A3179C800DCCC86 /* PortraitCircleView */,
 				765E005B1A3158A300DCCC86 /* EAIntroView */,
 				763F31541A2C56D3004CE6AE /* NavBar */,
@@ -606,6 +624,7 @@
 				4BBDAB811A2D8E2E00DEF6FB /* AFImageRequestOperation.m in Sources */,
 				4BBDAB841A2D8E2E00DEF6FB /* AFPropertyListRequestOperation.m in Sources */,
 				7677CA351A2703E2005675F0 /* TurnTableViewController.m in Sources */,
+				30E5F3A31A3373F2002384AA /* BRTabViewController.m in Sources */,
 				4BBDAB851A2D8E2E00DEF6FB /* AFURLConnectionOperation.m in Sources */,
 				765EFFDA1A2DE4D600DCCC86 /* RightViewController.m in Sources */,
 				765EFFE61A2ED2BC00DCCC86 /* DDMenuController.m in Sources */,
@@ -624,6 +643,7 @@
 				4BBDAB831A2D8E2E00DEF6FB /* AFNetworkActivityIndicatorManager.m in Sources */,
 				762FB8651A25E64600F68BC8 /* ViewController.m in Sources */,
 				765E00611A3158A300DCCC86 /* EAIntroView.m in Sources */,
+				30E5F3A01A32D2D1002384AA /* BRWebView.m in Sources */,
 				4BBDAB871A2D8E2E00DEF6FB /* UIImageView+AFNetworking.m in Sources */,
 				4BBDAB861A2D8E2E00DEF6FB /* AFXMLRequestOperation.m in Sources */,
 				4BBDABA31A2D8E3A00DEF6FB /* SBJsonStreamTokeniser.m in Sources */,

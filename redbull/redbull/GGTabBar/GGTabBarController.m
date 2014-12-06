@@ -94,8 +94,22 @@ int isLogin = 0;
             [self selectViewController:selectedViewController withButton:button];
         }
     }
-
     [self selectViewController:selectedViewController withButton:button];
+}
+
+/**跳转到指定Tab*/
+-(void)jumpToTabAtIndexNum:(NSInteger)tabIndex withStrUrl:(NSString*)url{
+    UIViewController *selectedViewController = _viewControllers[tabIndex];
+    if(url != nil){
+        [selectedViewController setValue:url forKey:@"bingStrUrl"];
+    }
+    if ([_delegate respondsToSelector:@selector(ggTabBarController:shouldSelectViewController:)]) {
+        if ([_delegate ggTabBarController:self shouldSelectViewController:selectedViewController]) {
+            [self selectViewController:selectedViewController withButton:[_tabBarView  getButtonAtIndex:tabIndex]];
+        }
+    }
+    
+    [self selectViewController:selectedViewController withButton:[_tabBarView  getButtonAtIndex:tabIndex]];
 }
 
 # pragma mark - View Controller Selection

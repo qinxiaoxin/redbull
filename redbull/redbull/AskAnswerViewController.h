@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BRTabViewController.h"
 
-@interface AskAnswerViewController : UIViewController
+@interface AskAnswerViewController : BRTabViewController
 
 @end

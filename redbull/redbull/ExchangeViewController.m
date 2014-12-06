@@ -38,8 +38,13 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    //加载URL
-    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:EXCHANGE_PAGE]]];
+    if(_bingStrUrl != nil){
+        //加载传递来的URL
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_bingStrUrl]]];
+    }else{
+        //加载URL
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:EXCHANGE_PAGE]]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {
@@ -63,11 +68,21 @@
     
     //禁用用户选择
     [_webView stringByEvaluatingJavaScriptFromString:@"document.documentElement.style.webkitUserSelect='none';"];
+    
+    //将携带来的url置空
+    _bingStrUrl = nil;
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [_indicator stopAnimating];
+}
+
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    
+    NSLog(@"EXCHANGE请求地址:%@",request.URL.absoluteString);
+    
+    return YES;
 }
 
 /*

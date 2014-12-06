@@ -43,12 +43,17 @@
     //不使用main board的tabbar
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
-    FirstViewController *vc1 = [[FirstViewController alloc] init];
-    AskAnswerViewController *vc2 = [[AskAnswerViewController alloc] init];
-    ExchangeViewController *vc3 = [[ExchangeViewController alloc] init];
-    TurnTableViewController *vc4 = [[TurnTableViewController alloc] init];
-    
     GGTabBarController *ggTabBarController = [[GGTabBarController alloc] init];
+    
+    FirstViewController *vc1 = [[FirstViewController alloc] init];
+    [vc1 setTabBarController:ggTabBarController];
+    AskAnswerViewController *vc2 = [[AskAnswerViewController alloc] init];
+    [vc2 setTabBarController:ggTabBarController];
+    ExchangeViewController *vc3 = [[ExchangeViewController alloc] init];
+    [vc3 setTabBarController:ggTabBarController];
+    TurnTableViewController *vc4 = [[TurnTableViewController alloc] init];
+    [vc4 setTabBarController:ggTabBarController];
+    
     ggTabBarController.viewControllers = @[vc1, vc2, vc3, vc4];
     
     UINavigationController *navController = [[UINavigationController alloc] initWithNavigationBarClass:[Navbar class] toolbarClass:nil];

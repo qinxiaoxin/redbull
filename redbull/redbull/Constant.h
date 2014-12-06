@@ -11,8 +11,15 @@
 #define INDEX_PAGE      @"http://www.redbullclub.cn/index.php?s=IOS"
 #define ASK_PAGE        @"http://www.redbullclub.cn/index.php?s=IOS/vote"
 #define EXCHANGE_PAGE   @"http://www.redbullclub.cn/index.php?s=IOS/shop"
+#define EXCHANGE_DETAIL_PAGE   @"http://www.redbullclub.cn/index.php?s=IOS/detail"
 #define TURNTABLE_PAGE  @"http://www.redbullclub.cn/index.php?s=IOS/event"
 #define LOGIN_POSTPATH  @"http://www.redbullclub.cn/index.php?s=User/doLoginForIos" //登陆postPath
+
+#define INDEX_PAGE_INDEX  0
+#define ASK_PAGE_INDEX 1
+#define EXCHANGE_PAGE_INDEX 2
+#define EXCHANGE_DETAIL_PAGE_INDEX 2
+#define TURNTABLE_PAGE_INDEX 3
 
 #define kMenuFullWidth                  320.0f
 #define kMenuDisplayedWidth             240.0f
