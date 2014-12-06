@@ -38,6 +38,8 @@
     
     //加载URL
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:INDEX_PAGE]]];
+    
+
 }
 
 - (void)viewWillAppear:(BOOL)animated

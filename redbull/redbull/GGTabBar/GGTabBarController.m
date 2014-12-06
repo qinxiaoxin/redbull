@@ -24,11 +24,13 @@
 @property (nonatomic, strong) UIView *presentationView;
 @property (nonatomic, strong) GGTabBar *tabBarView;
 @property (nonatomic, assign) BOOL isFirstAppear;
-@property (nonatomic, assign) BOOL isLogin;
 
 @end
 
 @implementation GGTabBarController
+
+//unlogin = 0
+int isLogin = 0;
 
 - (void)viewDidLoad
 {
@@ -73,9 +75,9 @@
     NSString *name = [userDefault objectForKey:@"name"];
     if (name == nil) {
         NSLog(@"启动判断有没有name--->%@",name);
-        _isLogin = NO;
+        isLogin = 0;
     }else{
-        _isLogin = YES;
+        isLogin = 1;
     }
 
 }
@@ -148,8 +150,8 @@
 - (void)loginClick:(id)sender
 {
     //是否已经登陆
-    NSLog(@"islogin-->%d",_isLogin);
-    if (_isLogin) {
+    NSLog(@"islogin-->%d",isLogin);
+    if (isLogin == 1) {
         DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
         [menuController showLeftController:YES];
     }else{

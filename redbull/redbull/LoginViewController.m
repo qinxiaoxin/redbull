@@ -11,10 +11,11 @@
 #import "SBJson.h"
 
 @interface LoginViewController ()
-@property (nonatomic, assign) BOOL isLogin;
 @end
 
 @implementation LoginViewController
+
+extern int isLogin;
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
@@ -156,7 +157,7 @@
              [userDefaults setObject:password forKey:@"password"];
              [userDefaults synchronize];
              
-             _isLogin = YES;
+             isLogin = 1;
              [self dismissViewControllerAnimated:YES completion:nil];
          }else {
              NSLog(@"登陆失败---->%@",[dic objectForKey:@"status"]);
