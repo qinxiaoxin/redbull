@@ -70,7 +70,8 @@ extern int isLogin;
     [logView addSubview:_usernameTextField];
     
     _passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, _usernameTextField.bottom +15, logView.width-40, 30)];
-    _passwordTextField.placeholder = @" ******";
+    _passwordTextField.placeholder = @" 密码";
+    _passwordTextField.secureTextEntry = YES;
     _passwordTextField.font = [UIFont systemFontOfSize:12.0f];
     _passwordTextField.backgroundColor = hll_color(210, 210, 210, 1);
     [logView addSubview:_passwordTextField];
@@ -162,7 +163,7 @@ extern int isLogin;
          }else {
              NSLog(@"登陆失败---->%@",[dic objectForKey:@"status"]);
 
-             UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"message:@"登陆失败"  delegate:nil cancelButtonTitle:@"确定"otherButtonTitles:nil];
+             UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"message:[dic objectForKey:@"errordesc"] delegate:nil cancelButtonTitle:@"确定"otherButtonTitles:nil];
              [alert show];
 
          }
