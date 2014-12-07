@@ -8,6 +8,7 @@
 
 #import "GGTabBarController.h"
 #import "GGTabBar.h"
+#import "AFNetworking.h"
 
 #import "FirstViewController.h"
 #import "AskAnswerViewController.h"
@@ -158,6 +159,21 @@ int isLogin = 0;
     [self fitView:viewController.view intoView:_presentationView];
 }
 
+/**设置头像图片*/
+-(void)setNavigationImageWithUrl:(NSString*)url{
+    NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+    AFImageRequestOperation *operation = [AFImageRequestOperation imageRequestOperationWithRequest:request imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse*response, UIImage *image) {
+        [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) image:image];
+        DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+        [menuController setLeftViewPortraitImage:image];
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
+        NSLog(@"Error %@",error);
+        [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) image:@"face"];
+    }];
+    
+    [operation start];
+}
+
 
 #pragma mark - Action
 
@@ -170,6 +186,7 @@ int isLogin = 0;
         [menuController showLeftController:YES];
     }else{
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        [loginViewController setValue:self forKey:@"mTabBarController"];
         loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
         [self presentViewController:loginViewController animated:YES completion:^{
             

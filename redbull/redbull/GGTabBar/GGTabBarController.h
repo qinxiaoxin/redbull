@@ -13,6 +13,7 @@
 @interface GGTabBarController : UIViewController
 
 -(void)jumpToTabAtIndexNum:(NSInteger)tabIndex withStrUrl:(NSString*)url;
+-(void)setNavigationImageWithUrl:(NSString*)url;
 
 @property (nonatomic, copy) NSArray *viewControllers;
 @property (nonatomic, weak) UIViewController *selectedViewController;

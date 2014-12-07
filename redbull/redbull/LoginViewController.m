@@ -14,7 +14,7 @@
 @end
 
 @implementation LoginViewController
-
+@synthesize mTabBarController  = _mTabBarController;
 extern int isLogin;
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -127,6 +127,7 @@ extern int isLogin;
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:username forKey:@"username"];
     [params setObject:password forKey:@"password"];
+    
   
     [httpClient getPath:LOGIN_POSTPATH
               parameters:params
@@ -159,6 +160,7 @@ extern int isLogin;
              [userDefaults synchronize];
              
              isLogin = 1;
+             [_mTabBarController setNavigationImageWithUrl:@"http://b.hiphotos.baidu.com/image/pic/item/d1160924ab18972ba5cd58cbe4cd7b899e510a3f.jpg"];
              [self dismissViewControllerAnimated:YES completion:nil];
          }else {
              NSLog(@"登陆失败---->%@",[dic objectForKey:@"status"]);
