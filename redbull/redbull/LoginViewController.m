@@ -86,7 +86,7 @@ extern int isLogin;
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     loginBtn.frame = CGRectMake(logView.width/2+10, _passwordTextField.bottom+20, _passwordTextField.width/2-10, 30);
     [loginBtn setBackgroundColor:hll_color(252, 74, 57, 1)];
-    [loginBtn setTitle:@"登陆" forState:UIControlStateNormal];
+    [loginBtn setTitle:@"登 陆" forState:UIControlStateNormal];
     [loginBtn addTarget:self action:@selector(loginClick) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:loginBtn];
 }
@@ -177,18 +177,5 @@ extern int isLogin;
      }];
 }
 
-//---------------------------------------------------------------------------------------------------------------
-//注销情况
-- (void) test
-{
-    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    //移除UserDefaults中存储的用户信息
-    [userDefaults removeObjectForKey:@"name"];
-    [userDefaults removeObjectForKey:@"password"];
-    [userDefaults synchronize];
-
-    //注销后需改变的code..
-
-}
 
 @end

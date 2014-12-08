@@ -269,13 +269,13 @@
 			path = SBJson;
 			sourceTree = "<group>";
 		};
-		4BC900551A2C520B00A1B24B /* login */ = {
+		4BC900551A2C520B00A1B24B /* loginOrRegister */ = {
 			isa = PBXGroup;
 			children = (
 				4BC900561A2C524000A1B24B /* LoginViewController.h */,
 				4BC900571A2C524000A1B24B /* LoginViewController.m */,
 			);
-			name = login;
+			name = loginOrRegister;
 			sourceTree = "<group>";
 		};
 		4BC900621A2C596400A1B24B /* extension */ = {
@@ -483,7 +483,7 @@
 				765EFFE31A2ED2AD00DCCC86 /* DDMenuController */,
 				765EFFD11A2DE43100DCCC86 /* SlideMenuVC */,
 				765EFFD01A2DE3F800DCCC86 /* NavTabChildVC */,
-				4BC900551A2C520B00A1B24B /* login */,
+				4BC900551A2C520B00A1B24B /* loginOrRegister */,
 			);
 			name = Control;
 			sourceTree = "<group>";

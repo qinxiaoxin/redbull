@@ -117,6 +117,14 @@
 - (IBAction)signOut:(id)sender
 {
     NSLog(@"退出登录");
+
+    NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+    [userDefaults removeObjectForKey:@"name"];
+    [userDefaults removeObjectForKey:@"password"];
+    [userDefaults synchronize];
+    
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+    [menuController showRootController:YES];
 }
 
 /*
