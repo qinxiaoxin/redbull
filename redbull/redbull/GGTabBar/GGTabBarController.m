@@ -80,7 +80,6 @@ int isLogin = 0;
     }else{
         isLogin = 1;
     }
-
 }
 
 

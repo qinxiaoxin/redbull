@@ -6,7 +6,6 @@
 //  Copyright (c) 2014 Xin Qin. All rights reserved.
 //
 
-
 @class DDMenuController;
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
