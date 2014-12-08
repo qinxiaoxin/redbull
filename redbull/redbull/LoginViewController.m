@@ -10,6 +10,8 @@
 #import "AFNetworking.h"
 #import "SBJson.h"
 
+#import "RegisterViewController.h"
+
 @interface LoginViewController ()
 @end
 
@@ -79,7 +81,7 @@ extern int isLogin;
     registerBtn.frame = CGRectMake(_passwordTextField.left, _passwordTextField.bottom+20, _passwordTextField.width/2-10, 30);
     [registerBtn setBackgroundColor:hll_color(253, 185, 61, 1)];
     [registerBtn setTitle:@"立即注册" forState:UIControlStateNormal];
-    [registerBtn addTarget:self action:@selector(registerClick) forControlEvents:UIControlEventTouchUpInside];
+    [registerBtn addTarget:self action:@selector(registerClick:) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:registerBtn];
     
     UIButton *loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -104,9 +106,12 @@ extern int isLogin;
     }
 }
 
-- (void)registerClick
+- (void)registerClick:(id)sender
 {
-    
+    RegisterViewController *rvc = [[RegisterViewController alloc] init];
+    [self presentViewController:rvc animated:YES completion:^{
+        
+    }];
 }
 
 - (void)cancelBtnClick

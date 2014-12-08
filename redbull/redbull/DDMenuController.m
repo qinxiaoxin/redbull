@@ -88,6 +88,7 @@
     [super viewDidAppear:animated];
     
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]){
+        [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
         [self showBasicIntroWithBg];
     }
 }

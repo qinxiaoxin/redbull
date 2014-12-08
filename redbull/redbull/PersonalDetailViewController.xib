@@ -25,7 +25,7 @@
                 </webView>
                 <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eX3-f4-Yr8">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                    <color key="barTintColor" red="0.094117656349999995" green="0.1215686351" blue="0.1411764771" alpha="1" colorSpace="deviceRGB"/>
+                    <color key="barTintColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     <items>
                         <navigationItem id="s3G-Rv-wV0">
                             <barButtonItem key="leftBarButtonItem" title="Back" id="3fv-al-N3t">

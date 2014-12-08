@@ -44,6 +44,10 @@
 		765E00601A3158A300DCCC86 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E005D1A3158A300DCCC86 /* EAIntroPage.m */; };
 		765E00611A3158A300DCCC86 /* EAIntroView.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E005F1A3158A300DCCC86 /* EAIntroView.m */; };
 		765E00691A317A0D00DCCC86 /* CircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E00681A317A0D00DCCC86 /* CircleView.m */; };
+		765E00A01A32D82400DCCC86 /* ShareDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E009E1A32D82400DCCC86 /* ShareDetailViewController.m */; };
+		765E00A11A32D82400DCCC86 /* ShareDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E009F1A32D82400DCCC86 /* ShareDetailViewController.xib */; };
+		765E00A61A3309B600DCCC86 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E00A41A3309B600DCCC86 /* RegisterViewController.m */; };
+		765E00A71A3309B600DCCC86 /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E00A51A3309B600DCCC86 /* RegisterViewController.xib */; };
 		765EFFD51A2DE4C200DCCC86 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765EFFD31A2DE4C200DCCC86 /* LeftViewController.m */; };
 		765EFFD61A2DE4C200DCCC86 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765EFFD41A2DE4C200DCCC86 /* LeftViewController.xib */; };
 		765EFFDA1A2DE4D600DCCC86 /* RightViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765EFFD81A2DE4D600DCCC86 /* RightViewController.m */; };
@@ -148,6 +152,12 @@
 		765E005F1A3158A300DCCC86 /* EAIntroView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EAIntroView.m; sourceTree = "<group>"; };
 		765E00671A317A0D00DCCC86 /* CircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CircleView.h; sourceTree = "<group>"; };
 		765E00681A317A0D00DCCC86 /* CircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CircleView.m; sourceTree = "<group>"; };
+		765E009D1A32D82400DCCC86 /* ShareDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareDetailViewController.h; sourceTree = "<group>"; };
+		765E009E1A32D82400DCCC86 /* ShareDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareDetailViewController.m; sourceTree = "<group>"; };
+		765E009F1A32D82400DCCC86 /* ShareDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareDetailViewController.xib; sourceTree = "<group>"; };
+		765E00A31A3309B600DCCC86 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		765E00A41A3309B600DCCC86 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		765E00A51A3309B600DCCC86 /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
 		765EFFD21A2DE4C200DCCC86 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
 		765EFFD31A2DE4C200DCCC86 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
 		765EFFD41A2DE4C200DCCC86 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
@@ -397,6 +407,26 @@
 			name = PortraitCircleView;
 			sourceTree = "<group>";
 		};
+		765E009C1A32D5C900DCCC86 /* Jump2ShareDetailVC */ = {
+			isa = PBXGroup;
+			children = (
+				765E009D1A32D82400DCCC86 /* ShareDetailViewController.h */,
+				765E009E1A32D82400DCCC86 /* ShareDetailViewController.m */,
+				765E009F1A32D82400DCCC86 /* ShareDetailViewController.xib */,
+			);
+			name = Jump2ShareDetailVC;
+			sourceTree = "<group>";
+		};
+		765E00A21A33097100DCCC86 /* register */ = {
+			isa = PBXGroup;
+			children = (
+				765E00A31A3309B600DCCC86 /* RegisterViewController.h */,
+				765E00A41A3309B600DCCC86 /* RegisterViewController.m */,
+				765E00A51A3309B600DCCC86 /* RegisterViewController.xib */,
+			);
+			name = register;
+			sourceTree = "<group>";
+		};
 		765EFFD01A2DE3F800DCCC86 /* NavTabChildVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +449,8 @@
 		765EFFD11A2DE43100DCCC86 /* SlideMenuVC */ = {
 			isa = PBXGroup;
 			children = (
+				765E009C1A32D5C900DCCC86 /* Jump2ShareDetailVC */,
+				765E00551A2FED6A00DCCC86 /* PersonalDetailVC */,
 				765EFFD21A2DE4C200DCCC86 /* LeftViewController.h */,
 				765EFFD31A2DE4C200DCCC86 /* LeftViewController.m */,
 				765EFFD41A2DE4C200DCCC86 /* LeftViewController.xib */,
@@ -461,11 +493,11 @@
 		7677CA0B1A26E8DD005675F0 /* Control */ = {
 			isa = PBXGroup;
 			children = (
-				765E00551A2FED6A00DCCC86 /* PersonalDetailVC */,
 				765EFFE31A2ED2AD00DCCC86 /* DDMenuController */,
 				765EFFD11A2DE43100DCCC86 /* SlideMenuVC */,
 				765EFFD01A2DE3F800DCCC86 /* NavTabChildVC */,
 				4BC900551A2C520B00A1B24B /* login */,
+				765E00A21A33097100DCCC86 /* register */,
 			);
 			name = Control;
 			sourceTree = "<group>";
@@ -575,6 +607,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				765E00A11A32D82400DCCC86 /* ShareDetailViewController.xib in Resources */,
 				7677CA361A2703E2005675F0 /* TurnTableViewController.xib in Resources */,
 				765EFFD61A2DE4C200DCCC86 /* LeftViewController.xib in Resources */,
 				76A300C91A2C76C80067F1A5 /* AskAnswerViewController.xib in Resources */,
@@ -585,6 +618,7 @@
 				765EFFDB1A2DE4D600DCCC86 /* RightViewController.xib in Resources */,
 				7677CA271A2703A2005675F0 /* FirstViewController.xib in Resources */,
 				7677CA311A2703CF005675F0 /* ExchangeViewController.xib in Resources */,
+				765E00A71A3309B600DCCC86 /* RegisterViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -613,6 +647,7 @@
 				7677CA261A2703A2005675F0 /* FirstViewController.m in Sources */,
 				765E00601A3158A300DCCC86 /* EAIntroPage.m in Sources */,
 				7677CA151A26F997005675F0 /* GGTabBarAppearanceKeys.m in Sources */,
+				765E00A61A3309B600DCCC86 /* RegisterViewController.m in Sources */,
 				4BC900581A2C524000A1B24B /* LoginViewController.m in Sources */,
 				4BBDABA61A2D8E3A00DEF6FB /* SBJsonStreamWriterState.m in Sources */,
 				4BC900601A2C592A00A1B24B /* UIKeyboardView.m in Sources */,
@@ -642,6 +677,7 @@
 				76A300C81A2C76C80067F1A5 /* AskAnswerViewController.m in Sources */,
 				7677CA141A26F997005675F0 /* GGTabBar.m in Sources */,
 				7677CA301A2703CF005675F0 /* ExchangeViewController.m in Sources */,
+				765E00A01A32D82400DCCC86 /* ShareDetailViewController.m in Sources */,
 				4BBDABA51A2D8E3A00DEF6FB /* SBJsonStreamWriterAccumulator.m in Sources */,
 				4BBDABA21A2D8E3A00DEF6FB /* SBJsonStreamParserState.m in Sources */,
 				4BC900611A2C592A00A1B24B /* UIKeyboardViewController.m in Sources */,

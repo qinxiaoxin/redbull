@@ -1,48 +1,25 @@
 //
-//  PersonalDetailViewController.m
+//  ShareDetailViewController.m
 //  redbull
 //
-//  Created by Xin Qin on 12/4/14.
+//  Created by Xin Qin on 12/6/14.
 //  Copyright (c) 2014 Xin Qin. All rights reserved.
 //
 
-#import "PersonalDetailViewController.h"
+#import "ShareDetailViewController.h"
 
-#import "Navbar.h"
+@interface ShareDetailViewController ()<UIWebViewDelegate>
 
-#import "DDMenuController.h"
-
-@interface PersonalDetailViewController ()<UIWebViewDelegate>
-
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 
 @end
 
-@implementation PersonalDetailViewController
+@implementation ShareDetailViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-    
-    _navigationBar.backgroundColor = [UIColor colorWithRed:47 / 255.f green:47 / 255.f blue:49 / 255.f alpha:1.f];
-
-    _titleLabel.text = self.navigationBarTitle;
-    
-    NSLog(@"Personal Detail = %@",_webURL);
-    _webView.delegate = self;
-    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webURL]]];
-    
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-
-- (IBAction)backAction:(id)sender
+- (IBAction)back:(id)sender
 {
     self.webURL = nil;
     
@@ -51,6 +28,20 @@
     }];
 }
 
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    // Do any additional setup after loading the view from its nib.
+    
+    _navigationBar.backgroundColor = [UIColor colorWithRed:47 / 255.f green:47 / 255.f blue:49 / 255.f alpha:1.f];
+
+    _webView.delegate = self;
+    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webURL]]];
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
+}
 
 #pragma mark - UIWebViewDelegate Methods
 
@@ -74,6 +65,7 @@
 {
     [_indicator stopAnimating];
 }
+
 
 /*
 #pragma mark - Navigation

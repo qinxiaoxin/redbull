@@ -8,6 +8,10 @@
 
 #import "RightViewController.h"
 
+#import "ShareDetailViewController.h"
+
+#import "DDMenuController.h"
+
 @interface RightViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *navView;
@@ -53,6 +57,82 @@
     _drawLine.image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
 }
+
+- (IBAction)shareWeibo:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+    sdvc.webURL = SHARE_WEIBO;
+    [menuController presentViewController:sdvc animated:YES completion:^{
+        
+    }];
+}
+
+- (IBAction)shareTecent:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+    sdvc.webURL = SHARE_TECENT;
+    [menuController presentViewController:sdvc animated:YES completion:^{
+        
+    }];
+}
+
+- (IBAction)shareRenren:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+    sdvc.webURL = SHARE_RENREN;
+    [menuController presentViewController:sdvc animated:YES completion:^{
+        
+    }];
+}
+
+- (IBAction)shareDouban:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+    sdvc.webURL = SHARE_DOUBAN;
+    [menuController presentViewController:sdvc animated:YES completion:^{
+        
+    }];
+}
+
+- (IBAction)shareQQzone:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+    sdvc.webURL = SHARE_QQZONE;
+    [menuController presentViewController:sdvc animated:YES completion:^{
+        
+    }];
+}
+
+- (IBAction)shareKaixin:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+    sdvc.webURL = SHARE_KAIXIN;
+    [menuController presentViewController:sdvc animated:YES completion:^{
+        
+    }];
+}
+
+- (IBAction)shareTaobao:(id)sender
+{
+    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+    sdvc.webURL = SHARE_TAOBAO;
+    [menuController presentViewController:sdvc animated:YES completion:^{
+        
+    }];
+}
+
+
+
+
+
+
 
 /*
 #pragma mark - Navigation
