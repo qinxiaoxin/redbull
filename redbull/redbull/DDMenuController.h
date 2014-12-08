@@ -27,6 +27,7 @@
 #import <UIKit/UIKit.h>
 
 #import "EAIntroView.h"
+#import "LeftViewController.h"
 
 typedef enum {
     DDMenuPanDirectionLeft = 0,
@@ -60,6 +61,7 @@ typedef enum {
 }
 
 - (id)initWithRootViewController:(UIViewController*)controller;
+-(void)setLeftViewPortraitImage:(UIImage*)image;
 
 @property(nonatomic,assign) id <DDMenuControllerDelegate> delegate;
 

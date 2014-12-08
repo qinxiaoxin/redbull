@@ -70,6 +70,13 @@
     [_indicator stopAnimating];
 }
 
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    
+    NSLog(@"TURN请求地址:%@",request.URL.absoluteString);
+    
+    return YES;
+}
+
 /*
 #pragma mark - Navigation
 

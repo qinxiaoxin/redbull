@@ -42,6 +42,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+/**设置头像*/
+-(void)setPortraitImage:(UIImage*)image{
+    [_portraitImageView setImage:image];
+}
+
 #pragma mark - Action & Target
 
 - (IBAction)editData:(id)sender

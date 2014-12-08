@@ -6,6 +6,8 @@
 //  Copyright (c) 2014 Xin Qin. All rights reserved.
 //
 
-@interface TurnTableViewController : UIViewController
+#import "BRTabViewController.h"
+
+@interface TurnTableViewController : BRTabViewController
 
 @end

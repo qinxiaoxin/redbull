@@ -11,6 +11,10 @@
 @protocol GGTabBarControllerDelegate;
 
 @interface GGTabBarController : UIViewController
+
+-(void)jumpToTabAtIndexNum:(NSInteger)tabIndex withStrUrl:(NSString*)url;
+-(void)setNavigationImageWithUrl:(NSString*)url;
+
 @property (nonatomic, copy) NSArray *viewControllers;
 @property (nonatomic, weak) UIViewController *selectedViewController;
 @property (nonatomic, assign) NSUInteger selectedIndex;
@@ -19,6 +23,8 @@
 @property (nonatomic, assign) BOOL debug;
 
 @end
+
+
 
 @protocol GGTabBarControllerDelegate <NSObject>
 @optional

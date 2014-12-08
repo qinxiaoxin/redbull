@@ -5,7 +5,8 @@
 //  Created by Xin Qin on 11/27/14.
 //  Copyright (c) 2014 Xin Qin. All rights reserved.
 //
+#import "BRTabViewController.h"
 
-@interface ExchangeViewController : UIViewController
+@interface ExchangeViewController : BRTabViewController
 
 @end

@@ -576,6 +576,11 @@
     [self resetNavButtons];
 }
 
+/**设置左侧菜单头像*/
+-(void)setLeftViewPortraitImage:(UIImage*)image{
+    [(LeftViewController*)_left setPortraitImage:image];
+}
+
 - (void)setRootViewController:(UIViewController *)rootViewController {
     UIViewController *tempRoot = _root;
     _root = rootViewController;

@@ -14,6 +14,7 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
+
 @end
 
 @implementation FirstViewController
@@ -28,6 +29,7 @@
     }
     return self;
 }
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -76,6 +78,21 @@
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [_indicator stopAnimating];
+}
+
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    NSLog(@"INDEX请求地址:%@",request.URL.absoluteString);
+    if ([request.URL.absoluteString hasPrefix:ASK_PAGE]) {
+         [_mTabBarController  jumpToTabAtIndexNum:ASK_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
+        return NO;
+    }else if([request.URL.absoluteString hasPrefix:EXCHANGE_PAGE]) {
+        [_mTabBarController  jumpToTabAtIndexNum:EXCHANGE_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
+        return NO;
+    }else if([request.URL.absoluteString hasPrefix:EXCHANGE_DETAIL_PAGE]) {
+        [_mTabBarController  jumpToTabAtIndexNum:EXCHANGE_DETAIL_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
+        return NO;
+    }
+    return YES;
 }
 
 @end

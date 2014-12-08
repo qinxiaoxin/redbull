@@ -6,6 +6,9 @@
 //  Copyright (c) 2014 Xin Qin. All rights reserved.
 //
 
-@interface FirstViewController : UIViewController
+#import "GGTabBarController.h"
+#import "BRTabViewController.h"
+
+@interface FirstViewController : BRTabViewController
 
 @end

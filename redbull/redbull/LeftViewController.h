@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface LeftViewController : UIViewController
-
+@interface LeftViewController : UIViewController{
+    
+}
+-(void)setPortraitImage:(UIImage*)image;
 @end

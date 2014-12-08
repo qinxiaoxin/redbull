@@ -172,13 +172,19 @@
     [self  titleOffsetWithType];
 }
 
-- (void)setImage:(NSString *)image
+- (void)setImage:(NSObject *)image
 {
-    _image = image;
-    UIImage *image_ = [UIImage imageNamed:image];
-    [_button setImage:image_  forState:UIControlStateNormal];
-    [_button setImage:image_ forState:UIControlStateHighlighted];
-    [_button setImage:image_ forState:UIControlStateSelected];
+    UIImage *uiImage = NULL;
+    if([image isKindOfClass:[NSString class]]){
+        _image = (NSString*)image;
+        uiImage = [UIImage imageNamed:(NSString*)image];
+    }else if([image isKindOfClass:[UIImage class]]){
+        uiImage = (UIImage*)image;
+    }
+    
+    [_button setImage:uiImage  forState:UIControlStateNormal];
+    [_button setImage:uiImage forState:UIControlStateHighlighted];
+    [_button setImage:uiImage forState:UIControlStateSelected];
 }
 
 - (void)setFont:(UIFont *)font
