@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		30E5F3A01A32D2D1002384AA /* BRWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E5F39F1A32D2D1002384AA /* BRWebView.m */; };
 		30E5F3A31A3373F2002384AA /* BRTabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E5F3A21A3373F2002384AA /* BRTabViewController.m */; };
+		30E5F3AA1A360A51002384AA /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E5F3A51A360A51002384AA /* RegisterViewController.m */; };
+		30E5F3AB1A360A51002384AA /* RegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E5F3A61A360A51002384AA /* RegisterViewController.xib */; };
+		30E5F3B21A360AC3002384AA /* ShareDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E5F3B01A360AC3002384AA /* ShareDetailViewController.m */; };
+		30E5F3B31A360AC3002384AA /* ShareDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30E5F3B11A360AC3002384AA /* ShareDetailViewController.xib */; };
 		4BBDAB7F1A2D8E2E00DEF6FB /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB6D1A2D8E2E00DEF6FB /* AFHTTPClient.m */; };
 		4BBDAB801A2D8E2E00DEF6FB /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB6F1A2D8E2E00DEF6FB /* AFHTTPRequestOperation.m */; };
 		4BBDAB811A2D8E2E00DEF6FB /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB711A2D8E2E00DEF6FB /* AFImageRequestOperation.m */; };
@@ -81,6 +85,12 @@
 		30E5F39F1A32D2D1002384AA /* BRWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRWebView.m; sourceTree = "<group>"; };
 		30E5F3A11A3373F2002384AA /* BRTabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BRTabViewController.h; sourceTree = "<group>"; };
 		30E5F3A21A3373F2002384AA /* BRTabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BRTabViewController.m; sourceTree = "<group>"; };
+		30E5F3A41A360A51002384AA /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		30E5F3A51A360A51002384AA /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		30E5F3A61A360A51002384AA /* RegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegisterViewController.xib; sourceTree = "<group>"; };
+		30E5F3AF1A360AC3002384AA /* ShareDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareDetailViewController.h; sourceTree = "<group>"; };
+		30E5F3B01A360AC3002384AA /* ShareDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShareDetailViewController.m; sourceTree = "<group>"; };
+		30E5F3B11A360AC3002384AA /* ShareDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareDetailViewController.xib; sourceTree = "<group>"; };
 		4BBDAB6C1A2D8E2E00DEF6FB /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		4BBDAB6D1A2D8E2E00DEF6FB /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		4BBDAB6E1A2D8E2E00DEF6FB /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -215,6 +225,16 @@
 			name = PrivateView;
 			sourceTree = "<group>";
 		};
+		30E5F3AE1A360A9E002384AA /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				30E5F3AF1A360AC3002384AA /* ShareDetailViewController.h */,
+				30E5F3B01A360AC3002384AA /* ShareDetailViewController.m */,
+				30E5F3B11A360AC3002384AA /* ShareDetailViewController.xib */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
 		4BBDAB6B1A2D8E2E00DEF6FB /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -272,6 +292,9 @@
 		4BC900551A2C520B00A1B24B /* loginOrRegister */ = {
 			isa = PBXGroup;
 			children = (
+				30E5F3A41A360A51002384AA /* RegisterViewController.h */,
+				30E5F3A51A360A51002384AA /* RegisterViewController.m */,
+				30E5F3A61A360A51002384AA /* RegisterViewController.xib */,
 				4BC900561A2C524000A1B24B /* LoginViewController.h */,
 				4BC900571A2C524000A1B24B /* LoginViewController.m */,
 			);
@@ -479,6 +502,7 @@
 		7677CA0B1A26E8DD005675F0 /* Control */ = {
 			isa = PBXGroup;
 			children = (
+				30E5F3AE1A360A9E002384AA /* Share */,
 				765E00551A2FED6A00DCCC86 /* PersonalDetailVC */,
 				765EFFE31A2ED2AD00DCCC86 /* DDMenuController */,
 				765EFFD11A2DE43100DCCC86 /* SlideMenuVC */,
@@ -593,6 +617,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				30E5F3AB1A360A51002384AA /* RegisterViewController.xib in Resources */,
 				7677CA361A2703E2005675F0 /* TurnTableViewController.xib in Resources */,
 				765EFFD61A2DE4C200DCCC86 /* LeftViewController.xib in Resources */,
 				76A300C91A2C76C80067F1A5 /* AskAnswerViewController.xib in Resources */,
@@ -603,6 +628,7 @@
 				765EFFDB1A2DE4D600DCCC86 /* RightViewController.xib in Resources */,
 				7677CA271A2703A2005675F0 /* FirstViewController.xib in Resources */,
 				7677CA311A2703CF005675F0 /* ExchangeViewController.xib in Resources */,
+				30E5F3B31A360AC3002384AA /* ShareDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -656,12 +682,14 @@
 				7677CA731A285646005675F0 /* Reachability.m in Sources */,
 				4BBDAB9E1A2D8E3A00DEF6FB /* SBJsonParser.m in Sources */,
 				765EFFD51A2DE4C200DCCC86 /* LeftViewController.m in Sources */,
+				30E5F3AA1A360A51002384AA /* RegisterViewController.m in Sources */,
 				4BBDAB9F1A2D8E3A00DEF6FB /* SBJsonStreamParser.m in Sources */,
 				4BBDABA71A2D8E3A00DEF6FB /* SBJsonWriter.m in Sources */,
 				763F31571A2C56E1004CE6AE /* Navbar.m in Sources */,
 				76A300C81A2C76C80067F1A5 /* AskAnswerViewController.m in Sources */,
 				7677CA141A26F997005675F0 /* GGTabBar.m in Sources */,
 				7677CA301A2703CF005675F0 /* ExchangeViewController.m in Sources */,
+				30E5F3B21A360AC3002384AA /* ShareDetailViewController.m in Sources */,
 				4BBDABA51A2D8E3A00DEF6FB /* SBJsonStreamWriterAccumulator.m in Sources */,
 				4BBDABA21A2D8E3A00DEF6FB /* SBJsonStreamParserState.m in Sources */,
 				4BC900611A2C592A00A1B24B /* UIKeyboardViewController.m in Sources */,

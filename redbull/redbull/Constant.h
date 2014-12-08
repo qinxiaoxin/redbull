@@ -58,7 +58,7 @@
 #define REGISTER_POSTPATH           @"http://www.redbullclub.cn/index.php?s=User/doRegIos"
 #define VALIDATION_POSTPATH         @"http://www.redbullclub.cn/index.php?s=User/doSendVcode"
 
-#define REGEX_EMAIL                 @"[A-Z0-9a-z._%+-]{3,}+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+#define REGEX_EMAIL                 @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
 #define REGEX_PASSWORD              @"[A-Za-z0-9]{6,20}"
 #define REGEX_PHONE                 @"1[3|5|7|8|][0-9]{9}"
 

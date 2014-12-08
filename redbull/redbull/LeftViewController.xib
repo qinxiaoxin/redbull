@@ -92,34 +92,34 @@
                         <action selector="signOut:" destination="-1" eventType="touchUpInside" id="eRf-4X-b05"/>
                     </connections>
                 </button>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="lJq-s0-2Pk">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="lJq-s0-2Pk">
                     <rect key="frame" x="340" y="180" width="25" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="t69-SO-Zrs"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="DO3-Fe-Ngl">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="password" translatesAutoresizingMaskIntoConstraints="NO" id="DO3-Fe-Ngl">
                     <rect key="frame" x="340" y="225" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="IZd-VJ-1sh"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="kP8-2W-Ova">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="kP8-2W-Ova">
                     <rect key="frame" x="340" y="310" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="NX3-VB-35u"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="present" translatesAutoresizingMaskIntoConstraints="NO" id="Ndg-1j-BmF">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="present" translatesAutoresizingMaskIntoConstraints="NO" id="Ndg-1j-BmF">
                     <rect key="frame" x="340" y="350" width="25" height="25"/>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="signout" translatesAutoresizingMaskIntoConstraints="NO" id="hGF-RS-NzW">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="signout" translatesAutoresizingMaskIntoConstraints="NO" id="hGF-RS-NzW">
                     <rect key="frame" x="340" y="395" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="L2A-tl-t0V"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="adress" translatesAutoresizingMaskIntoConstraints="NO" id="bxl-Zv-m1I">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adress" translatesAutoresizingMaskIntoConstraints="NO" id="bxl-Zv-m1I">
                     <rect key="frame" x="340" y="265" width="25" height="25"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="25" id="Lns-IS-Fio"/>

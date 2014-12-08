@@ -34,6 +34,19 @@
 
 @implementation RegisterViewController
 
+@synthesize timerThread;
+@synthesize sendValidationButton;
+
+int resendRegisterTime = 60;
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    _keyBoardController=[[UIKeyboardViewController alloc] initWithControllerDelegate:self];
+    [_keyBoardController addToolbarToKeyboard];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
@@ -78,13 +91,13 @@
     if ([mail isEqualToString:@""]) {
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"邮箱不能为空"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
-    }else if (![mail isEqualToString:REGEX_EMAIL]){
+    }else if (![[NSPredicate predicateWithFormat:@"SELF MATCHES %@", REGEX_EMAIL]  evaluateWithObject:mail]){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"邮箱格式不正确"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
     }else if ([phone isEqualToString:@""]){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"电话号不能为空"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
-    }else if (![phone isEqualToString:REGEX_PHONE]){
+    }else if (![[NSPredicate predicateWithFormat:@"SELF MATCHES %@", REGEX_PHONE]  evaluateWithObject:phone]){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"电话号格式不正确"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
     }else if ([validation isEqualToString:@""]){
@@ -96,7 +109,7 @@
     }else if ([password isEqualToString:@""]){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"密码不能为空"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
-    }else if (![password isEqualToString:REGEX_PASSWORD]){
+    }else if (![[NSPredicate predicateWithFormat:@"SELF MATCHES %@", REGEX_PASSWORD]  evaluateWithObject:password]){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"密码应为6~20位"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
     }else if (![password2 isEqualToString:password]){
@@ -104,6 +117,26 @@
         [alert show];
     }else{
         [self registerPost];
+    }
+}
+
+/**计时器*/
+-(void)sendNumTimer{
+    for (int i = resendRegisterTime; i >=0; i--) {
+        [NSThread  sleepForTimeInterval:1];
+        -- resendRegisterTime;
+        [self performSelectorOnMainThread:@selector(updataSendNumUI)withObject:nil waitUntilDone:YES];
+    }
+}
+
+/**更新显示UI*/
+-(void)updataSendNumUI{
+    if(resendRegisterTime >0){
+        [sendValidationButton setTitle:[[NSString alloc] initWithFormat:@"成功，%d秒后可重发",resendRegisterTime] forState:UIControlStateNormal];
+    }else{
+        [sendValidationButton setTitle:[[NSString alloc] initWithFormat:@"发送手机验证码"] forState:UIControlStateNormal];
+        [sendValidationButton setEnabled:YES];
+        [sendValidationButton setAlpha:1.0f];
     }
 }
 
@@ -182,7 +215,7 @@
     if ([mobile isEqualToString:@""]){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"电话号不能为空"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
-    }else if ([mobile isEqualToString:REGEX_PHONE]){
+    }else if (![[NSPredicate predicateWithFormat:@"SELF MATCHES %@", REGEX_PHONE]  evaluateWithObject:mobile]){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"电话号格式不正确"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
     }else{
@@ -218,7 +251,7 @@
          int sendCode = 0;
          NSDictionary  *resultDataString = [dic objectForKey:@"data"];
          if(resultDataString != NULL  &&  ![@""  isEqualToString:resultDataString]){
-             NSString *codeStr = [[resultDataString objectForKey:@"status"]  stringValue];
+             NSString *codeStr = [[resultDataString objectForKey:@"ret"]  stringValue];
              if([@"1" isEqualToString:codeStr]){
                  sendCode = 1;
              }
@@ -227,13 +260,13 @@
          if (sendCode == 1) {
              NSLog(@"发送验证码成功---->%@",[dic objectForKey:@"status"]);
              
-             //             NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-             //             [userDefaults setObject:username forKey:@"name"];
-             //             [userDefaults setObject:password forKey:@"password"];
-             //             [userDefaults synchronize];
-             UIAlertView*alert = [[UIAlertView alloc]initWithTitle:nil message:@"发送成功" delegate:nil cancelButtonTitle:@"确定"otherButtonTitles:nil];
-             [alert show];
-             
+             /**设置按钮不可点击倒计时*/
+             resendRegisterTime = 60;
+             [sendValidationButton setEnabled:NO];
+             [sendValidationButton setAlpha:0.3f];
+             timerThread = [[NSThread alloc] initWithTarget:self selector:@selector(sendNumTimer) object:nil];
+             [timerThread start];
+            
              sendCode = 1;
          }else {
              NSLog(@"发送验证码失败---->%@",[dic objectForKey:@"status"]);

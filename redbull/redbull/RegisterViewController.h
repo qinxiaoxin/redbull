@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UIKeyboardViewController.h"
 
-@interface RegisterViewController : UIViewController
+@interface RegisterViewController : UIViewController{
+    UIKeyboardViewController *_keyBoardController;
+    NSThread* timerThread;
+}
+
+@property (weak, nonatomic) IBOutlet UIButton *sendValidationButton;
+@property (nonatomic,retain) NSThread* timerThread;
 
 @end
