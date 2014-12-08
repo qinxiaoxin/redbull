@@ -55,6 +55,12 @@
 #define SHARE_KAIXIN                @"http://www.kaixin001.com/login/open_login.php?flag=1&url=%2Frest%2Frecords.php%3Fcontent%3D%25E8%2583%25BD%25E9%2587%258F%25E9%2583%25A8%25E8%2590%25BD%25EF%25BC%258C%25E4%25BD%25A0%25E7%259A%2584%25E8%2583%25BD%25E9%2587%258F%25E8%25B6%2585%25E4%25B9%258E%25E4%25BD%25A0%25E6%2583%25B3%25E8%25B1%25A1%25E3%2580%2582%25E5%2588%2586%25E4%25BA%25AB%25E5%2586%2585%25E5%25AE%25B9%26url%3Dhttp%3A%2F%2Fwww.redbullclub.cn%2Fdownload%2FRedbullClup.beta1.0.apk%26starid%3D0%26aid%3D0%26style%3D11%26pic%3Dhttp%3A%2F%2Fwww.redbullclub.cn%2Fuploads%2Fbanner%2F20141109%2F165754_487picture.jpg"
 #define SHARE_TAOBAO                @"https://login.taobao.com/member/login.jhtml?redirect_url=http%3A%2F%2Fshare.jianghu.taobao.com%2Fshare%2FaddShare.htm%3Ftitle%3D%25E8%2583%25BD%25E9%2587%258F%25E9%2583%25A8%25E8%2590%25BD%25E2%2580%2594%25E2%253F%25E4%25BD%25A0%25E7%259A%2584%25E8%2583%25BD%25E9%2587%258F%25E8%25B6%2585%25E4%25B9%258E%25E4%25BD%25A0%25E6%2583%25B3%25E8%25B1%253F%26pic%3Dhttp%253A%252F%252Fwww.redbullclub.cn%252Fuploads%252Fbanner%252F20141109%252F165754_487picture.jpg%26url%3Dhttp%253A%252F%252Fwww.redbullclub.cn%252Fdownload%252FRedbullClup.beta1.0.apk%26content%3D%25E8%2583%25BD%25E9%2587%258F%25E9%2583%25A8%25E8%2590%25BD%25EF%25BC%258C%25E4%25BD%25A0%25E7%259A%2584%25E8%2583%25BD%25E9%2587%258F%25E8%25B6%2585%25E4%25B9%258E%25E4%25BD%25A0%25E6%2583%25B3%25E8%25B1%25A1%25E3%2580%2582%25E5%2588%2586%25E4%25BA%25AB%25E5%2586%2585%25E5%25AE%253F"
 
+#define REGISTER_POSTPATH           @"http://www.redbullclub.cn/index.php?s=User/doRegIos"
+#define VALIDATION_POSTPATH         @"http://www.redbullclub.cn/index.php?s=User/doSendVcode"
+
+#define REGEX_EMAIL                 @"[A-Z0-9a-z._%+-]{3,}+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
+#define REGEX_PASSWORD              @"[A-Za-z0-9]{6,20}"
+#define REGEX_PHONE                 @"1[3|5|7|8|][0-9]{9}"
 
 @interface Constant : NSObject
 
