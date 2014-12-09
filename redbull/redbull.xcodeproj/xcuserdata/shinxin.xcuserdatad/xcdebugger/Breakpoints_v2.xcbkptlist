@@ -10,12 +10,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "redbull/RegisterViewController.m"
-            timestampString = "439737741.13059"
+            timestampString = "439815679.425408"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "133"
-            endingLineNumber = "133"
-            landmarkName = "-registerPost"
+            startingLineNumber = "167"
+            endingLineNumber = "167"
+            landmarkName = "-registerAction:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
