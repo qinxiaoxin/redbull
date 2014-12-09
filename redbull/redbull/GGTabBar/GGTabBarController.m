@@ -25,6 +25,7 @@
 @property (nonatomic, strong) UIView *presentationView;
 @property (nonatomic, strong) GGTabBar *tabBarView;
 @property (nonatomic, assign) BOOL isFirstAppear;
+@property (nonatomic,retain) NSString *documentsDirectory;
 
 @end
 
@@ -38,6 +39,10 @@ int isLogin = 0;
     [super viewDidLoad];
     
     self.view.frame = [[UIScreen mainScreen] bounds];
+    
+    /**获取Document 文件夹地址*/
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    _documentsDirectory =[paths objectAtIndex:0];
 
     _tabBarView = [[GGTabBar alloc] initWithFrame:CGRectZero viewControllers:_viewControllers appearance:_tabBarAppearanceSettings];
     _tabBarView.delegate = self;
@@ -123,7 +128,12 @@ int isLogin = 0;
 {
     if ([viewController isKindOfClass:[FirstViewController class]]) {
         [self.navigationItem setNewTitle:@"红牛能量部落"];
-        [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) image:@"face"];
+        /**有用户头像文件则显示头像*/
+        if([self checkIsHaveUserPic]){
+             [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) image:[UIImage imageWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent:@"UserHeadPic.png"]]];
+        }else{
+             [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) image:@"face"];
+        }
         [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:) image:@"share"];
         self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:25 / 255.f green:29 / 255.f blue:30 / 255.f alpha:1.f];
     }else if ([viewController isKindOfClass:[AskAnswerViewController class]]){
@@ -139,7 +149,12 @@ int isLogin = 0;
         self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:25 / 255.f green:29 / 255.f blue:30 / 255.f alpha:1.f];
     }else if ([viewController isKindOfClass:[TurnTableViewController class]]){
         [self.navigationItem setNewTitle:@"红牛能量部落"];
-        [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) image:@"face"];
+        /**有用户头像文件则显示头像*/
+        if([self checkIsHaveUserPic]){
+            [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) image:[UIImage imageWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent:@"UserHeadPic.png"]]];
+        }else{
+            [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) image:@"face"];
+        }
         [self.navigationItem setRightItemWithTarget:self action:@selector(shareClick:)  image:@"share"];
         self.navigationController.navigationBar.backgroundColor = [UIColor colorWithRed:25 / 255.f green:29 / 255.f blue:30 / 255.f alpha:1.f];
     }
@@ -159,8 +174,10 @@ int isLogin = 0;
 /**设置头像图片*/
 -(void)setNavigationImageWithUrl:(NSString*)url{
     NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
-    AFImageRequestOperation *operation = [AFImageRequestOperation imageRequestOperationWithRequest:request imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse*response, UIImage *image) {
+        AFImageRequestOperation *operation = [AFImageRequestOperation imageRequestOperationWithRequest:request imageProcessingBlock:nil success:^(NSURLRequest *request, NSHTTPURLResponse*response, UIImage *image) {
         [self.navigationItem setLeftItemWithTarget:self action:@selector(loginClick:) image:image];
+        [self writeUserHeadPicToDocuments:image];
+       
         DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
         [menuController setLeftViewPortraitImage:image];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error) {
@@ -169,6 +186,15 @@ int isLogin = 0;
     }];
     
     [operation start];
+}
+
+/**将用户头像写入本地*/
+-(void)writeUserHeadPicToDocuments:(UIImage*)image{
+    
+    /**获取Document 文件夹地址*/
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentPath =[paths objectAtIndex:0];
+    [UIImagePNGRepresentation(image) writeToFile:[[NSString alloc] initWithFormat:@"%@%@",documentPath,@"UserHeadPic.png"] atomically:YES];
 }
 
 
@@ -234,6 +260,12 @@ int isLogin = 0;
                                                                           options:0
                                                                           metrics:nil
                                                                             views:viewsDictioanry]];
+}
+
+/**判断是否有用户头像图片*/
+-(BOOL)checkIsHaveUserPic{
+    NSFileManager *fileManager =   [[NSFileManager alloc] init];
+    return [fileManager fileExistsAtPath:[[NSString alloc]  initWithFormat:@"%@%@",_documentsDirectory,@"UserHeadPic.png"]];
 }
 
 

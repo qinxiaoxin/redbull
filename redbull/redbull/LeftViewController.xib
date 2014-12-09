@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LeftViewController">
             <connections>
-                <outlet property="portraitImageView" destination="rbf-1p-FNS" id="eci-ep-93d"/>
+                <outlet property="portraitImageView" destination="rbf-1p-FNS" id="NSM-AV-iBv"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

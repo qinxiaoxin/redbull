@@ -165,7 +165,10 @@ extern int isLogin;
              [userDefaults synchronize];
              
              isLogin = 1;
-             [_mTabBarController setNavigationImageWithUrl:@"http://b.hiphotos.baidu.com/image/pic/item/d1160924ab18972ba5cd58cbe4cd7b899e510a3f.jpg"];
+             if(nil != [resultDataString objectForKey:@"largeUrl"]){
+                 [_mTabBarController setNavigationImageWithUrl:[resultDataString objectForKey:@"largeUrl"]];
+             }
+             
              [self dismissViewControllerAnimated:YES completion:nil];
          }else {
              NSLog(@"登陆失败---->%@",[dic objectForKey:@"status"]);

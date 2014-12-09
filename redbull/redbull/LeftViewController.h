@@ -11,5 +11,8 @@
 @interface LeftViewController : UIViewController{
     
 }
+
+@property (weak, nonatomic) IBOutlet UIImageView *portraitImageView;
+
 -(void)setPortraitImage:(UIImage*)image;
 @end

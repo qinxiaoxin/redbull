@@ -18,11 +18,14 @@
 
 @interface LeftViewController ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *portraitImageView;
+@property (nonatomic,retain) NSString *documentsDirectory;
+@property (nonatomic,retain) NSString *userHeadPicPath;
 
 @end
 
 @implementation LeftViewController
+
+@synthesize portraitImageView;
 extern int isLogin;
 
 - (void)viewDidLoad {
@@ -33,8 +36,17 @@ extern int isLogin;
     self.view.backgroundColor = [UIColor colorWithRed:33 / 255.f green:33 / 255.f blue:35 / 255.f alpha:1.f];
     
     //portrait 圆角
-    _portraitImageView.layer.cornerRadius = 40.f;
-    _portraitImageView.layer.masksToBounds = YES;
+    portraitImageView.layer.cornerRadius = 40.f;
+    portraitImageView.layer.masksToBounds = YES;
+    
+    /**获取Document 文件夹地址*/
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    _documentsDirectory =[paths objectAtIndex:0];
+    
+    /**有用户头像文件则显示头像*/
+    if([self checkIsHaveUserPic]){
+        [portraitImageView setImage: [UIImage imageWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent:@"UserHeadPic.png"]]];
+    }
     
 }
 
@@ -43,9 +55,16 @@ extern int isLogin;
     // Dispose of any resources that can be recreated.
 }
 
+/**判断是否有用户头像图片*/
+-(BOOL)checkIsHaveUserPic{
+    NSFileManager *fileManager =   [[NSFileManager alloc] init];
+   _userHeadPicPath  = [[NSString alloc]  initWithFormat:@"%@%@",_documentsDirectory,@"UserHeadPic.png"];
+    return [fileManager fileExistsAtPath:_userHeadPicPath];
+}
+
 /**设置头像*/
 -(void)setPortraitImage:(UIImage*)image{
-    [_portraitImageView setImage:image];
+    [portraitImageView setImage:image];
 }
 
 #pragma mark - Action & Target
@@ -123,6 +142,12 @@ extern int isLogin;
     [userDefaults removeObjectForKey:@"name"];
     [userDefaults removeObjectForKey:@"password"];
     [userDefaults synchronize];
+    
+    //清除用户头像图片
+    if([self checkIsHaveUserPic]){
+        NSFileManager *fileManager =  [[NSFileManager alloc] init];
+        [fileManager removeItemAtPath: _userHeadPicPath error:nil];
+    }
     
     isLogin = 0;
     
