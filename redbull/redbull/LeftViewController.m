@@ -123,6 +123,12 @@
     [userDefaults removeObjectForKey:@"password"];
     [userDefaults synchronize];
     
+    NSHTTPCookie *cookie;
+    NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
+    for (cookie in [storage cookies]) {
+        [storage deleteCookie:cookie];
+    }
+    
     DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
     [menuController showRootController:YES];
 }

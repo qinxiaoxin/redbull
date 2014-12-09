@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "UIKeyboardViewController.h"
 
-@interface RegisterViewController : UIViewController{
+@interface RegisterViewController : UIViewController<UIKeyboardViewControllerDelegate>{
     UIKeyboardViewController *_keyBoardController;
     NSThread* timerThread;
 }
