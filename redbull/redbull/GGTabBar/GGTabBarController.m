@@ -31,7 +31,7 @@
 @implementation GGTabBarController
 
 //unlogin = 0
-//int isLogin = 0;
+int isLogin = 0;
 
 - (void)viewDidLoad
 {
@@ -69,6 +69,14 @@
     if (!_isFirstAppear) {
         _isFirstAppear = YES;
         [self selectViewController:[_viewControllers firstObject]];
+    }
+    
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSString *name = [userDefault objectForKey:@"name"];
+    if (name == nil) {
+        isLogin = 0;
+    }else{
+        isLogin = 1;
     }
 }
 
@@ -169,10 +177,8 @@
 - (void)loginClick:(id)sender
 {
     //是否已经登陆
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    NSString *name = [userDefault objectForKey:@"name"];
-    
-    if (name) {
+
+    if (isLogin) {
         DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
         [menuController showLeftController:YES];
     }else{

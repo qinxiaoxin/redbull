@@ -23,6 +23,7 @@
 @end
 
 @implementation LeftViewController
+extern int isLogin;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -122,6 +123,8 @@
     [userDefaults removeObjectForKey:@"name"];
     [userDefaults removeObjectForKey:@"password"];
     [userDefaults synchronize];
+    
+    isLogin = 0;
     
     NSHTTPCookie *cookie;
     NSHTTPCookieStorage *storage = [NSHTTPCookieStorage sharedHTTPCookieStorage];
