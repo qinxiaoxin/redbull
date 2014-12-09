@@ -32,6 +32,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *loginButton;
 
 
+
 @end
 
 @implementation RegisterViewController
@@ -60,49 +61,56 @@ int resendRegisterTime = 60;
     
     //提示小图标布局 利用Masonry开源framework
     _register_mail = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"register_mail"]];
-    _register_mail.translatesAutoresizingMaskIntoConstraints = NO;
+//    _register_mail.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_register_mail];
-    UIEdgeInsets padding_mail = UIEdgeInsetsMake(5, _mailTextFiled.frame.size.width / 2 - 40, 5, 5);//230
+    NSLog(@"%f",_mailTextFiled.frame.size.width);
+    UIEdgeInsets padding_mail = UIEdgeInsetsMake(5, 230, 5, 5);
 //    CGRect frame = CGRectMake(_mailTextFiled.frame.size.width, _mailTextFiled.frame.size.height, 20, 20);
     [_register_mail mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(_mailTextFiled).with.insets(padding_mail);
     }];
     
     _register_phone = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"register_phone"]];
-    _register_phone.translatesAutoresizingMaskIntoConstraints = NO;
+//    _register_phone.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_register_phone];
-    UIEdgeInsets padding_phone = UIEdgeInsetsMake(5, _phoneTextFiled.frame.size.width / 2 - 40, 5, 5);//230
+    UIEdgeInsets padding_phone = UIEdgeInsetsMake(5, 230, 5, 5);
     //    CGRect frame = CGRectMake(_mailTextFiled.frame.size.width, _mailTextFiled.frame.size.height, 20, 20);
     [_register_phone mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(_phoneTextFiled).with.insets(padding_phone);
     }];
     
     _register_validation = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"register_validation"]];
-    _register_validation.translatesAutoresizingMaskIntoConstraints = NO;
+//    _register_validation.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_register_validation];
-    UIEdgeInsets padding_validation = UIEdgeInsetsMake(5, _vdalidationTextField.frame.size.width / 2 - 40, 5, 5);//230
+    UIEdgeInsets padding_validation = UIEdgeInsetsMake(5, 230, 5, 5);
     [_register_validation mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(_vdalidationTextField).width.insets(padding_validation);
     }];
     
     _register_password = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"register_password"]];
-    _register_password.translatesAutoresizingMaskIntoConstraints = NO;
+//    _register_password.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_register_password];
-    UIEdgeInsets padding_password = UIEdgeInsetsMake(5, _passwordTextFiled.frame.size.width / 2 - 40, 5, 5);//230
+    UIEdgeInsets padding_password = UIEdgeInsetsMake(5, 230, 5, 5);
     [_register_password mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(_passwordTextFiled).width.insets(padding_password);
     }];
 
     _register_password2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"register_password"]];
-    _register_password2.translatesAutoresizingMaskIntoConstraints = NO;
+//    _register_password2.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:_register_password2];
-    UIEdgeInsets padding_password2 = UIEdgeInsetsMake(5, _password2TextFiled.frame.size.width / 2 - 40, 5, 5);//230
+    UIEdgeInsets padding_password2 = UIEdgeInsetsMake(5, 230, 5, 5);
     [_register_password2 mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(_password2TextFiled).width.insets(padding_password2);
     }];
     
+    //set text filed backgournd color
+    _mailTextFiled.backgroundColor = hll_color(210, 210, 210, 1);
+    _phoneTextFiled.backgroundColor = hll_color(210, 210, 210, 1);
+    _vdalidationTextField.backgroundColor = hll_color(210, 210, 210, 1);
+    _passwordTextFiled.backgroundColor = hll_color(210, 210, 210, 1);
+    _password2TextFiled.backgroundColor = hll_color(210, 210, 210, 1);
     
-    
+    self.view.backgroundColor = hll_color(240, 240, 240, 1);
     
 }
 

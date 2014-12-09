@@ -37,17 +37,17 @@
                     </items>
                 </navigationBar>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入你的邮箱" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ngo-fS-RJ0">
-                    <rect key="frame" x="30" y="80" width="540" height="30"/>
+                    <rect key="frame" x="30" y="100" width="540" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="输入您的手机号" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jxW-lD-2tu">
-                    <rect key="frame" x="30" y="130" width="540" height="30"/>
+                    <rect key="frame" x="30" y="150" width="540" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVN-xc-T1h">
-                    <rect key="frame" x="30" y="180" width="540" height="36"/>
+                    <rect key="frame" x="30" y="200" width="540" height="36"/>
                     <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                     <state key="normal" title="发送手机验证码">
@@ -59,22 +59,22 @@
                     </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="手机验证码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OX9-Q6-fbI">
-                    <rect key="frame" x="30" y="236" width="540" height="30"/>
+                    <rect key="frame" x="30" y="256" width="540" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="密码 6 ～ 20位" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rrc-ZI-Ym6">
-                    <rect key="frame" x="30" y="286" width="540" height="30"/>
+                    <rect key="frame" x="30" y="306" width="540" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="next" secureTextEntry="YES"/>
                 </textField>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="确认密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qiu-PC-XmH">
-                    <rect key="frame" x="30" y="336" width="540" height="30"/>
+                    <rect key="frame" x="30" y="356" width="540" height="30"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lVV-6F-8Eu">
-                    <rect key="frame" x="50" y="510" width="100" height="30"/>
+                    <rect key="frame" x="50" y="420" width="100" height="30"/>
                     <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="iXa-mD-xEl"/>
@@ -90,7 +90,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WMl-Fs-5yF">
-                    <rect key="frame" x="450" y="510" width="100" height="30"/>
+                    <rect key="frame" x="450" y="420" width="100" height="30"/>
                     <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="oN1-Gc-mCa"/>
@@ -109,7 +109,6 @@
             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstAttribute="trailing" secondItem="WMl-Fs-5yF" secondAttribute="trailing" constant="50" id="1PS-07-y9p"/>
-                <constraint firstAttribute="bottom" secondItem="WMl-Fs-5yF" secondAttribute="bottom" constant="60" id="6eh-2Y-fyl"/>
                 <constraint firstItem="rVN-xc-T1h" firstAttribute="top" secondItem="jxW-lD-2tu" secondAttribute="bottom" constant="20" id="7xX-7N-atP"/>
                 <constraint firstItem="rVN-xc-T1h" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="90h-EK-bWX"/>
                 <constraint firstItem="ngo-fS-RJ0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="BKF-RJ-gkL"/>
@@ -119,6 +118,7 @@
                 <constraint firstAttribute="centerX" secondItem="jxW-lD-2tu" secondAttribute="centerX" id="F0p-6n-aCa"/>
                 <constraint firstItem="lVV-6F-8Eu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="50" id="FoB-Yo-nKL"/>
                 <constraint firstAttribute="centerX" secondItem="qiu-PC-XmH" secondAttribute="centerX" id="Guq-FQ-dVa"/>
+                <constraint firstItem="WMl-Fs-5yF" firstAttribute="top" secondItem="qiu-PC-XmH" secondAttribute="bottom" constant="34" id="MBb-Gc-VBJ"/>
                 <constraint firstItem="rrc-ZI-Ym6" firstAttribute="top" secondItem="OX9-Q6-fbI" secondAttribute="bottom" constant="20" id="MVs-Gp-1x4"/>
                 <constraint firstAttribute="centerX" secondItem="otX-eo-E3i" secondAttribute="centerX" id="Nix-Sg-DdF"/>
                 <constraint firstItem="OX9-Q6-fbI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="VWA-Eu-Qed"/>
@@ -126,15 +126,15 @@
                 <constraint firstAttribute="centerX" secondItem="ngo-fS-RJ0" secondAttribute="centerX" id="bDj-Y7-gDT"/>
                 <constraint firstItem="qiu-PC-XmH" firstAttribute="top" secondItem="rrc-ZI-Ym6" secondAttribute="bottom" constant="20" id="cPV-1c-6oF"/>
                 <constraint firstItem="rrc-ZI-Ym6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="d1I-wN-ZEa"/>
-                <constraint firstItem="ngo-fS-RJ0" firstAttribute="top" secondItem="otX-eo-E3i" secondAttribute="bottom" constant="36" id="fIg-oQ-aX1"/>
+                <constraint firstItem="ngo-fS-RJ0" firstAttribute="top" secondItem="otX-eo-E3i" secondAttribute="bottom" constant="56" id="fIg-oQ-aX1"/>
+                <constraint firstItem="lVV-6F-8Eu" firstAttribute="top" secondItem="qiu-PC-XmH" secondAttribute="bottom" constant="34" id="icZ-Vf-6py"/>
                 <constraint firstItem="qiu-PC-XmH" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="jze-Fj-QkR"/>
                 <constraint firstAttribute="centerX" secondItem="OX9-Q6-fbI" secondAttribute="centerX" id="k6o-Xk-x3Y"/>
                 <constraint firstItem="jxW-lD-2tu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="m5d-vx-AQK"/>
-                <constraint firstAttribute="bottom" secondItem="lVV-6F-8Eu" secondAttribute="bottom" constant="60" id="t3D-TZ-XBF"/>
                 <constraint firstAttribute="centerX" secondItem="rrc-ZI-Ym6" secondAttribute="centerX" id="tVc-bX-orp"/>
                 <constraint firstItem="otX-eo-E3i" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="vTB-fN-Lr2"/>
             </constraints>
-            <point key="canvasLocation" x="499" y="383"/>
+            <point key="canvasLocation" x="139" y="377"/>
         </view>
     </objects>
 </document>
