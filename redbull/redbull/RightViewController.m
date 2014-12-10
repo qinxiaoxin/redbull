@@ -8,9 +8,9 @@
 
 #import "RightViewController.h"
 
-#import "ShareDetailViewController.h"
-
 #import "DDMenuController.h"
+
+#import "UMSocial.h"
 
 @interface RightViewController ()
 
@@ -60,78 +60,95 @@
 
 - (IBAction)shareWeibo:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
-    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
-    sdvc.webURL = SHARE_WEIBO;
-    [menuController presentViewController:sdvc animated:YES completion:^{
-        
-    }];
+//    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+//    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+//    sdvc.webURL = SHARE_WEIBO;
+//    [menuController presentViewController:sdvc animated:YES completion:^{
+//        
+//    }];
+     NSString* string = [SHARE_WEIBO stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
 }
 
 - (IBAction)shareTecent:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
-    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
-    sdvc.webURL = SHARE_TECENT;
-    [menuController presentViewController:sdvc animated:YES completion:^{
-        
+    [UMSocialData defaultData].extConfig.qqData.url = APP_ID;
+    UIImage *image = [UIImage imageNamed:@"face"];
+    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToQQ] content:@"能量部落，你的能量超乎你想象" image:image location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response){
+        if (response.responseCode == UMSResponseCodeSuccess) {
+            NSLog(@"分享成功！");
+        }
+    }];
+}
+
+- (IBAction)shareWeChat:(id)sender
+{
+    [UMSocialData defaultData].extConfig.wechatTimelineData.url = APP_ID;
+    UIImage *image = [UIImage imageNamed:@"face"];
+    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToWechatTimeline] content:@"能量部落，你的能量超乎你想象" image:image location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response){
+        if (response.responseCode == UMSResponseCodeSuccess) {
+            NSLog(@"分享成功！");
+        }
     }];
 }
 
 - (IBAction)shareRenren:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
-    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
-    sdvc.webURL = SHARE_RENREN;
-    [menuController presentViewController:sdvc animated:YES completion:^{
-        
-    }];
+//    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+//    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+//    sdvc.webURL = SHARE_RENREN;
+//    [menuController presentViewController:sdvc animated:YES completion:^{
+//        
+//    }];
+     NSString *string = [SHARE_RENREN stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
 }
 
 - (IBAction)shareDouban:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
-    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
-    sdvc.webURL = SHARE_DOUBAN;
-    [menuController presentViewController:sdvc animated:YES completion:^{
-        
-    }];
+//    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+//    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+//    sdvc.webURL = SHARE_DOUBAN;
+//    [menuController presentViewController:sdvc animated:YES completion:^{
+//        
+//    }];
+    NSString *string = [SHARE_DOUBAN stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
 }
 
 - (IBAction)shareQQzone:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
-    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
-    sdvc.webURL = SHARE_QQZONE;
-    [menuController presentViewController:sdvc animated:YES completion:^{
-        
-    }];
+//    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+//    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+//    sdvc.webURL = SHARE_QQZONE;
+//    [menuController presentViewController:sdvc animated:YES completion:^{
+//        
+//    }];
+    NSString *string = [SHARE_QQZONE stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
 }
 
 - (IBAction)shareKaixin:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
-    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
-    sdvc.webURL = SHARE_KAIXIN;
-    [menuController presentViewController:sdvc animated:YES completion:^{
-        
-    }];
+//    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+//    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+//    sdvc.webURL = SHARE_KAIXIN;
+//    [menuController presentViewController:sdvc animated:YES completion:^{
+//        
+//    }];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SHARE_KAIXIN]];
 }
 
 - (IBAction)shareTaobao:(id)sender
 {
-    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
-    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
-    sdvc.webURL = SHARE_TAOBAO;
-    [menuController presentViewController:sdvc animated:YES completion:^{
-        
-    }];
+//    DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
+//    ShareDetailViewController *sdvc = [[ShareDetailViewController alloc] init];
+//    sdvc.webURL = SHARE_TAOBAO;
+//    [menuController presentViewController:sdvc animated:YES completion:^{
+//        
+//    }];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:SHARE_TAOBAO]];
 }
-
-
-
-
-
 
 
 /*

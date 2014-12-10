@@ -21,6 +21,10 @@
 
 #import "DDMenuController.h"
 
+#import "UMSocial.h"
+#import "UMSocialWechatHandler.h"
+#import "UMSocialQQHandler.h"
+
 @interface AppDelegate ()
 
 @end
@@ -71,6 +75,12 @@
     self.window.backgroundColor = [UIColor colorWithRed:18 / 255.f green:18 / 255.f blue:18 / 255.f alpha:1.f];
     [self.window makeKeyAndVisible];
     
+    //wechat
+    [UMSocialWechatHandler setWXAppId:@"wx8ff0fc6d23a90c06" appSecret:@"55e4de12e1cadfd582f7794194daa53d" url:nil];
+    
+    //qq
+    [UMSocialQQHandler setQQWithAppId:@"801536709" appKey:@"5ec8f94bdae30e680632df939127e8b4" url:nil];
+    
     return YES;
 }
 
@@ -97,6 +107,20 @@
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
+
+//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+//{
+//    return  [UMSocialSnsService handleOpenURL:url];
+//}
+//
+//- (BOOL)application:(UIApplication *)application
+//            openURL:(NSURL *)url
+//  sourceApplication:(NSString *)sourceApplication
+//         annotation:(id)annotation
+//{
+//    return  [UMSocialSnsService handleOpenURL:url];
+//}
+
 
 #pragma mark - Core Data stack
 

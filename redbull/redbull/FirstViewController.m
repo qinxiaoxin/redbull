@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 
+//@property (strong, nonatomic) UIButton *refreshButton;
+
 
 @end
 
@@ -27,6 +29,7 @@
                                                         image:[UIImage imageNamed:@"01.jpg"]
                                                 selectedImage:[UIImage imageNamed:@"01-1.jpg"]];
     }
+    
     return self;
 }
 
@@ -40,6 +43,16 @@
     
     //加载URL
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:INDEX_PAGE]]];
+    
+    //refreash Button
+//    _refreshButton = [[UIButton alloc] initWithFrame:CGRectMake(_indicator.frame.origin.x - 25, _indicator.frame.origin.y - 15, 100, 30)];
+//    _refreshButton.backgroundColor = [UIColor grayColor];
+//    _refreshButton.tintColor = [UIColor blackColor];
+//    [_refreshButton setTitle:@"重新加载" forState:UIControlStateNormal];
+//    _refreshButton.titleLabel.font = [UIFont systemFontOfSize:14.f];
+//    [_refreshButton addTarget:self action:@selector(viewWillAppear:) forControlEvents:UIControlEventTouchUpInside];
+//    _refreshButton.hidden = YES;
+    [self.view addSubview:_refreshButton];
     
 
 }
@@ -62,6 +75,8 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
     [_indicator startAnimating];
+    
+    _refreshButton.hidden = YES;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
@@ -77,7 +92,11 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
+    NSLog(@"webview error");
+    
     [_indicator stopAnimating];
+    
+//    _refreshButton.hidden = NO;
 }
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{

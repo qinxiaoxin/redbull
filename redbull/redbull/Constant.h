@@ -48,7 +48,6 @@
 #define PRESENT_NAV                 @"已兑换礼品"
 
 #define SHARE_WEIBO                 @"http://v.t.sina.com.cn/share/share.php?appkey=&url=http://www.redbullclub.cn/download/RedbullClup.beta1.0.apk&title=能量部落，你的能量超乎你想象%E3%80%82分享内容&source=&sourceUrl=&content=utf-8&pic=http://www.redbullclub.cn/uploads/banner/20141109/165754_487picture.jpg"
-#define SHARE_TECENT                @"http://share.v.t.qq.com/index.php?c=share&a=index&title=能量部落，你的能量超乎你想象%E3%80%82分享内容&url=http://www.redbullclub.cn/download/RedbullClup.beta1.0.apk&appkey=&site={url}&pic=http://www.redbullclub.cn/uploads/banner/20141109/165754_487picture.jpg"
 #define SHARE_RENREN                @"http://widget.renren.com/dialog/share?resourceUrl=http://www.redbullclub.cn/download/RedbullClup.beta1.0.apk&pic=http://www.redbullclub.cn/uploads/banner/20141109/165754_487picture.jpg&title=能量部落——你的能量超乎你想象&description=能量部落，你的能量超乎你想象%E3%80%82分享内容"
 #define SHARE_DOUBAN                @"http://www.douban.com/share/service?image=http://www.redbullclub.cn/uploads/banner/20141109/165754_487picture.jpg&href=http://www.redbullclub.cn/download/RedbullClup.beta1.0.apk&name=能量部落，你的能量超乎你想象%E3%80%82分享内容"
 #define SHARE_QQZONE                @"http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.redbullclub.cn/download/RedbullClup.beta1.0.apk&title=能量部落——你的能量超乎你想象&summary=能量部落，你的能量超乎你想象%E3%80%82分享内容&desc=&site=&sourceUrl=&content=utf-8&pics=http://www.redbullclub.cn/uploads/banner/20141109/165754_487picture.jpg"
@@ -61,6 +60,8 @@
 #define REGEX_EMAIL                 @"[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}"
 #define REGEX_PASSWORD              @"[A-Za-z0-9]{6,20}"
 #define REGEX_PHONE                 @"1[3|5|7|8|][0-9]{9}"
+
+#define APP_ID                      @"https://itunes.apple.com/us/app/hong-niu-neng-liang-bu-luo/id947297356?ls=1&mt=8"
 
 @interface Constant : NSObject
 
