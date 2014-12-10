@@ -41,6 +41,8 @@
 @synthesize tap=_tap;
 @synthesize pan=_pan;
 
+extern int isLogin;
+
 
 - (id)initWithRootViewController:(UIViewController*)controller {
     if ((self = [super init])) {
@@ -159,6 +161,10 @@
 #pragma mark - GestureRecognizers
 
 - (void)pan:(UIPanGestureRecognizer*)gesture {
+    
+    if (isLogin == 0) {
+        return;
+    }
 
     if (gesture.state == UIGestureRecognizerStateBegan) {
         

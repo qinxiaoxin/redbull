@@ -30,7 +30,6 @@
 
     _titleLabel.text = self.navigationBarTitle;
     
-    NSLog(@"Personal Detail = %@",_webURL);
     _webView.delegate = self;
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webURL]]];
     
@@ -74,6 +73,15 @@
 {
     [_indicator stopAnimating];
 }
+
+//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+//{
+//    NSString *requestString = [[request URL] absoluteString];
+//    if ([requestString isEqualToString:HTML5_APP_URL])
+//        return NO;
+//    
+//    return YES;
+//}
 
 /*
 #pragma mark - Navigation

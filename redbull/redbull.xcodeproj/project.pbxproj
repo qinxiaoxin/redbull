@@ -77,8 +77,6 @@
 		76A74EB91A3817EC00D1CB37 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A74EB81A3817EC00D1CB37 /* libz.dylib */; };
 		76FC7AD71A38448500475AAC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FC7AD31A38448500475AAC /* libWeChatSDK.a */; };
 		76FC7AD81A38448500475AAC /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 76FC7AD41A38448500475AAC /* read_me.txt */; };
-		76FC7ADB1A384E0200475AAC /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76FC7AD91A384E0200475AAC /* TencentOpenApi_IOS_Bundle.bundle */; };
-		76FC7ADC1A384E0200475AAC /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FC7ADA1A384E0200475AAC /* TencentOpenAPI.framework */; };
 		76FC7B001A38506000475AAC /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76FC7AE61A38506000475AAC /* UMSocialLocalizable.strings */; };
 		76FC7B011A38506000475AAC /* libUMSocial_Sdk_4.2.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FC7AF41A38506000475AAC /* libUMSocial_Sdk_4.2.1.a */; };
 		76FC7B021A38506000475AAC /* UMSCommentDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 76FC7AF61A38506000475AAC /* UMSCommentDetailController.xib */; };
@@ -231,8 +229,6 @@
 		76FC7AD41A38448500475AAC /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
 		76FC7AD51A38448500475AAC /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
 		76FC7AD61A38448500475AAC /* WXApiObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApiObject.h; sourceTree = "<group>"; };
-		76FC7AD91A384E0200475AAC /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
-		76FC7ADA1A384E0200475AAC /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TencentOpenAPI.framework; path = redbull/TencentOpenAPI.framework; sourceTree = "<group>"; };
 		76FC7AE71A38506000475AAC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/UMSocialLocalizable.strings; sourceTree = "<group>"; };
 		76FC7AE91A38506000475AAC /* UMSocial.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocial.h; sourceTree = "<group>"; };
 		76FC7AEA1A38506000475AAC /* UMSocialAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialAccountManager.h; sourceTree = "<group>"; };
@@ -278,7 +274,6 @@
 				76A74EB11A3817A800D1CB37 /* CoreGraphics.framework in Frameworks */,
 				76A74EAF1A38179C00D1CB37 /* SystemConfiguration.framework in Frameworks */,
 				76A74EAD1A38178D00D1CB37 /* libiconv.dylib in Frameworks */,
-				76FC7ADC1A384E0200475AAC /* TencentOpenAPI.framework in Frameworks */,
 				76FC7B011A38506000475AAC /* libUMSocial_Sdk_4.2.1.a in Frameworks */,
 				76A74EAB1A38176B00D1CB37 /* Security.framework in Frameworks */,
 				54CE7DAC9985942964C6F915 /* libPods.a in Frameworks */,
@@ -602,7 +597,6 @@
 			children = (
 				76FC7B0B1A38506F00475AAC /* TencentOpenAPI */,
 				76FC7AE51A38506000475AAC /* UMSocial_Sdk_4.2.1 */,
-				76FC7AD91A384E0200475AAC /* TencentOpenApi_IOS_Bundle.bundle */,
 				76FC7AD21A38448500475AAC /* WeChatSDK_1.5 */,
 				7677CA711A285646005675F0 /* Reachability.h */,
 				7677CA721A285646005675F0 /* Reachability.m */,
@@ -691,7 +685,6 @@
 		897E9F97F5F44CC952179B5F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				76FC7ADA1A384E0200475AAC /* TencentOpenAPI.framework */,
 				76A74EB81A3817EC00D1CB37 /* libz.dylib */,
 				76A74EB61A3817E000D1CB37 /* libstdc++.dylib */,
 				76A74EB41A3817CE00D1CB37 /* CoreTelephony.framework */,
@@ -803,7 +796,6 @@
 				76FC7B041A38506000475AAC /* UMSCommentInputControlleriPad.xib in Resources */,
 				76FC7B031A38506000475AAC /* UMSCommentInputController.xib in Resources */,
 				76FC7B081A38506000475AAC /* UMSnsAccountViewController.xib in Resources */,
-				76FC7ADB1A384E0200475AAC /* TencentOpenApi_IOS_Bundle.bundle in Resources */,
 				76FC7B0A1A38506000475AAC /* UMSocialSDKResourcesNew.bundle in Resources */,
 				765EFFDB1A2DE4D600DCCC86 /* RightViewController.xib in Resources */,
 				76FC7B061A38506000475AAC /* UMShareEditViewControlleriPad.xib in Resources */,
