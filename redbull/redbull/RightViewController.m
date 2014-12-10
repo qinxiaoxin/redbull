@@ -12,6 +12,8 @@
 
 #import "UMSocial.h"
 
+#import "WXApi.h"
+
 @interface RightViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *navView;
@@ -83,13 +85,37 @@
 
 - (IBAction)shareWeChat:(id)sender
 {
-    [UMSocialData defaultData].extConfig.wechatTimelineData.url = APP_ID;
-    UIImage *image = [UIImage imageNamed:@"face"];
-    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToWechatTimeline] content:@"能量部落，你的能量超乎你想象" image:image location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response){
-        if (response.responseCode == UMSResponseCodeSuccess) {
-            NSLog(@"分享成功！");
-        }
-    }];
+//    [UMSocialData defaultData].extConfig.wechatTimelineData.url = APP_ID;
+//    UIImage *image = [UIImage imageNamed:@"face"];
+//    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToWechatTimeline] content:@"能量部落，你的能量超乎你想象" image:image location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response){
+//        if (response.responseCode == UMSResponseCodeSuccess) {
+//            NSLog(@"分享成功！");
+//            
+//        }
+//    }];
+    
+    WXMediaMessage *message = [WXMediaMessage message];
+    //设置分享标题信息
+    message.title = @"能量部落，你的能量超乎你想象";
+    
+    //设置分享内容信息
+//    message.description = @"能量部落，你的能量超乎你想象";
+    
+    [message setThumbImage:[UIImage imageNamed:@"face"]];
+    
+    WXWebpageObject *ext = [WXWebpageObject object];
+    
+    //设置分享链接地址信息
+    ext.webpageUrl = APP_ID;
+    
+    message.mediaObject = ext;
+    
+    SendMessageToWXReq* req = [[SendMessageToWXReq alloc] init];
+    req.bText = NO;
+    req.message = message;
+    req.scene = WXSceneTimeline;
+    
+    [WXApi sendReq:req];
 }
 
 - (IBAction)shareRenren:(id)sender

@@ -52,7 +52,7 @@
 //    _refreshButton.titleLabel.font = [UIFont systemFontOfSize:14.f];
 //    [_refreshButton addTarget:self action:@selector(viewWillAppear:) forControlEvents:UIControlEventTouchUpInside];
 //    _refreshButton.hidden = YES;
-    [self.view addSubview:_refreshButton];
+//    [self.view addSubview:_refreshButton];
     
 
 }
@@ -76,7 +76,7 @@
 {
     [_indicator startAnimating];
     
-    _refreshButton.hidden = YES;
+//    _refreshButton.hidden = YES;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
