@@ -91,6 +91,7 @@
 		76FC7B101A38506F00475AAC /* libSocialQQ.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FC7B0C1A38506F00475AAC /* libSocialQQ.a */; };
 		76FC7B111A38506F00475AAC /* TencentOpenAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FC7B0D1A38506F00475AAC /* TencentOpenAPI.framework */; };
 		76FC7B121A38506F00475AAC /* TencentOpenApi_IOS_Bundle.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 76FC7B0E1A38506F00475AAC /* TencentOpenApi_IOS_Bundle.bundle */; };
+		76FC7B161A389A0F00475AAC /* WebFailView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76FC7B141A389A0F00475AAC /* WebFailView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -256,6 +257,8 @@
 		76FC7B0D1A38506F00475AAC /* TencentOpenAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = TencentOpenAPI.framework; sourceTree = "<group>"; };
 		76FC7B0E1A38506F00475AAC /* TencentOpenApi_IOS_Bundle.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = TencentOpenApi_IOS_Bundle.bundle; sourceTree = "<group>"; };
 		76FC7B0F1A38506F00475AAC /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
+		76FC7B141A389A0F00475AAC /* WebFailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebFailView.m; sourceTree = "<group>"; };
+		76FC7B151A389A0F00475AAC /* WebFailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebFailView.h; sourceTree = "<group>"; };
 		E61E4918FCE8AE46A2E58748 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB98A3C501CC40F30FAEC066 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -557,6 +560,7 @@
 		7677CA0A1A26E8D7005675F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				76FC7B131A3899EE00475AAC /* WebFailView */,
 				30E5F39B1A32D1F6002384AA /* PrivateView */,
 				765E00661A3179C800DCCC86 /* PortraitCircleView */,
 				765E005B1A3158A300DCCC86 /* EAIntroView */,
@@ -671,6 +675,15 @@
 				76FC7B0F1A38506F00475AAC /* UMSocialQQHandler.h */,
 			);
 			path = TencentOpenAPI;
+			sourceTree = "<group>";
+		};
+		76FC7B131A3899EE00475AAC /* WebFailView */ = {
+			isa = PBXGroup;
+			children = (
+				76FC7B141A389A0F00475AAC /* WebFailView.m */,
+				76FC7B151A389A0F00475AAC /* WebFailView.h */,
+			);
+			name = WebFailView;
 			sourceTree = "<group>";
 		};
 		80038C8E54A7E558EF7A01A8 /* Pods */ = {
@@ -899,6 +912,7 @@
 				7677CA301A2703CF005675F0 /* ExchangeViewController.m in Sources */,
 				4BBDABA51A2D8E3A00DEF6FB /* SBJsonStreamWriterAccumulator.m in Sources */,
 				4BBDABA21A2D8E3A00DEF6FB /* SBJsonStreamParserState.m in Sources */,
+				76FC7B161A389A0F00475AAC /* WebFailView.m in Sources */,
 				4BC900611A2C592A00A1B24B /* UIKeyboardViewController.m in Sources */,
 				4BBDAB7F1A2D8E2E00DEF6FB /* AFHTTPClient.m in Sources */,
 			);

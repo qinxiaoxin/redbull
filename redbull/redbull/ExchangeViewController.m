@@ -8,6 +8,8 @@
 
 #import "ExchangeViewController.h"
 
+#import "LoginViewController.h"
+
 @interface ExchangeViewController ()<UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -16,6 +18,8 @@
 @end
 
 @implementation ExchangeViewController
+
+extern int isLogin;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -81,6 +85,17 @@
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
     NSLog(@"EXCHANGE请求地址:%@",request.URL.absoluteString);
+    
+//    if (isLogin == 0) {
+//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+//        [loginViewController setValue:self forKey:@"mTabBarController"];
+//        loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
+//        [self presentViewController:loginViewController animated:YES completion:^{
+//            
+//        }];
+//        
+//        return NO;
+//    }
     
     return YES;
 }

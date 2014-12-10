@@ -8,6 +8,8 @@
 
 #import "TurnTableViewController.h"
 
+#import "LoginViewController.h"
+
 @interface TurnTableViewController ()<UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -16,6 +18,8 @@
 @end
 
 @implementation TurnTableViewController
+
+extern int isLogin;
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -32,6 +36,9 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
     
+    //
+    _webView.delegate = self;
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -43,8 +50,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-    //
-    _webView.delegate = self;
 }
 
 #pragma mark - UIWebViewDelegate Methods
@@ -73,6 +78,22 @@
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
     NSLog(@"TURN请求地址:%@",request.URL.absoluteString);
+    
+//    if (isLogin == 0) {
+//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+//        [loginViewController setValue:self forKey:@"mTabBarController"];
+//        loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
+//        [self presentViewController:loginViewController animated:YES completion:^{
+//            
+//        }];
+//        
+//        return NO;
+//    }
+    
+    if([request.URL.absoluteString hasPrefix:ASK_PAGE]) {
+        [_mTabBarController  jumpToTabAtIndexNum:ASK_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
+        return NO;
+    }
     
     return YES;
 }

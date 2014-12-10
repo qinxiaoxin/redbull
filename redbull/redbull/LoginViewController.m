@@ -59,7 +59,7 @@ extern int isLogin;
     titleImage.image = [UIImage imageNamed:@""];
     [logView addSubview:titleImage];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(logView.width / 2 - 45, titleImage.top + 5, 90, 10)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(redline.width / 2 - 35, redline.top + 15, 90, 10)];
     titleLabel.text = @"用户登录";
     titleLabel.textColor = hll_color(210, 40, 39, 1);
     titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
@@ -69,6 +69,11 @@ extern int isLogin;
     _usernameTextField.placeholder = @" 登录名";
     _usernameTextField.font = [UIFont systemFontOfSize:12.0f];
     _usernameTextField.backgroundColor = hll_color(210, 210, 210, 1);
+    UILabel * leftView1 = [[UILabel alloc] initWithFrame:CGRectMake(10,0,7,26)];
+    leftView1.backgroundColor = [UIColor clearColor];
+    _usernameTextField.leftView = leftView1;
+    _usernameTextField.leftViewMode = UITextFieldViewModeAlways;
+    _usernameTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     [logView addSubview:_usernameTextField];
     
     _passwordTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, _usernameTextField.bottom +15, logView.width-40, 30)];
@@ -76,6 +81,11 @@ extern int isLogin;
     _passwordTextField.secureTextEntry = YES;
     _passwordTextField.font = [UIFont systemFontOfSize:12.0f];
     _passwordTextField.backgroundColor = hll_color(210, 210, 210, 1);
+    UILabel * leftView2 = [[UILabel alloc] initWithFrame:CGRectMake(10,0,7,26)];
+    leftView2.backgroundColor = [UIColor clearColor];
+    _passwordTextField.leftView = leftView2;
+    _passwordTextField.leftViewMode = UITextFieldViewModeAlways;
+    _passwordTextField.contentVerticalAlignment = UIControlContentVerticalAlignmentCenter;
     [logView addSubview:_passwordTextField];
     
     UIButton *registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];

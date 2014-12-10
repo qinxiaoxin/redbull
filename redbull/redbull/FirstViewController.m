@@ -21,6 +21,8 @@
 
 @implementation FirstViewController
 
+extern int isLogin;
+
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -101,6 +103,18 @@
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     NSLog(@"INDEX请求地址:%@",request.URL.absoluteString);
+    
+//    if (isLogin == 0) {
+//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+//        [loginViewController setValue:self forKey:@"mTabBarController"];
+//        loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
+//        [self presentViewController:loginViewController animated:YES completion:^{
+//            
+//        }];
+//        
+//        return NO;
+//    }
+    
     if ([request.URL.absoluteString hasPrefix:ASK_PAGE]) {
          [_mTabBarController  jumpToTabAtIndexNum:ASK_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
         return NO;
