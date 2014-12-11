@@ -7,13 +7,14 @@
 //
 
 #import "ExchangeViewController.h"
-
 #import "LoginViewController.h"
+#import "WebFailView.h"
 
 @interface ExchangeViewController ()<UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+@property (strong, nonatomic) UIView *webFailView;
 
 @end
 
@@ -80,12 +81,18 @@ extern int isLogin;
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [_indicator stopAnimating];
+    
+    _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
+    [self.view addSubview:_webFailView];
 }
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
     NSLog(@"EXCHANGE请求地址:%@",request.URL.absoluteString);
     
+    if (_webFailView) {
+        [_webFailView removeFromSuperview];
+    }
 //    if (isLogin == 0) {
 //        LoginViewController *loginViewController = [[LoginViewController alloc] init];
 //        [loginViewController setValue:self forKey:@"mTabBarController"];

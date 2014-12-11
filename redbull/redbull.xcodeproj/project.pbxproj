@@ -680,8 +680,8 @@
 		76FC7B131A3899EE00475AAC /* WebFailView */ = {
 			isa = PBXGroup;
 			children = (
-				76FC7B141A389A0F00475AAC /* WebFailView.m */,
 				76FC7B151A389A0F00475AAC /* WebFailView.h */,
+				76FC7B141A389A0F00475AAC /* WebFailView.m */,
 			);
 			name = WebFailView;
 			sourceTree = "<group>";

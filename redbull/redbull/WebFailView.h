@@ -18,4 +18,7 @@
 
 @property (nonatomic ,strong)UIWebView *webView;
 
++ (id)reSetWithTarget:(id)target
+               action:(SEL)action;
+
 @end

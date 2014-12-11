@@ -8,11 +8,13 @@
 
 #import "FirstViewController.h"
 #import "LoginViewController.h"
+#import "WebFailView.h"
 
 @interface FirstViewController ()<UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
+@property (strong, nonatomic) UIView *webFailView;
 
 //@property (strong, nonatomic) UIButton *refreshButton;
 
@@ -98,11 +100,15 @@ extern int isLogin;
     
     [_indicator stopAnimating];
     
-//    _refreshButton.hidden = NO;
+    _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
+    [self.view addSubview:_webFailView];
 }
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     NSLog(@"INDEX请求地址:%@",request.URL.absoluteString);
+    if (_webFailView) {
+        [_webFailView removeFromSuperview];
+    }
     
 //    if (isLogin == 0) {
 //        LoginViewController *loginViewController = [[LoginViewController alloc] init];

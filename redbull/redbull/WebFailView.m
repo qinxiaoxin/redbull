@@ -41,7 +41,7 @@
     _reClick.backgroundColor = [UIColor clearColor];
     [_reClick setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
     [_reClick setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
-    [_reClick addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
+//    [_reClick addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_reClick];
 }
 
@@ -64,11 +64,19 @@
     
 }
 
-- (void)buttonClick
++ (id)reSetWithTarget:(id)target
+               action:(SEL)action
 {
-    self.hidden = YES;
+    WebFailView *failView = [[WebFailView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    [failView setTarget:target withAction:action];
     
+    return failView;
 }
 
+- (void)setTarget:(id)target withAction:(SEL)action
+{
+    [_reClick addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
+}
 
 @end
+
