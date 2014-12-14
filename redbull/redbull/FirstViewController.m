@@ -110,19 +110,8 @@ extern int isLogin;
         [_webFailView removeFromSuperview];
     }
     
-//    if (isLogin == 0) {
-//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
-//        [loginViewController setValue:self forKey:@"mTabBarController"];
-//        loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
-//        [self presentViewController:loginViewController animated:YES completion:^{
-//            
-//        }];
-//        
-//        return NO;
-//    }
-    
-    if ([request.URL.absoluteString hasPrefix:ASK_PAGE]) {
-         [_mTabBarController  jumpToTabAtIndexNum:ASK_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
+    if([request.URL.absoluteString hasPrefix:ASK_PAGE]) {
+        [_mTabBarController  jumpToTabAtIndexNum:ASK_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
         return NO;
     }else if([request.URL.absoluteString hasPrefix:EXCHANGE_PAGE]) {
         [_mTabBarController  jumpToTabAtIndexNum:EXCHANGE_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
@@ -131,6 +120,7 @@ extern int isLogin;
         [_mTabBarController  jumpToTabAtIndexNum:EXCHANGE_DETAIL_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
         return NO;
     }
+    
     return YES;
 }
 

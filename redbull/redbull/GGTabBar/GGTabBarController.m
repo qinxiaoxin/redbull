@@ -194,7 +194,9 @@ int isLogin = 0;
     /**获取Document 文件夹地址*/
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *documentPath =[paths objectAtIndex:0];
-    [UIImagePNGRepresentation(image) writeToFile:[[NSString alloc] initWithFormat:@"%@%@",documentPath,@"UserHeadPic.png"] atomically:YES];
+//    [UIImagePNGRepresentation(image) writeToFile:[[NSString alloc] initWithFormat:@"%@%@",documentPath,@"UserHeadPic.png"] atomically:YES];
+    NSURL *sandBoxURL = [NSURL fileURLWithPath:[documentPath stringByAppendingPathComponent:@"UserHeadPic.png"]];
+    [UIImagePNGRepresentation(image) writeToFile:[sandBoxURL path] atomically:YES];
 }
 
 

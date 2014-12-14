@@ -45,6 +45,7 @@ extern int isLogin;
     
     /**有用户头像文件则显示头像*/
     if([self checkIsHaveUserPic]){
+        NSLog(@"有头像");
         [portraitImageView setImage: [UIImage imageWithContentsOfFile:[_documentsDirectory stringByAppendingPathComponent:@"UserHeadPic.png"]]];
     }
     
@@ -58,8 +59,9 @@ extern int isLogin;
 /**判断是否有用户头像图片*/
 -(BOOL)checkIsHaveUserPic{
     NSFileManager *fileManager =   [[NSFileManager alloc] init];
-   _userHeadPicPath  = [[NSString alloc]  initWithFormat:@"%@%@",_documentsDirectory,@"UserHeadPic.png"];
-    return [fileManager fileExistsAtPath:_userHeadPicPath];
+//   _userHeadPicPath  = [[NSString alloc]  initWithFormat:@"%@%@",_documentsDirectory,@"UserHeadPic.png"];
+    NSURL *sandBoxURL = [NSURL fileURLWithPath:[_documentsDirectory stringByAppendingPathComponent:@"UserHeadPic.png"]];
+    return [fileManager fileExistsAtPath:sandBoxURL.path];
 }
 
 /**设置头像*/

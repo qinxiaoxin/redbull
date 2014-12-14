@@ -93,16 +93,18 @@ extern int isLogin;
     if (_webFailView) {
         [_webFailView removeFromSuperview];
     }
-//    if (isLogin == 0) {
-//        LoginViewController *loginViewController = [[LoginViewController alloc] init];
-//        [loginViewController setValue:self forKey:@"mTabBarController"];
-//        loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
-//        [self presentViewController:loginViewController animated:YES completion:^{
-//            
-//        }];
-//        
-//        return NO;
-//    }
+    
+    if([request.URL.absoluteString hasPrefix:LOGIN_INDEX]){
+        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        [loginViewController setValue:self forKey:@"mTabBarController"];
+        loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
+        [self presentViewController:loginViewController animated:YES completion:^{
+            
+        }];
+        
+        return NO;
+        
+    }
     
     return YES;
 }

@@ -63,6 +63,8 @@
 
 #define APP_ID                      @"https://itunes.apple.com/us/app/hong-niu-neng-liang-bu-luo/id947297356?ls=1&mt=8"
 
+#define LOGIN_INDEX                 @"http://www.redbullclub.cn/index.php?s=IOS/login"
+
 @interface Constant : NSObject
 
 @end
