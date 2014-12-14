@@ -42,6 +42,10 @@ extern int isLogin;
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    [super viewWillAppear:animated];
+    
+    NSLog(@"viewWillAppear !!!");
+    
     if(_bingStrUrl != nil){
         //加载传递来的URL
         [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_bingStrUrl]]];
@@ -82,26 +86,28 @@ extern int isLogin;
 {
     [_indicator stopAnimating];
     
-    _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
-    [self.view addSubview:_webFailView];
+//    _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
+//    [self.view addSubview:_webFailView];
 }
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
     NSLog(@"ASK请求地址:%@",request.URL.absoluteString);
     
-    if (_webFailView) {
-        [_webFailView removeFromSuperview];
-    }
+//    if (_webFailView) {
+//        [_webFailView removeFromSuperview];
+//    }
     
     if([request.URL.absoluteString hasPrefix:LOGIN_INDEX]){
         
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
         [loginViewController setValue:self forKey:@"mTabBarController"];
-        loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
-        [self presentViewController:loginViewController animated:YES completion:^{
+        loginViewController.modalPresentationStyle = UIModalPresentationPageSheet;
+        [_mTabBarController presentViewController:loginViewController animated:YES completion:^{
             
         }];
+        
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:ASK_PAGE]]];
         
         return NO;
     }

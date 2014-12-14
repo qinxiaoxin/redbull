@@ -93,6 +93,20 @@ extern int isLogin;
         return NO;
     }
     
+    if([request.URL.absoluteString hasPrefix:LOGIN_INDEX]){
+        
+        LoginViewController *loginViewController = [[LoginViewController alloc] init];
+        [loginViewController setValue:self forKey:@"mTabBarController"];
+        loginViewController.modalPresentationStyle = UIModalPresentationPageSheet;
+        [_mTabBarController presentViewController:loginViewController animated:YES completion:^{
+            
+        }];
+        
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:TURNTABLE_PAGE]]];
+        
+        return NO;
+    }
+    
     return YES;
 }
 

@@ -127,6 +127,8 @@ extern int isLogin;
 
 - (void)cancelBtnClick
 {
+    
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
