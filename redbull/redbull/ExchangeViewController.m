@@ -96,7 +96,7 @@ extern int isLogin;
     
     if([request.URL.absoluteString hasPrefix:LOGIN_INDEX]){
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
-        [loginViewController setValue:self forKey:@"mTabBarController"];
+        [loginViewController setValue:[self  mTabBarController] forKey:@"mTabBarController"];
         loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
         [_mTabBarController presentViewController:loginViewController animated:YES completion:^{
             
