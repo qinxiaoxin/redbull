@@ -15,7 +15,6 @@
     UITextField *_usernameTextField;
     UITextField *_passwordTextField;
     GGTabBarController *_mTabBarController;
-
 }
 @property (retain,nonatomic) GGTabBarController *mTabBarController;
 @end

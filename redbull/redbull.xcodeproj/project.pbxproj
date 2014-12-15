@@ -30,6 +30,7 @@
 		4BBDABA51A2D8E3A00DEF6FB /* SBJsonStreamWriterAccumulator.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB991A2D8E3A00DEF6FB /* SBJsonStreamWriterAccumulator.m */; };
 		4BBDABA61A2D8E3A00DEF6FB /* SBJsonStreamWriterState.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB9B1A2D8E3A00DEF6FB /* SBJsonStreamWriterState.m */; };
 		4BBDABA71A2D8E3A00DEF6FB /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDAB9D1A2D8E3A00DEF6FB /* SBJsonWriter.m */; };
+		4BC3E0F51A3E74890063C4BF /* BounceSheet.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC3E0F41A3E74890063C4BF /* BounceSheet.m */; };
 		4BC900581A2C524000A1B24B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC900571A2C524000A1B24B /* LoginViewController.m */; };
 		4BC9005B1A2C539C00A1B24B /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9005A1A2C539C00A1B24B /* UIViewExt.m */; };
 		4BC900601A2C592A00A1B24B /* UIKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9005D1A2C592A00A1B24B /* UIKeyboardView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -152,6 +153,8 @@
 		4BBDAB9B1A2D8E3A00DEF6FB /* SBJsonStreamWriterState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonStreamWriterState.m; sourceTree = "<group>"; };
 		4BBDAB9C1A2D8E3A00DEF6FB /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		4BBDAB9D1A2D8E3A00DEF6FB /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
+		4BC3E0F31A3E74890063C4BF /* BounceSheet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BounceSheet.h; sourceTree = "<group>"; };
+		4BC3E0F41A3E74890063C4BF /* BounceSheet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BounceSheet.m; sourceTree = "<group>"; };
 		4BC900561A2C524000A1B24B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		4BC900571A2C524000A1B24B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		4BC900591A2C539C00A1B24B /* UIViewExt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIViewExt.h; sourceTree = "<group>"; };
@@ -357,6 +360,15 @@
 			path = SBJson;
 			sourceTree = "<group>";
 		};
+		4BC3E0F61A3EBCF60063C4BF /* BounceSheet */ = {
+			isa = PBXGroup;
+			children = (
+				4BC3E0F31A3E74890063C4BF /* BounceSheet.h */,
+				4BC3E0F41A3E74890063C4BF /* BounceSheet.m */,
+			);
+			name = BounceSheet;
+			sourceTree = "<group>";
+		};
 		4BC900551A2C520B00A1B24B /* loginOrRegister */ = {
 			isa = PBXGroup;
 			children = (
@@ -560,6 +572,7 @@
 		7677CA0A1A26E8D7005675F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4BC3E0F61A3EBCF60063C4BF /* BounceSheet */,
 				76FC7B131A3899EE00475AAC /* WebFailView */,
 				30E5F39B1A32D1F6002384AA /* PrivateView */,
 				765E00661A3179C800DCCC86 /* PortraitCircleView */,
@@ -907,6 +920,7 @@
 				4BBDAB9F1A2D8E3A00DEF6FB /* SBJsonStreamParser.m in Sources */,
 				4BBDABA71A2D8E3A00DEF6FB /* SBJsonWriter.m in Sources */,
 				763F31571A2C56E1004CE6AE /* Navbar.m in Sources */,
+				4BC3E0F51A3E74890063C4BF /* BounceSheet.m in Sources */,
 				76A300C81A2C76C80067F1A5 /* AskAnswerViewController.m in Sources */,
 				7677CA141A26F997005675F0 /* GGTabBar.m in Sources */,
 				7677CA301A2703CF005675F0 /* ExchangeViewController.m in Sources */,

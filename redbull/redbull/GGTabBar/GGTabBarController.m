@@ -20,8 +20,12 @@
 #import "LoginViewController.h"
 
 #import "DDMenuController.h"
+#import "BounceSheet.h"
 
-@interface GGTabBarController () <GGTabBarDelegate>
+@interface GGTabBarController () <GGTabBarDelegate ,BounceSheetDelegate>{
+    BounceSheet *bounceSheet1;
+    BounceSheet *bounceSheet2;
+}
 @property (nonatomic, strong) UIView *presentationView;
 @property (nonatomic, strong) GGTabBar *tabBarView;
 @property (nonatomic, assign) BOOL isFirstAppear;
@@ -90,14 +94,36 @@ int isLogin = 0;
 
 - (void)tabBar:(GGTabBar *)tabBar didPressButton:(UIButton *)button atIndex:(NSUInteger)tabIndex
 {
-    UIViewController *selectedViewController = _viewControllers[tabIndex];
-    
-    if ([_delegate respondsToSelector:@selector(ggTabBarController:shouldSelectViewController:)]) {
-        if ([_delegate ggTabBarController:self shouldSelectViewController:selectedViewController]) {
-            [self selectViewController:selectedViewController withButton:button];
+    if (tabIndex == 1) {
+        bounceSheet1 = [[BounceSheet alloc] initWithDelegate:self X:ScreenWidth/4];
+        [bounceSheet1 addButtonWithTitle:@"Hi!" actionBlock:^{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hi!" message:@"测试测试" delegate:nil cancelButtonTitle:@"okay" otherButtonTitles: nil];
+            [alert show];
+        }];
+        [bounceSheet1 addButtonWithTitle:@"Bye"];
+        [bounceSheet1 addButtonWithTitle:@"加1"];
+        [bounceSheet1 show];
+    }else if (tabIndex == 3) {
+        bounceSheet2 = [[BounceSheet alloc] initWithDelegate:self X:3*ScreenWidth/4];
+        [bounceSheet2 addButtonWithTitle:@"Hi!" actionBlock:^{
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hi!" message:@"测试测试" delegate:nil cancelButtonTitle:@"okay" otherButtonTitles: nil];
+            [alert show];
+        }];
+        [bounceSheet2 addButtonWithTitle:@"Bye"];
+        [bounceSheet2 addButtonWithTitle:@"加1"];
+        [bounceSheet2 addButtonWithTitle:@"加2"];
+        [bounceSheet2 addButtonWithTitle:@"加3"];
+        [bounceSheet2 show];
+    }else {
+        UIViewController *selectedViewController = _viewControllers[tabIndex];
+        
+        if ([_delegate respondsToSelector:@selector(ggTabBarController:shouldSelectViewController:)]) {
+            if ([_delegate ggTabBarController:self shouldSelectViewController:selectedViewController]) {
+                [self selectViewController:selectedViewController withButton:button];
+            }
         }
+        [self selectViewController:selectedViewController withButton:button];
     }
-    [self selectViewController:selectedViewController withButton:button];
 }
 
 /**跳转到指定Tab*/
@@ -113,6 +139,31 @@ int isLogin = 0;
     }
     
     [self selectViewController:selectedViewController withButton:[_tabBarView  getButtonAtIndex:tabIndex]];
+}
+
+#pragma mark - BounceSheet Delegate
+- (void)actionSheetCancel:(BounceSheet *)actionSheet
+{
+    if (bounceSheet1) {
+        [bounceSheet1 removeFromSuperview];
+        bounceSheet1 = nil;
+    }else if(bounceSheet2) {
+        [bounceSheet2 removeFromSuperview];
+        bounceSheet2 = nil;
+    }
+
+}
+
+- (void)actionSheet:(BounceSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    if (bounceSheet1) {
+        [bounceSheet1 removeFromSuperview];
+        bounceSheet1 = nil;
+    }else if(bounceSheet2) {
+        [bounceSheet2 removeFromSuperview];
+        bounceSheet2 = nil;
+    }
+
 }
 
 # pragma mark - View Controller Selection
