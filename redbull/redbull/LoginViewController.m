@@ -39,7 +39,7 @@ extern int isLogin;
 #pragma mark - UI
 - (void)_initView {
     self.view.backgroundColor = hll_color(1, 1, 1, 0.7);
-    UIView *logView = [[UIView alloc] initWithFrame:CGRectMake(15, FSystenVersion>=7.0?64:44, ScreenWidth - 30, 230)];
+    UIView *logView = [[UIView alloc] initWithFrame:CGRectMake(15, FSystenVersion>=7.0?64:44, ScreenWidth - 30, 300)];
     logView.backgroundColor = hll_color(240, 240, 240, 1);
     [self.view addSubview:logView];
     
@@ -101,6 +101,24 @@ extern int isLogin;
     [loginBtn setTitle:@"登 陆" forState:UIControlStateNormal];
     [loginBtn addTarget:self action:@selector(loginClick) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:loginBtn];
+    
+    UILabel *otherTitle = [[UILabel alloc] initWithFrame:CGRectMake(logView.width / 2 - 65, loginBtn.bottom + 20, 140, 10)];
+    otherTitle.text = @"使用其它账号登陆";
+    otherTitle.textColor = hll_color(210, 40, 39, 1);
+    otherTitle.translatesAutoresizingMaskIntoConstraints = NO;
+    [logView addSubview:otherTitle];
+    
+    UIButton *qqButton = [[UIButton alloc] initWithFrame:CGRectMake(registerBtn.center.x - 25, registerBtn.bottom + 50, 50, 50)];
+    qqButton.backgroundColor = [UIColor clearColor];
+    [qqButton setImage:[UIImage imageNamed:@"login_qq"] forState:UIControlStateNormal];
+    [qqButton addTarget:self action:@selector(loginQQ:) forControlEvents:UIControlEventTouchUpInside];
+    [logView addSubview:qqButton];
+    
+    UIButton *weiboButton = [[UIButton alloc] initWithFrame:CGRectMake(loginBtn.center.x - 25, loginBtn.bottom + 50, 50, 50)];
+    weiboButton.backgroundColor = [UIColor clearColor];
+    [weiboButton setImage:[UIImage imageNamed:@"login_weibo"] forState:UIControlStateNormal];
+    [weiboButton addTarget:self action:@selector(loginWeibo:) forControlEvents:UIControlEventTouchUpInside];
+    [logView addSubview:weiboButton];
 }
 
 #pragma mark - action
@@ -195,6 +213,16 @@ extern int isLogin;
          UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"message:@"网络错误"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
          [alert show];
      }];
+}
+
+- (void)loginQQ:(id)sender
+{
+    NSLog(@"login QQ");
+}
+
+- (void)loginWeibo:(id)sender
+{
+    NSLog(@"login weibo");
 }
 
 @end
