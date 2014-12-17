@@ -65,6 +65,8 @@
 
 #define LOGIN_INDEX                 @"http://www.redbullclub.cn/index.php?s=IOS/login"
 
+#define JSON_TAB                    @"http://redbullclub.cn/public/nav.json"
+
 @interface Constant : NSObject
 
 @end

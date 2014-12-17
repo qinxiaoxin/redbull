@@ -45,8 +45,13 @@ extern int isLogin;
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    //加载URL
-    [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:TURNTABLE_PAGE]]];
+    if(_bingStrUrl != nil){
+        //加载传递来的URL
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_bingStrUrl]]];
+    }else{
+        //加载URL
+        [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:TURNTABLE_PAGE]]];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

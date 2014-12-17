@@ -31,6 +31,9 @@
 @property (nonatomic, assign) BOOL isFirstAppear;
 @property (nonatomic,retain) NSString *documentsDirectory;
 
+@property (nonatomic, strong) NSArray *jsonArrayAsk;
+@property (nonatomic, strong) NSArray *jsonArrayTurn;
+
 @end
 
 @implementation GGTabBarController
@@ -50,12 +53,15 @@ int isLogin = 0;
 
     _tabBarView = [[GGTabBar alloc] initWithFrame:CGRectZero viewControllers:_viewControllers appearance:_tabBarAppearanceSettings];
     _tabBarView.delegate = self;
-
+ 
     _presentationView = [[UIView alloc] init];
     _presentationView.translatesAutoresizingMaskIntoConstraints = NO;
     
     [self.view addSubview:_tabBarView];
     [self.view addSubview:_presentationView];
+    
+    //Fetch json data
+    [self requestJsonTabData];
 }
 
 - (void)viewWillLayoutSubviews
@@ -89,6 +95,37 @@ int isLogin = 0;
     }
 }
 
+/**
+ *  Fetch tab json data
+ */
+- (void)requestJsonTabData
+{
+    //创建一个线程获取Tab json数据
+    dispatch_queue_t fetchQ = dispatch_queue_create("json fetch", NULL);
+    dispatch_async(fetchQ, ^{
+        NSURL *url = [NSURL URLWithString:JSON_TAB];
+        NSMutableURLRequest *mrequest = [NSMutableURLRequest requestWithURL:url];
+        mrequest.timeoutInterval = 15.f;
+        AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:mrequest success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+            
+            NSDictionary *jsonDictionary = (NSDictionary *)JSON;
+            self.jsonArrayAsk = [jsonDictionary objectForKey:@"pageConfig1"];
+            NSLog(@"self.jsonArray = %@",self.jsonArrayAsk);
+            self.jsonArrayTurn = [jsonDictionary objectForKey:@"pageConfig2"];
+            NSLog(@"self.jsonArrayTurn = %@",self.jsonArrayTurn);
+            
+        } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+            NSLog(@"json error = %@",error);
+            
+            UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"message:@"网络错误"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+            [alert show];
+            
+        }];
+        
+        [operation start];
+    });
+}
+
 
 #pragma mark - Delegation
 
@@ -96,24 +133,41 @@ int isLogin = 0;
 {
     if (tabIndex == 1) {
         bounceSheet1 = [[BounceSheet alloc] initWithDelegate:self X:ScreenWidth/4];
-        [bounceSheet1 addButtonWithTitle:@"Hi!" actionBlock:^{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hi!" message:@"测试测试" delegate:nil cancelButtonTitle:@"okay" otherButtonTitles: nil];
-            [alert show];
-        }];
-        [bounceSheet1 addButtonWithTitle:@"Bye"];
-        [bounceSheet1 addButtonWithTitle:@"加1"];
+        
+        __block GGTabBarController *ggVC = self;
+        
+        for(int i = 0;i < self.jsonArrayAsk.count;i++){
+            NSDictionary *dic = [self.jsonArrayAsk objectAtIndex:i];
+            NSString *string = [dic objectForKeyedSubscript:@"title"];
+            NSString *url = [dic objectForKeyedSubscript:@"url"];
+            NSLog(@"ask tab string = %@",string);
+            NSLog(@"ask tab string = %@",url);
+            [bounceSheet1 addButtonWithTitle:string actionBlock:^{
+                [ggVC jumpToTabAtIndexNum:tabIndex withStrUrl:url];
+                
+            }];
+        }
+        
         [bounceSheet1 show];
+        
     }else if (tabIndex == 3) {
         bounceSheet2 = [[BounceSheet alloc] initWithDelegate:self X:3*ScreenWidth/4];
-        [bounceSheet2 addButtonWithTitle:@"Hi!" actionBlock:^{
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Hi!" message:@"测试测试" delegate:nil cancelButtonTitle:@"okay" otherButtonTitles: nil];
-            [alert show];
-        }];
-        [bounceSheet2 addButtonWithTitle:@"Bye"];
-        [bounceSheet2 addButtonWithTitle:@"加1"];
-        [bounceSheet2 addButtonWithTitle:@"加2"];
-        [bounceSheet2 addButtonWithTitle:@"加3"];
+        
+        __block GGTabBarController *ggVC = self;
+        
+        for(int i = 0;i < self.jsonArrayTurn.count;i++){
+            NSDictionary *dic = [self.jsonArrayTurn objectAtIndex:i];
+            NSString *string = [dic objectForKeyedSubscript:@"title"];
+            NSString *url = [dic objectForKey:@"url"];
+            NSLog(@"turn tab title = %@",string);
+            NSLog(@"turn tab url = %@",url);
+            [bounceSheet2 addButtonWithTitle:string actionBlock:^{
+                [ggVC jumpToTabAtIndexNum:tabIndex withStrUrl:url];
+            }];
+        }
+        
         [bounceSheet2 show];
+        
     }else {
         UIViewController *selectedViewController = _viewControllers[tabIndex];
         

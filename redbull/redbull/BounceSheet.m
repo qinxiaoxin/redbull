@@ -9,10 +9,10 @@
 #import "BounceSheet.h"
 
 #define kButtonHeight 50.f
-#define kAnimationDuration 0.2f
+#define kAnimationDuration 0.5f
 #define kSeparatorWidth .5f
 #define kMargin 10.f
-#define kBottomMargin 10.f
+#define kBottomMargin 5.f
 
 static UIWindow *__sheetWindow = nil;
 
@@ -37,12 +37,15 @@ static UIWindow *__sheetWindow = nil;
 
 - (void)_commonInit
 {
-    self.backgroundColor = [UIColor colorWithWhite:1.f alpha:0.95f];
-    _highlightedButtonColor = [UIColor colorWithWhite:0.93f alpha:1.f];
-    _separatorColor = [UIColor colorWithWhite:0.8 alpha:1.f];
+//    self.backgroundColor = [UIColor colorWithRed:44 / 255.f green:44 / 255.f blue:44 / 255.f alpha:1.f];
+    self.backgroundColor = hll_color(44, 44, 44, 1);
+//    _highlightedButtonColor = [UIColor colorWithRed:254 / 255.f green:0 / 255.f blue:0 / 255.f alpha:1.f];
+    _highlightedButtonColor = hll_color(254, 0, 0, 1);
+//    _separatorColor = [UIColor colorWithRed:18 / 255.f green:18 / 255.f blue:18 / 255.f alpha:1.f];
+    _separatorColor = hll_color(18, 18, 18, 1);
     
-    self.layer.cornerRadius = 8.f;
-    self.clipsToBounds = YES;
+//    self.layer.cornerRadius = 8.f;
+//    self.clipsToBounds = YES;
 }
 
 #pragma mark -
@@ -52,11 +55,11 @@ static UIWindow *__sheetWindow = nil;
         [self.buttonTitles addObject:@""];
     } else [self.buttonTitles addObject:title];
     
-    UIButton *newButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    UIButton *newButton = [UIButton buttonWithType:UIButtonTypeCustom];
     newButton.titleLabel.font = [UIFont systemFontOfSize:16.f];
     [newButton setFrame:CGRectMake(0, 0, self.screenSize.width, kButtonHeight)];
     [newButton setTitle:title forState:UIControlStateNormal];
-    [newButton setTitleColor:hll_color(63, 63, 63, 1) forState:UIControlStateNormal];
+    [newButton setTitleColor:hll_color(187, 187, 187, 1) forState:UIControlStateNormal];
     [newButton addTarget:self action:@selector(dismissWithClickedButton:) forControlEvents:UIControlEventTouchUpInside];
     NSUInteger index = [self.buttons count];
     
@@ -152,6 +155,7 @@ static UIWindow *__sheetWindow = nil;
 
 - (void)dismissWithClickedButton:(UIButton *)button
 {
+    
     NSInteger buttonIndex = [self indexOfButton:button];
     
     void (^actionBlockForButton)() = [self.actionBlockForButtonIndex objectForKey:[NSNumber numberWithInteger:buttonIndex]];
@@ -233,8 +237,15 @@ static UIWindow *__sheetWindow = nil;
     if ([button isKindOfClass:[UIButton class]]) {
         [UIView animateWithDuration:0.2f animations:^{
             if (button.isHighlighted) {
-                button.backgroundColor = self.highlightedButtonColor;
-            } else button.backgroundColor = [UIColor clearColor];
+                
+                NSLog(@"highlighted");
+                
+                button.backgroundColor = _highlightedButtonColor;
+                [button setTitleColor:hll_color(255, 255, 255, 1) forState:UIControlStateHighlighted];
+            }
+            
+            
+            else button.backgroundColor = [UIColor clearColor];
         }];
     }
 }
