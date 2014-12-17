@@ -38,8 +38,7 @@
 
 @implementation GGTabBarController
 
-//unlogin = 0
-int isLogin = 0;
+extern int isLogin;
 
 - (void)viewDidLoad
 {
@@ -84,14 +83,6 @@ int isLogin = 0;
     if (!_isFirstAppear) {
         _isFirstAppear = YES;
         [self selectViewController:[_viewControllers firstObject]];
-    }
-    
-    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
-    NSString *name = [userDefault objectForKey:@"name"];
-    if (name == nil) {
-        isLogin = 0;
-    }else{
-        isLogin = 1;
     }
 }
 
@@ -372,7 +363,8 @@ int isLogin = 0;
 /**判断是否有用户头像图片*/
 -(BOOL)checkIsHaveUserPic{
     NSFileManager *fileManager =   [[NSFileManager alloc] init];
-    return [fileManager fileExistsAtPath:[[NSString alloc]  initWithFormat:@"%@%@",_documentsDirectory,@"UserHeadPic.png"]];
+    NSURL *sandBoxURL = [NSURL fileURLWithPath:[_documentsDirectory stringByAppendingPathComponent:@"UserHeadPic.png"]];
+    return [fileManager fileExistsAtPath:sandBoxURL.path];
 }
 
 

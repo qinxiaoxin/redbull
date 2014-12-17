@@ -44,8 +44,6 @@ extern int isLogin;
 {
     [super viewWillAppear:animated];
     
-    NSLog(@"viewWillAppear !!!");
-    
     if(_bingStrUrl != nil){
         //加载传递来的URL
         [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:_bingStrUrl]]];
@@ -109,6 +107,9 @@ extern int isLogin;
         
         [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:ASK_PAGE]]];
         
+        return NO;
+    }else if([request.URL.absoluteString hasPrefix:EXCHANGE_PAGE]) {
+        [_mTabBarController  jumpToTabAtIndexNum:EXCHANGE_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
         return NO;
     }
     

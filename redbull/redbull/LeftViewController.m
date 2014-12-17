@@ -61,7 +61,8 @@ extern int isLogin;
     NSFileManager *fileManager =   [[NSFileManager alloc] init];
 //   _userHeadPicPath  = [[NSString alloc]  initWithFormat:@"%@%@",_documentsDirectory,@"UserHeadPic.png"];
     NSURL *sandBoxURL = [NSURL fileURLWithPath:[_documentsDirectory stringByAppendingPathComponent:@"UserHeadPic.png"]];
-    return [fileManager fileExistsAtPath:sandBoxURL.path];
+    _userHeadPicPath = sandBoxURL.path;
+    return [fileManager fileExistsAtPath:_userHeadPicPath];
 }
 
 /**设置头像*/

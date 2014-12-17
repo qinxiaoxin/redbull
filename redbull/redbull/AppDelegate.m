@@ -33,6 +33,8 @@
 
 @implementation AppDelegate
 
+int isLogin = 0;
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
@@ -44,6 +46,14 @@
     }
     else{
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
+    }
+    
+    NSUserDefaults *userDefault = [NSUserDefaults standardUserDefaults];
+    NSString *name = [userDefault objectForKey:@"name"];
+    if (name == nil) {
+        isLogin = 0;
+    }else{
+        isLogin = 1;
     }
     
     //不使用main board的tabbar

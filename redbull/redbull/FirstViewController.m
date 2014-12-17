@@ -16,8 +16,6 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (strong, nonatomic) UIView *webFailView;
 
-//@property (strong, nonatomic) UIButton *refreshButton;
-
 
 @end
 
@@ -47,23 +45,12 @@ extern int isLogin;
     
     //加载URL
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:INDEX_PAGE]]];
-    
-    //refreash Button
-//    _refreshButton = [[UIButton alloc] initWithFrame:CGRectMake(_indicator.frame.origin.x - 25, _indicator.frame.origin.y - 15, 100, 30)];
-//    _refreshButton.backgroundColor = [UIColor grayColor];
-//    _refreshButton.tintColor = [UIColor blackColor];
-//    [_refreshButton setTitle:@"重新加载" forState:UIControlStateNormal];
-//    _refreshButton.titleLabel.font = [UIFont systemFontOfSize:14.f];
-//    [_refreshButton addTarget:self action:@selector(viewWillAppear:) forControlEvents:UIControlEventTouchUpInside];
-//    _refreshButton.hidden = YES;
-//    [self.view addSubview:_refreshButton];
-    
-
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
+    
     //加载URL
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:INDEX_PAGE]]];
 
@@ -80,8 +67,6 @@ extern int isLogin;
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
     [_indicator startAnimating];
-    
-//    _refreshButton.hidden = YES;
 }
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
