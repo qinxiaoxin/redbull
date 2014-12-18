@@ -23,6 +23,12 @@ extern int isLogin;
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    NSLog(@"Login viewWillAppear");
+    if(isLogin == 1){
+        [self ProfileGet];
+        [self dismissLogin];
+    }
+    
     _keyBoardController=[[UIKeyboardViewController alloc] initWithControllerDelegate:self];
     [_keyBoardController addToolbarToKeyboard];
 }
@@ -31,11 +37,13 @@ extern int isLogin;
     [super viewDidLoad];
     
     [self _initView];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(dismissLogin) name:@"CLOSE_LOGIN" object:nil];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
 
 #pragma mark - UI
 - (void)_initView {
@@ -163,10 +171,12 @@ extern int isLogin;
     [self presentViewController:pdvc animated:YES completion:nil];
 }
 
+-(void) dismissLogin{
+    [self performSelectorOnMainThread:@selector(cancelBtnClick)withObject:nil waitUntilDone:YES];
+}
+
 - (void)cancelBtnClick
 {
-    
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -239,11 +249,11 @@ extern int isLogin;
 {
     NSLog(@"login QQ");
     
-//    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
-//    pdvc.webURL = LOGIN_QQ;
-//    pdvc.navigationBarTitle = QQLOGIN_NAV;
-//
-//    [self presentViewController:pdvc animated:YES completion:nil];
+    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
+    pdvc.webURL = LOGIN_QQ;
+    pdvc.navigationBarTitle = QQLOGIN_NAV;
+
+    [self presentViewController:pdvc animated:YES completion:nil];
 
 }
 
@@ -251,12 +261,41 @@ extern int isLogin;
 {
     NSLog(@"login weibo");
     
-//    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
-//    pdvc.webURL = LOGIN_WEIBO;
-//    pdvc.navigationBarTitle = WEIBOLOGIN_NAV;
-//    
-//    [self presentViewController:pdvc animated:YES completion:nil];
+    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
+    pdvc.webURL = LOGIN_WEIBO;
+    pdvc.navigationBarTitle = WEIBOLOGIN_NAV;
+    
+    [self presentViewController:pdvc animated:YES completion:nil];
 
 }
+
+- (void)ProfileGet
+{
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@""]];
+    httpClient.parameterEncoding = AFJSONParameterEncoding;
+    [httpClient setDefaultHeader:@"Accept" value:@"text/json"];
+    
+    [httpClient getPath:PROFILE_URL
+             parameters:NULL
+                success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+        NSRange start =  [responseStr rangeOfString:@"<td class=\"td2\"><img src=\""];
+         if(start.location>0){
+             NSString *headPicUrl = [responseStr substringFromIndex:start.location+start.length];
+             NSRange end = [headPicUrl rangeOfString:@"\""];
+             headPicUrl =[headPicUrl substringToIndex:end.location] ;
+             [_mTabBarController setNavigationImageWithUrl:headPicUrl];
+             NSLog(@"headPicUrl :%@",headPicUrl);
+         }
+         
+     }
+                failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"message:@"网络错误"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+         [alert show];
+     }];
+}
+
 
 @end
