@@ -14,6 +14,7 @@
 #define EXCHANGE_DETAIL_PAGE   @"http://www.redbullclub.cn/index.php?s=IOS/detail"
 #define TURNTABLE_PAGE  @"http://www.redbullclub.cn/index.php?s=IOS/event"
 #define LOGIN_POSTPATH  @"http://www.redbullclub.cn/index.php?s=User/doLoginForIos" //登陆postPath
+#define FORGETPASSWORD_URL  @"http://www.redbullclub.cn/index.php?s=IOS/forgetPassword"
 
 #define INDEX_PAGE_INDEX  0
 #define ASK_PAGE_INDEX 1
@@ -46,6 +47,7 @@
 #define ADDRESS_NAV                 @"收货地址管理"
 #define SCORE_NAV                   @"我的能量值"
 #define PRESENT_NAV                 @"已兑换礼品"
+#define FORGET_NAV                  @"找回密码"
 
 #define SHARE_WEIBO                 @"http://v.t.sina.com.cn/share/share.php?appkey=&url=http://www.redbullclub.cn/download/RedbullClup.beta1.0.apk&title=能量部落，你的能量超乎你想象%E3%80%82分享内容&source=&sourceUrl=&content=utf-8&pic=http://www.redbullclub.cn/uploads/banner/20141109/165754_487picture.jpg"
 #define SHARE_RENREN                @"http://widget.renren.com/dialog/share?resourceUrl=http://www.redbullclub.cn/download/RedbullClup.beta1.0.apk&pic=http://www.redbullclub.cn/uploads/banner/20141109/165754_487picture.jpg&title=能量部落——你的能量超乎你想象&description=能量部落，你的能量超乎你想象%E3%80%82分享内容"
@@ -64,6 +66,7 @@
 #define APP_ID                      @"https://itunes.apple.com/us/app/hong-niu-neng-liang-bu-luo/id947297356?ls=1&mt=8"
 
 #define LOGIN_INDEX                 @"http://www.redbullclub.cn/index.php?s=IOS/login"
+#define WHAT_LOGIN_INDEX            @"http://www.redbullclub.cn/?s=IOS/login"
 
 #define JSON_TAB                    @"http://redbullclub.cn/public/nav.json"
 

@@ -11,6 +11,7 @@
 #import "SBJson.h"
 
 #import "RegisterViewController.h"
+#import "PersonalDetailViewController.h"
 
 @interface LoginViewController ()
 @end
@@ -48,22 +49,29 @@ extern int isLogin;
     [logView addSubview:redline];
     
     UIButton *cancelBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    cancelBtn.frame = CGRectMake(redline.right - 17, redline.top + 33, 60, 60);
+    cancelBtn.frame = CGRectMake(redline.right -8, redline.top + 43, 40, 40);
     [cancelBtn setBackgroundImage:[UIImage imageNamed:@"cancel"] forState:UIControlStateNormal];
     [cancelBtn addTarget:self action:@selector(cancelBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancelBtn];
     
-    UIImageView *titleImage = [[UIImageView alloc] init];
-    titleImage.frame = CGRectMake(logView.width/2-50, redline.bottom+5, 15, 15);
-    titleImage.backgroundColor = [UIColor clearColor];
-    titleImage.image = [UIImage imageNamed:@""];
-    [logView addSubview:titleImage];
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(redline.width / 2 - 35, redline.top + 15, 90, 10)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, redline.top + 15, 90, 10)];
     titleLabel.text = @"用户登录";
+    titleLabel.font = [UIFont systemFontOfSize:15.f];
     titleLabel.textColor = hll_color(210, 40, 39, 1);
     titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [logView addSubview:titleLabel];
+    
+    UIButton *forgetPasswordBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    forgetPasswordBtn.frame = CGRectMake(logView.width-80, redline.top +15, 60, 15);
+    forgetPasswordBtn.backgroundColor = hll_color(63, 63, 63, 1);
+    forgetPasswordBtn.layer.cornerRadius = 8.f;
+    forgetPasswordBtn.clipsToBounds = YES;
+    forgetPasswordBtn.titleLabel.font = [UIFont boldSystemFontOfSize:10.f];
+    [forgetPasswordBtn setTitle:@" 找回密码" forState:UIControlStateNormal];
+    [forgetPasswordBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [forgetPasswordBtn setTitleColor:hll_color(255, 255, 255, 0.5) forState:UIControlStateHighlighted];
+    [forgetPasswordBtn addTarget:self action:@selector(forgerClick) forControlEvents:UIControlEventTouchUpInside];
+    [logView addSubview:forgetPasswordBtn];
     
     _usernameTextField = [[UITextField alloc] initWithFrame:CGRectMake(20, titleLabel.bottom +20, logView.width-40, 30)];
     _usernameTextField.placeholder = @" 登录名";
@@ -92,6 +100,8 @@ extern int isLogin;
     registerBtn.frame = CGRectMake(_passwordTextField.left, _passwordTextField.bottom+20, _passwordTextField.width/2-10, 30);
     [registerBtn setBackgroundColor:hll_color(253, 185, 61, 1)];
     [registerBtn setTitle:@"立即注册" forState:UIControlStateNormal];
+    registerBtn.titleLabel.font = [UIFont boldSystemFontOfSize:18.f];
+    [registerBtn setTitleColor:hll_color(255, 255, 255, 0.3) forState:UIControlStateHighlighted];
     [registerBtn addTarget:self action:@selector(registerClick:) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:registerBtn];
     
@@ -99,6 +109,8 @@ extern int isLogin;
     loginBtn.frame = CGRectMake(logView.width/2+10, _passwordTextField.bottom+20, _passwordTextField.width/2-10, 30);
     [loginBtn setBackgroundColor:hll_color(252, 74, 57, 1)];
     [loginBtn setTitle:@"登 陆" forState:UIControlStateNormal];
+    loginBtn.titleLabel.font = [UIFont boldSystemFontOfSize:18.f];
+    [loginBtn setTitleColor:hll_color(255, 255, 255, 0.3) forState:UIControlStateHighlighted];
     [loginBtn addTarget:self action:@selector(loginClick) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:loginBtn];
     
@@ -141,6 +153,14 @@ extern int isLogin;
     [self presentViewController:rvc animated:YES completion:^{
         
     }];
+}
+
+- (void)forgerClick
+{
+    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
+    pdvc.webURL = FORGETPASSWORD_URL;
+    pdvc.navigationBarTitle = FORGET_NAV;
+    [self presentViewController:pdvc animated:YES completion:nil];
 }
 
 - (void)cancelBtnClick

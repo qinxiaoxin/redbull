@@ -79,7 +79,7 @@
     NSString *requestString = [[request URL] absoluteString];
     NSLog(@"requestString =====> %@",requestString);
     NSString *indexPage = [NSString stringWithFormat:@"%@/",INDEX_PAGE];
-    if ([requestString isEqualToString:HTML5_APP_URL]||[requestString isEqualToString:indexPage]){
+    if ([requestString isEqualToString:HTML5_APP_URL]||[requestString isEqualToString:indexPage]||[requestString isEqualToString:WHAT_LOGIN_INDEX]){
         self.webURL = nil;
         
         [self dismissViewControllerAnimated:YES completion:nil];
