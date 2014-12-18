@@ -239,20 +239,24 @@ extern int isLogin;
 {
     NSLog(@"login QQ");
     
-    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
-    pdvc.webURL = LOGIN_QQ;
-    pdvc.navigationBarTitle = QQLOGIN_NAV;
-    [self presentViewController:pdvc animated:YES completion:nil];
+//    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
+//    pdvc.webURL = LOGIN_QQ;
+//    pdvc.navigationBarTitle = QQLOGIN_NAV;
+//
+//    [self presentViewController:pdvc animated:YES completion:nil];
+
 }
 
 - (void)loginWeibo:(id)sender
 {
     NSLog(@"login weibo");
     
-    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
-    pdvc.webURL = LOGIN_WEIBO;
-    pdvc.navigationBarTitle = WEIBOLOGIN_NAV;
-    [self presentViewController:pdvc animated:YES completion:nil];
+//    PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
+//    pdvc.webURL = LOGIN_WEIBO;
+//    pdvc.navigationBarTitle = WEIBOLOGIN_NAV;
+//    
+//    [self presentViewController:pdvc animated:YES completion:nil];
+
 }
 
 @end

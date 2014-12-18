@@ -15,6 +15,7 @@
 #define TURNTABLE_PAGE  @"http://www.redbullclub.cn/index.php?s=IOS/event"
 #define LOGIN_POSTPATH  @"http://www.redbullclub.cn/index.php?s=User/doLoginForIos" //登陆postPath
 #define FORGETPASSWORD_URL  @"http://www.redbullclub.cn/index.php?s=IOS/forgetPassword"
+#define HTML5_APP_URL_1 @"http://redbullclub.cn/index.php?s=M"
 
 #define INDEX_PAGE_INDEX  0
 #define ASK_PAGE_INDEX 1

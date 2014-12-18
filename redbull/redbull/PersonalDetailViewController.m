@@ -12,6 +12,8 @@
 
 #import "DDMenuController.h"
 
+#import "LoginViewController.h"
+
 @interface PersonalDetailViewController ()<UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
@@ -21,6 +23,8 @@
 @end
 
 @implementation PersonalDetailViewController
+
+extern int isLogin;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -79,10 +83,12 @@
     NSString *requestString = [[request URL] absoluteString];
     NSLog(@"requestString =====> %@",requestString);
     NSString *indexPage = [NSString stringWithFormat:@"%@/",INDEX_PAGE];
-    if ([requestString isEqualToString:HTML5_APP_URL]||[requestString isEqualToString:indexPage]||[requestString isEqualToString:WHAT_LOGIN_INDEX]){
-        self.webURL = nil;
+    if ([requestString isEqualToString:HTML5_APP_URL]||[requestString isEqualToString:indexPage]||[requestString isEqualToString:WHAT_LOGIN_INDEX] || [requestString isEqualToString:HTML5_APP_URL_1]){
         
+        self.webURL = nil;
+       
         [self dismissViewControllerAnimated:YES completion:nil];
+        
     }
     
     return YES;
