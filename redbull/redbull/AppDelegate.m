@@ -23,9 +23,7 @@
 
 #import "WXApi.h"
 
-#import "UMSocial.h"
-//#import "UMSocialWechatHandler.h"
-#import "UMSocialQQHandler.h"
+#import <QQApi/QQApi.h>
 
 @interface AppDelegate ()
 
@@ -87,11 +85,8 @@ int isLogin = 0;
     self.window.backgroundColor = [UIColor colorWithRed:18 / 255.f green:18 / 255.f blue:18 / 255.f alpha:1.f];
     [self.window makeKeyAndVisible];
     
-//    //wechat
-//    [UMSocialWechatHandler setWXAppId:@"wx8ff0fc6d23a90c06" appSecret:@"55e4de12e1cadfd582f7794194daa53d" url:nil];
-//    
-    //qq
-    [UMSocialQQHandler setQQWithAppId:@"801536709" appKey:@"5ec8f94bdae30e680632df939127e8b4" url:nil];
+    //向QQ好友分享注册
+    [QQApi registerPluginWithId:@"QQ2FC67AC5"];
     
     //向微信注册
     [WXApi registerApp:@"wx8ff0fc6d23a90c06" withDescription:@"demo 2.0"];

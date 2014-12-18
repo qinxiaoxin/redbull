@@ -35,7 +35,6 @@
 		4BC9005B1A2C539C00A1B24B /* UIViewExt.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9005A1A2C539C00A1B24B /* UIViewExt.m */; };
 		4BC900601A2C592A00A1B24B /* UIKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9005D1A2C592A00A1B24B /* UIKeyboardView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		4BC900611A2C592A00A1B24B /* UIKeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BC9005F1A2C592A00A1B24B /* UIKeyboardViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		54CE7DAC9985942964C6F915 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E61E4918FCE8AE46A2E58748 /* libPods.a */; };
 		762FB85C1A25E64600F68BC8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FB85B1A25E64600F68BC8 /* main.m */; };
 		762FB85F1A25E64600F68BC8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FB85E1A25E64600F68BC8 /* AppDelegate.m */; };
 		762FB8621A25E64600F68BC8 /* redbull.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 762FB8601A25E64600F68BC8 /* redbull.xcdatamodeld */; };
@@ -45,6 +44,7 @@
 		762FB86D1A25E64600F68BC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762FB86B1A25E64600F68BC8 /* LaunchScreen.xib */; };
 		762FB8791A25E64600F68BC8 /* redbullTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FB8781A25E64600F68BC8 /* redbullTests.m */; };
 		763F31571A2C56E1004CE6AE /* Navbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 763F31561A2C56E1004CE6AE /* Navbar.m */; };
+		764D84C51A42DBC900AC4819 /* QQApi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 764D84C41A42DBC900AC4819 /* QQApi.framework */; };
 		765E00591A2FEDB600DCCC86 /* PersonalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E00571A2FEDB600DCCC86 /* PersonalDetailViewController.m */; };
 		765E005A1A2FEDB600DCCC86 /* PersonalDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E00581A2FEDB600DCCC86 /* PersonalDetailViewController.xib */; };
 		765E00601A3158A300DCCC86 /* EAIntroPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E005D1A3158A300DCCC86 /* EAIntroPage.m */; };
@@ -76,6 +76,7 @@
 		76A74EB51A3817CE00D1CB37 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A74EB41A3817CE00D1CB37 /* CoreTelephony.framework */; };
 		76A74EB71A3817E000D1CB37 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A74EB61A3817E000D1CB37 /* libstdc++.dylib */; };
 		76A74EB91A3817EC00D1CB37 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 76A74EB81A3817EC00D1CB37 /* libz.dylib */; };
+		76F292AE1A42E65B005545B9 /* login_qq.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 76F292AD1A42E65B005545B9 /* login_qq.jpg */; };
 		76FC7AD71A38448500475AAC /* libWeChatSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76FC7AD31A38448500475AAC /* libWeChatSDK.a */; };
 		76FC7AD81A38448500475AAC /* read_me.txt in Resources */ = {isa = PBXBuildFile; fileRef = 76FC7AD41A38448500475AAC /* read_me.txt */; };
 		76FC7B001A38506000475AAC /* UMSocialLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76FC7AE61A38506000475AAC /* UMSocialLocalizable.strings */; };
@@ -180,6 +181,7 @@
 		762FB8781A25E64600F68BC8 /* redbullTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = redbullTests.m; sourceTree = "<group>"; };
 		763F31551A2C56E1004CE6AE /* Navbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Navbar.h; sourceTree = "<group>"; };
 		763F31561A2C56E1004CE6AE /* Navbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Navbar.m; sourceTree = "<group>"; };
+		764D84C41A42DBC900AC4819 /* QQApi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = QQApi.framework; sourceTree = "<group>"; };
 		765E00561A2FEDB600DCCC86 /* PersonalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDetailViewController.h; sourceTree = "<group>"; };
 		765E00571A2FEDB600DCCC86 /* PersonalDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonalDetailViewController.m; sourceTree = "<group>"; };
 		765E00581A2FEDB600DCCC86 /* PersonalDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonalDetailViewController.xib; sourceTree = "<group>"; };
@@ -229,6 +231,7 @@
 		76A74EB41A3817CE00D1CB37 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		76A74EB61A3817E000D1CB37 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		76A74EB81A3817EC00D1CB37 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		76F292AD1A42E65B005545B9 /* login_qq.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login_qq.jpg; sourceTree = "<group>"; };
 		76FC7AD31A38448500475AAC /* libWeChatSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libWeChatSDK.a; sourceTree = "<group>"; };
 		76FC7AD41A38448500475AAC /* read_me.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = read_me.txt; sourceTree = "<group>"; };
 		76FC7AD51A38448500475AAC /* WXApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXApi.h; sourceTree = "<group>"; };
@@ -262,7 +265,6 @@
 		76FC7B0F1A38506F00475AAC /* UMSocialQQHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UMSocialQQHandler.h; sourceTree = "<group>"; };
 		76FC7B141A389A0F00475AAC /* WebFailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebFailView.m; sourceTree = "<group>"; };
 		76FC7B151A389A0F00475AAC /* WebFailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebFailView.h; sourceTree = "<group>"; };
-		E61E4918FCE8AE46A2E58748 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB98A3C501CC40F30FAEC066 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -280,9 +282,9 @@
 				76A74EB11A3817A800D1CB37 /* CoreGraphics.framework in Frameworks */,
 				76A74EAF1A38179C00D1CB37 /* SystemConfiguration.framework in Frameworks */,
 				76A74EAD1A38178D00D1CB37 /* libiconv.dylib in Frameworks */,
+				764D84C51A42DBC900AC4819 /* QQApi.framework in Frameworks */,
 				76FC7B011A38506000475AAC /* libUMSocial_Sdk_4.2.1.a in Frameworks */,
 				76A74EAB1A38176B00D1CB37 /* Security.framework in Frameworks */,
-				54CE7DAC9985942964C6F915 /* libPods.a in Frameworks */,
 				76FC7B101A38506F00475AAC /* libSocialQQ.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,6 +441,7 @@
 		762FB8591A25E64600F68BC8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				76F292AD1A42E65B005545B9 /* login_qq.jpg */,
 				762FB8661A25E64600F68BC8 /* Main.storyboard */,
 				762FB86B1A25E64600F68BC8 /* LaunchScreen.xib */,
 				762FB8691A25E64600F68BC8 /* Images.xcassets */,
@@ -682,6 +685,7 @@
 		76FC7B0B1A38506F00475AAC /* TencentOpenAPI */ = {
 			isa = PBXGroup;
 			children = (
+				764D84C41A42DBC900AC4819 /* QQApi.framework */,
 				76FC7B0C1A38506F00475AAC /* libSocialQQ.a */,
 				76FC7B0D1A38506F00475AAC /* TencentOpenAPI.framework */,
 				76FC7B0E1A38506F00475AAC /* TencentOpenApi_IOS_Bundle.bundle */,
@@ -719,7 +723,6 @@
 				76A74EAE1A38179C00D1CB37 /* SystemConfiguration.framework */,
 				76A74EAC1A38178D00D1CB37 /* libiconv.dylib */,
 				76A74EAA1A38176B00D1CB37 /* Security.framework */,
-				E61E4918FCE8AE46A2E58748 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 				762FB86A1A25E64600F68BC8 /* Images.xcassets in Resources */,
 				765E005A1A2FEDB600DCCC86 /* PersonalDetailViewController.xib in Resources */,
 				76FC7B041A38506000475AAC /* UMSCommentInputControlleriPad.xib in Resources */,
+				76F292AE1A42E65B005545B9 /* login_qq.jpg in Resources */,
 				76FC7B031A38506000475AAC /* UMSCommentInputController.xib in Resources */,
 				76FC7B081A38506000475AAC /* UMSnsAccountViewController.xib in Resources */,
 				76FC7B0A1A38506000475AAC /* UMSocialSDKResourcesNew.bundle in Resources */,
@@ -1072,7 +1076,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/redbull/Wechat",
 					"$(PROJECT_DIR)/redbull/UMSocial_Sdk_4.2.1",
 					"$(PROJECT_DIR)/redbull/TencentOpenAPI",
 					"$(PROJECT_DIR)/redbull/WeChatSDK_1.5",
@@ -1108,7 +1111,6 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
-					"$(PROJECT_DIR)/redbull/Wechat",
 					"$(PROJECT_DIR)/redbull/UMSocial_Sdk_4.2.1",
 					"$(PROJECT_DIR)/redbull/TencentOpenAPI",
 					"$(PROJECT_DIR)/redbull/WeChatSDK_1.5",

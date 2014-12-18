@@ -10,7 +10,7 @@
 
 #import "DDMenuController.h"
 
-#import "UMSocial.h"
+#import <QQApi/QQApi.h>
 
 #import "WXApi.h"
 
@@ -74,26 +74,49 @@
 
 - (IBAction)shareTecent:(id)sender
 {
-    [UMSocialData defaultData].extConfig.qqData.url = APP_ID;
-    UIImage *image = [UIImage imageNamed:@"face"];
-    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToQQ] content:@"能量部落，你的能量超乎你想象" image:image location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response){
-        if (response.responseCode == UMSResponseCodeSuccess) {
-            NSLog(@"分享成功！");
-        }
-    }];
+//    [UMSocialData defaultData].extConfig.qqData.url = APP_ID;
+//    UIImage *image = [UIImage imageNamed:@"face"];
+//    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToQQ] content:@"能量部落，你的能量超乎你想象" image:image location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response){
+//        if (response.responseCode == UMSResponseCodeSuccess) {
+//            NSLog(@"分享成功！");
+//        }
+//    }];
+    
+    if(![self checkQQ]) return;
+    
+    NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"login_qq.jpg"];
+    NSData* data = [NSData dataWithContentsOfFile:path];
+    
+    NSURL* url = [NSURL URLWithString:APP_ID];
+    
+    QQApiNewsObject* img = [QQApiNewsObject objectWithURL:url title:@"能量部落，你的能量超乎你想象" description:@"" previewImageData:data];
+    
+    QQApiMessage* msg = [QQApiMessage messageWithObject:img];
+    
+    [QQApi sendMessage:msg];
+}
+
+- (BOOL)checkQQ
+{
+    if(![QQApi isQQInstalled])
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"warning" message:@"手机未安装QQ应用" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        [alertView show];
+        return NO;
+    }
+    
+    if(![QQApi isQQSupportApi])
+    {
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"warning" message:@"Open API is not supported by current QQ" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        [alertView show];
+        return NO;
+    }
+    
+    return YES;
 }
 
 - (IBAction)shareWeChat:(id)sender
 {
-//    [UMSocialData defaultData].extConfig.wechatTimelineData.url = APP_ID;
-//    UIImage *image = [UIImage imageNamed:@"face"];
-//    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToWechatTimeline] content:@"能量部落，你的能量超乎你想象" image:image location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response){
-//        if (response.responseCode == UMSResponseCodeSuccess) {
-//            NSLog(@"分享成功！");
-//            
-//        }
-//    }];
-    
     WXMediaMessage *message = [WXMediaMessage message];
     //设置分享标题信息
     message.title = @"能量部落，你的能量超乎你想象";

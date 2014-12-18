@@ -48,6 +48,8 @@
 #define SCORE_NAV                   @"我的能量值"
 #define PRESENT_NAV                 @"已兑换礼品"
 #define FORGET_NAV                  @"找回密码"
+#define QQLOGIN_NAV                 @"QQ登陆"
+#define WEIBOLOGIN_NAV              @"微博登陆"
 
 #define SHARE_WEIBO                 @"http://v.t.sina.com.cn/share/share.php?appkey=&url=http://www.redbullclub.cn/download/RedbullClup.beta1.0.apk&title=能量部落，你的能量超乎你想象%E3%80%82分享内容&source=&sourceUrl=&content=utf-8&pic=http://www.redbullclub.cn/uploads/banner/20141109/165754_487picture.jpg"
 #define SHARE_RENREN                @"http://widget.renren.com/dialog/share?resourceUrl=http://www.redbullclub.cn/download/RedbullClup.beta1.0.apk&pic=http://www.redbullclub.cn/uploads/banner/20141109/165754_487picture.jpg&title=能量部落——你的能量超乎你想象&description=能量部落，你的能量超乎你想象%E3%80%82分享内容"
