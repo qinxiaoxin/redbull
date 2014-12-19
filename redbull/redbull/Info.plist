@@ -29,17 +29,17 @@
 			<string>wechat</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wx8ff0fc6d23a90c06</string>
+				<string>wx8ff0fc6d23a90c06.content</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>QQ</string>
+			<string>tencentApiIdentifier</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>QQ2FC67AC5</string>
+				<string>tencent801536709</string>
 			</array>
 		</dict>
 	</array>

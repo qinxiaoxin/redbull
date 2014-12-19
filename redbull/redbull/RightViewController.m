@@ -10,9 +10,10 @@
 
 #import "DDMenuController.h"
 
-#import <QQApi/QQApi.h>
-
 #import "WXApi.h"
+
+#import <TencentOpenAPI/QQApi.h>
+#import <TencentOpenAPI/QQApiInterface.h>
 
 @interface RightViewController ()
 
@@ -74,14 +75,6 @@
 
 - (IBAction)shareTecent:(id)sender
 {
-//    [UMSocialData defaultData].extConfig.qqData.url = APP_ID;
-//    UIImage *image = [UIImage imageNamed:@"face"];
-//    [[UMSocialDataService defaultDataService]  postSNSWithTypes:@[UMShareToQQ] content:@"能量部落，你的能量超乎你想象" image:image location:nil urlResource:nil presentedController:self completion:^(UMSocialResponseEntity *response){
-//        if (response.responseCode == UMSResponseCodeSuccess) {
-//            NSLog(@"分享成功！");
-//        }
-//    }];
-    
     if(![self checkQQ]) return;
     
     NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"login_qq.jpg"];
@@ -91,16 +84,16 @@
     
     QQApiNewsObject* img = [QQApiNewsObject objectWithURL:url title:@"能量部落，你的能量超乎你想象" description:@"" previewImageData:data];
     
-    QQApiMessage* msg = [QQApiMessage messageWithObject:img];
-    
-    [QQApi sendMessage:msg];
+    SendMessageToQQReq * msg = [SendMessageToQQReq reqWithContent:img];
+    QQApiSendResultCode sent = [QQApiInterface sendReq:msg];
+    NSLog(@"%d",sent);
 }
 
 - (BOOL)checkQQ
 {
     if(![QQApi isQQInstalled])
     {
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"warning" message:@"手机未安装QQ应用" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"手机未安装QQ应用" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
         [alertView show];
         return NO;
     }

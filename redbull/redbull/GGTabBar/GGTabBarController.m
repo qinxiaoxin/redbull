@@ -122,7 +122,7 @@ extern int isLogin;
 
 - (void)tabBar:(GGTabBar *)tabBar didPressButton:(UIButton *)button atIndex:(NSUInteger)tabIndex
 {
-    if (tabIndex == 1) {
+    if (tabIndex == 1 && self.jsonArrayAsk) {
         bounceSheet1 = [[BounceSheet alloc] initWithDelegate:self X:ScreenWidth/4];
         
         __block GGTabBarController *ggVC = self;
@@ -141,7 +141,8 @@ extern int isLogin;
         
         [bounceSheet1 show];
         
-    }else if (tabIndex == 3) {
+        
+    }else if (tabIndex == 3 && self.jsonArrayTurn) {
         bounceSheet2 = [[BounceSheet alloc] initWithDelegate:self X:3*ScreenWidth/4];
         
         __block GGTabBarController *ggVC = self;

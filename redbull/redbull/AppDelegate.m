@@ -23,9 +23,9 @@
 
 #import "WXApi.h"
 
-#import <QQApi/QQApi.h>
+#import <TencentOpenAPI/TencentOAuth.h>
 
-@interface AppDelegate ()
+@interface AppDelegate ()<TencentSessionDelegate>
 
 @end
 
@@ -85,11 +85,12 @@ int isLogin = 0;
     self.window.backgroundColor = [UIColor colorWithRed:18 / 255.f green:18 / 255.f blue:18 / 255.f alpha:1.f];
     [self.window makeKeyAndVisible];
     
-    //向QQ好友分享注册
-    [QQApi registerPluginWithId:@"QQ2FC67AC5"];
-    
     //向微信注册
     [WXApi registerApp:@"wx8ff0fc6d23a90c06" withDescription:@"demo 2.0"];
+    
+    //向QQ注册
+    TencentOAuth *to = [[TencentOAuth alloc] initWithAppId:@"801536709" andDelegate:self];
+    NSLog(@"%@",to);
     
     return YES;
 }
@@ -197,21 +198,6 @@ int isLogin = 0;
     // Saves changes in the application's managed object context before the application terminates.
     [self saveContext];
 }
-
-//- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
-//{
-//    NSLog(@"这个什么时候调用嘞");
-//    return  [UMSocialSnsService handleOpenURL:url];
-//}
-//
-//- (BOOL)application:(UIApplication *)application
-//            openURL:(NSURL *)url
-//  sourceApplication:(NSString *)sourceApplication
-//         annotation:(id)annotation
-//{
-//    NSLog(@"返回应用");
-//    return  [UMSocialSnsService handleOpenURL:url];
-//}
 
 
 #pragma mark - Core Data stack
