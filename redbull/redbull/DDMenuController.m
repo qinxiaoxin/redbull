@@ -89,11 +89,15 @@ extern int isLogin;
 {
     [super viewDidAppear:animated];
     
+    NSLog(@"DDMenu -->");
+    
     if ([[NSUserDefaults standardUserDefaults] boolForKey:@"firstLaunch"]){
         [[NSUserDefaults standardUserDefaults] setBool:NO forKey:@"firstLaunch"];
         [self showBasicIntroWithBg];
     }
 }
+
+
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
     return [_root shouldAutorotateToInterfaceOrientation:toInterfaceOrientation];

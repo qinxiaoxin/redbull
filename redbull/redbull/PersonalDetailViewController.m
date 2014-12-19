@@ -10,6 +10,10 @@
 
 #import "Navbar.h"
 
+#import "AFNetworking.h"
+#import "SBJson.h"
+#import "Masonry.h"
+
 #import "DDMenuController.h"
 
 #import "LoginViewController.h"
@@ -91,7 +95,38 @@ extern int isLogin;
         
     }
     
+    if([requestString hasPrefix:(LOGIN_WEIBO_SUCCESS)]){
+        isLogin = 1;
+    }
+    
     return YES;
+}
+
+- (void)ProfileGet
+{
+    AFHTTPClient *httpClient = [[AFHTTPClient alloc] initWithBaseURL:[NSURL URLWithString:@""]];
+    httpClient.parameterEncoding = AFJSONParameterEncoding;
+    [httpClient setDefaultHeader:@"Accept" value:@"text/json"];
+    
+    [httpClient getPath:PROFILE_URL
+             parameters:NULL
+                success:^(AFHTTPRequestOperation *operation, id responseObject)
+     {
+         NSString *responseStr = [[NSString alloc] initWithData:responseObject encoding:NSUTF8StringEncoding];
+         NSLog(@"返回结果:%@",responseStr);
+         SBJsonParser *jsonParser = [[SBJsonParser alloc] init];
+         NSError *error = nil;
+         NSDictionary *dic=[[NSDictionary alloc]init];
+         dic = [jsonParser objectWithString:responseStr error:&error];
+         NSLog(@"请求成功---->%@",dic);
+         NSLog(@"%@",[dic objectForKey:@"errordesc"]);
+         
+    }
+                failure:^(AFHTTPRequestOperation *operation, NSError *error)
+     {
+         UIAlertView*alert = [[UIAlertView alloc]initWithTitle:@"提示"message:@"网络错误"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
+         [alert show];
+     }];
 }
 
 /*

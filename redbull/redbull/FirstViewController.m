@@ -51,6 +51,7 @@ extern int isLogin;
 {
     [super viewWillAppear:animated];
     
+    NSLog(@"FirstView --->");
     //加载URL
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:INDEX_PAGE]]];
 
