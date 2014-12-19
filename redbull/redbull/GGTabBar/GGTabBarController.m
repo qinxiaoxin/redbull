@@ -22,6 +22,8 @@
 #import "DDMenuController.h"
 #import "BounceSheet.h"
 
+#import "WebFailView.h"
+
 @interface GGTabBarController () <GGTabBarDelegate ,BounceSheetDelegate>{
     BounceSheet *bounceSheet1;
     BounceSheet *bounceSheet2;
@@ -29,10 +31,12 @@
 @property (nonatomic, strong) UIView *presentationView;
 @property (nonatomic, strong) GGTabBar *tabBarView;
 @property (nonatomic, assign) BOOL isFirstAppear;
-@property (nonatomic,retain) NSString *documentsDirectory;
+@property (nonatomic, retain) NSString *documentsDirectory;
 
 @property (nonatomic, strong) NSArray *jsonArrayAsk;
 @property (nonatomic, strong) NSArray *jsonArrayTurn;
+
+@property (nonatomic, strong) WebFailView *webFailView;
 
 @end
 
@@ -59,7 +63,7 @@ extern int isLogin;
     [self.view addSubview:_tabBarView];
     [self.view addSubview:_presentationView];
     
-    //Fetch json data
+    //Fetch tab json data
     [self requestJsonTabData];
 }
 
@@ -101,7 +105,7 @@ extern int isLogin;
             
             NSDictionary *jsonDictionary = (NSDictionary *)JSON;
             self.jsonArrayAsk = [jsonDictionary objectForKey:@"pageConfig1"];
-            NSLog(@"self.jsonArray = %@",self.jsonArrayAsk);
+            NSLog(@"self.jsonArrayAsk = %@",self.jsonArrayAsk);
             self.jsonArrayTurn = [jsonDictionary objectForKey:@"pageConfig2"];
             NSLog(@"self.jsonArrayTurn = %@",self.jsonArrayTurn);
             
@@ -160,6 +164,8 @@ extern int isLogin;
         
         [bounceSheet2 show];
         
+    }else if (button.selected == YES){
+        return;
     }else {
         UIViewController *selectedViewController = _viewControllers[tabIndex];
         

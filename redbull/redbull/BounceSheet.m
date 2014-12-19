@@ -227,10 +227,6 @@ static UIWindow *__sheetWindow = nil;
 - (void)removeObserversInButtonsForKeyPath:(NSString *)keypath
 {
     for (UIButton *button in self.buttons) {
-        //如果button的abservationInfo为空 那么removeObjserver不执行
-        if (button.observationInfo == nil) {
-            return;
-        }
         [button removeObserver:self forKeyPath:keypath];
     }
 }

@@ -62,6 +62,13 @@ static const NSInteger kMarginSeparatorOffsetTag = 8000;
 
 - (void)setSelectedButton:(UIButton *)selectedButton
 {
+    for (int i = 0; i < _buttons.count; i++ ) {
+        UIButton *button = [_buttons objectAtIndex:i];
+        button.selected = NO;
+    }
+    
+    selectedButton.selected = YES;
+    
     NSUInteger oldButtonIndex = [_buttons indexOfObject:_selectedButton];
     NSUInteger newButtonIndex = [_buttons indexOfObject:selectedButton];
 

@@ -82,17 +82,17 @@ extern int isLogin;
 {
     [_indicator stopAnimating];
     
-//    _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
-//    [self.view addSubview:_webFailView];
+    _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
+    [self.view addSubview:_webFailView];
 }
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
     NSLog(@"EXCHANGE请求地址:%@",request.URL.absoluteString);
     
-//    if (_webFailView) {
-//        [_webFailView removeFromSuperview];
-//    }
+    if (_webFailView) {
+        [_webFailView removeFromSuperview];
+    }
     
     if([request.URL.absoluteString hasPrefix:LOGIN_INDEX]){
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
