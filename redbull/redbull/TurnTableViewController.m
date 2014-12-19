@@ -93,6 +93,10 @@ extern int isLogin;
         [_webFailView removeFromSuperview];
     }
     
+    if ([request.URL.absoluteString hasPrefix:BAIDU_OPEN_API]) {
+        return NO;
+    }
+    
     if([request.URL.absoluteString hasPrefix:ASK_PAGE]) {
         [_mTabBarController  jumpToTabAtIndexNum:ASK_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
         return NO;

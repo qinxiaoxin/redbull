@@ -9,7 +9,7 @@
 #import "BounceSheet.h"
 
 #define kButtonHeight 50.f
-#define kAnimationDuration 0.5f
+#define kAnimationDuration 0.2f
 #define kSeparatorWidth .5f
 #define kMargin 10.f
 #define kBottomMargin 5.f
