@@ -122,8 +122,9 @@ extern int isLogin;
     [loginBtn addTarget:self action:@selector(loginClick) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:loginBtn];
     
-    UILabel *otherTitle = [[UILabel alloc] initWithFrame:CGRectMake(logView.width / 2 - 65, loginBtn.bottom + 20, 140, 10)];
+    UILabel *otherTitle = [[UILabel alloc] initWithFrame:CGRectMake(logView.width / 2 - 60, loginBtn.bottom + 20, 140, 10)];
     otherTitle.text = @"使用其它账号登陆";
+    otherTitle.font = [UIFont systemFontOfSize:15.f];
     otherTitle.textColor = hll_color(210, 40, 39, 1);
     otherTitle.translatesAutoresizingMaskIntoConstraints = NO;
     [logView addSubview:otherTitle];
