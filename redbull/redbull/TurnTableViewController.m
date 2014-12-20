@@ -81,6 +81,8 @@ extern int isLogin;
 {
     [_indicator stopAnimating];
     
+    NSLog(@"turn:webView.request.URL.absoluteString = %@",webView.request.URL.absoluteString);
+    
     if (![webView.request.URL.absoluteString hasPrefix:TURNTABLE_PAGE]) {
         _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
         [self.view addSubview:_webFailView];
