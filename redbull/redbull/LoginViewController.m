@@ -62,11 +62,11 @@ extern int isLogin;
     [cancelBtn addTarget:self action:@selector(cancelBtnClick) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:cancelBtn];
     
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, redline.top + 15, 90, 10)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, redline.top + 15, 90, 20)];
     titleLabel.text = @"用户登录";
     titleLabel.font = [UIFont systemFontOfSize:15.f];
     titleLabel.textColor = hll_color(210, 40, 39, 1);
-    titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
+//    titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [logView addSubview:titleLabel];
     
     UIButton *forgetPasswordBtn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -122,11 +122,11 @@ extern int isLogin;
     [loginBtn addTarget:self action:@selector(loginClick) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:loginBtn];
     
-    UILabel *otherTitle = [[UILabel alloc] initWithFrame:CGRectMake(logView.width / 2 - 60, loginBtn.bottom + 20, 140, 10)];
+    UILabel *otherTitle = [[UILabel alloc] initWithFrame:CGRectMake(logView.width / 2 - 60, loginBtn.bottom + 20, 140, 20)];
     otherTitle.text = @"使用其它账号登陆";
     otherTitle.font = [UIFont systemFontOfSize:15.f];
     otherTitle.textColor = hll_color(210, 40, 39, 1);
-    otherTitle.translatesAutoresizingMaskIntoConstraints = NO;
+//    otherTitle.translatesAutoresizingMaskIntoConstraints = NO;
     [logView addSubview:otherTitle];
     
     UIButton *qqButton = [[UIButton alloc] initWithFrame:CGRectMake(registerBtn.center.x - 25, registerBtn.bottom + 50, 50, 50)];
@@ -253,9 +253,8 @@ extern int isLogin;
     PersonalDetailViewController *pdvc = [[PersonalDetailViewController alloc] init];
     pdvc.webURL = LOGIN_QQ;
     pdvc.navigationBarTitle = QQLOGIN_NAV;
-
+        
     [self presentViewController:pdvc animated:YES completion:nil];
-
 }
 
 - (void)loginWeibo:(id)sender
