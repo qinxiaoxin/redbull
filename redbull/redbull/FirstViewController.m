@@ -87,7 +87,7 @@ extern int isLogin;
     
     [_indicator stopAnimating];
     
-    NSLog(@"webView.request.URL.absoluteString = %@",webView.request.URL.absoluteString);
+    NSLog(@"first:webView.request.URL.absoluteString = %@",webView.request.URL.absoluteString);
     
     if (![webView.request.URL.absoluteString hasPrefix:INDEX_PAGE]) {
         _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewDidLoad)];

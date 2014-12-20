@@ -104,9 +104,9 @@ extern int isLogin;
         AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:mrequest success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
             
             NSDictionary *jsonDictionary = (NSDictionary *)JSON;
-            self.jsonArrayAsk = [jsonDictionary objectForKey:@"pageConfig1"];
+            self.jsonArrayAsk = [jsonDictionary objectForKeyedSubscript:@"pageConfig1"];
             NSLog(@"self.jsonArrayAsk = %@",self.jsonArrayAsk);
-            self.jsonArrayTurn = [jsonDictionary objectForKey:@"pageConfig2"];
+            self.jsonArrayTurn = [jsonDictionary objectForKeyedSubscript:@"pageConfig2"];
             NSLog(@"self.jsonArrayTurn = %@",self.jsonArrayTurn);
             
         } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {

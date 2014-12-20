@@ -82,6 +82,8 @@ extern int isLogin;
 {
     [_indicator stopAnimating];
     
+    NSLog(@"exchange:webView.request.URL.absoluteString = %@",webView.request.URL.absoluteString);
+    
     if (![webView.request.URL.absoluteString hasPrefix:EXCHANGE_PAGE]) {
         _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
         [self.view addSubview:_webFailView];
