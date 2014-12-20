@@ -137,7 +137,7 @@ static UIWindow *__sheetWindow = nil;
     [UIView animateWithDuration:kAnimationDuration delay:0.f options:UIViewAnimationOptionCurveEaseInOut animations:^{
         self.frame = CGRectOffset(self.frame, 0.f, -(self.frame.size.height+kMargin+44));
     } completion:^(BOOL finished) {
-        [self addObserversInButtonsForKeyPath:@"highlighted"];
+//        [self addObserversInButtonsForKeyPath:@"highlighted"];
         if ([self.delegate respondsToSelector:@selector(didPresentActionSheet:)]) {
             [self.delegate didPresentActionSheet:self];
         }
@@ -196,7 +196,7 @@ static UIWindow *__sheetWindow = nil;
     }
     
     __sheetWindow.hidden = YES;
-    [self removeObserversInButtonsForKeyPath:@"highlighted"];
+//    [self removeObserversInButtonsForKeyPath:@"highlighted"];
     __sheetWindow = nil;
 }
 
@@ -210,7 +210,7 @@ static UIWindow *__sheetWindow = nil;
         }
         
         __sheetWindow.hidden = YES;
-        [self removeObserversInButtonsForKeyPath:@"highlighted"];
+//        [self removeObserversInButtonsForKeyPath:@"highlighted"];
         __sheetWindow = nil;
     }];
 }

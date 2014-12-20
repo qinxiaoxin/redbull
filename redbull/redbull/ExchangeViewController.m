@@ -82,8 +82,10 @@ extern int isLogin;
 {
     [_indicator stopAnimating];
     
-    _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
-    [self.view addSubview:_webFailView];
+    if (![webView.request.URL.absoluteString hasPrefix:INDEX_PAGE]) {
+        _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
+        [self.view addSubview:_webFailView];
+    }
 }
 
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{

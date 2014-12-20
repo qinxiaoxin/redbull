@@ -194,29 +194,29 @@ extern int isLogin;
 }
 
 #pragma mark - BounceSheet Delegate
-- (void)actionSheetCancel:(BounceSheet *)actionSheet
-{
-    if (bounceSheet1) {
-        [bounceSheet1 removeFromSuperview];
-        bounceSheet1 = nil;
-    }else if(bounceSheet2) {
-        [bounceSheet2 removeFromSuperview];
-        bounceSheet2 = nil;
-    }
-
-}
-
-- (void)actionSheet:(BounceSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
-{
-    if (bounceSheet1) {
-        [bounceSheet1 removeFromSuperview];
-        bounceSheet1 = nil;
-    }else if(bounceSheet2) {
-        [bounceSheet2 removeFromSuperview];
-        bounceSheet2 = nil;
-    }
-
-}
+//- (void)actionSheetCancel:(BounceSheet *)actionSheet
+//{
+//    if (bounceSheet1) {
+//        [bounceSheet1 removeFromSuperview];
+//        bounceSheet1 = nil;
+//    }else if(bounceSheet2) {
+//        [bounceSheet2 removeFromSuperview];
+//        bounceSheet2 = nil;
+//    }
+//
+//}
+//
+//- (void)actionSheet:(BounceSheet *)actionSheet didDismissWithButtonIndex:(NSInteger)buttonIndex
+//{
+//    if (bounceSheet1) {
+//        [bounceSheet1 removeFromSuperview];
+//        bounceSheet1 = nil;
+//    }else if(bounceSheet2) {
+//        [bounceSheet2 removeFromSuperview];
+//        bounceSheet2 = nil;
+//    }
+//
+//}
 
 # pragma mark - View Controller Selection
 
