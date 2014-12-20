@@ -114,6 +114,8 @@ extern int isLogin;
     }else if([request.URL.absoluteString hasPrefix:EXCHANGE_DETAIL_PAGE]) {
         [_mTabBarController  jumpToTabAtIndexNum:EXCHANGE_DETAIL_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
         return NO;
+    }else if ([request.URL.absoluteString hasPrefix:HTML5_APP_URL]) {
+        return NO;
     }
     
     return YES;
