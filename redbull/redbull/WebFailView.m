@@ -39,7 +39,7 @@
     
     _reClick = [UIButton buttonWithType:UIButtonTypeCustom];
     _reClick.backgroundColor = [UIColor clearColor];
-    [_reClick setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    [_reClick setTitleColor:[UIColor redColor] forState:UIControlStateNormal];
     [_reClick setTitleColor:[UIColor grayColor] forState:UIControlStateHighlighted];
 //    [_reClick addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
     [self addSubview:_reClick];
@@ -59,7 +59,7 @@
     _cusSubTitLabel.frame = CGRectMake(ScreenWidth/2 - 100, _cusTitleLabel.bottom+40, 200, 18);
     _cusSubTitLabel.text = @"请检查你的手机是否联网";
     
-    _reClick.frame = CGRectMake(ScreenWidth/2-50, _cusSubTitLabel.bottom+100, 100, 24);
+    _reClick.frame = CGRectMake(ScreenWidth/2-50, _cusSubTitLabel.bottom+50, 100, 24);
     [_reClick setTitle:@"再试一次" forState:UIControlStateNormal];
     
 }
@@ -67,7 +67,7 @@
 + (id)reSetWithTarget:(id)target
                action:(SEL)action
 {
-    WebFailView *failView = [[WebFailView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight)];
+    WebFailView *failView = [[WebFailView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight - 94)];
     [failView setTarget:target withAction:action];
     
     return failView;

@@ -90,7 +90,7 @@ extern int isLogin;
     NSLog(@"webView.request.URL.absoluteString = %@",webView.request.URL.absoluteString);
     
     if (![webView.request.URL.absoluteString hasPrefix:INDEX_PAGE]) {
-        _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
+        _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewDidLoad)];
         [self.view addSubview:_webFailView];
     }
 }

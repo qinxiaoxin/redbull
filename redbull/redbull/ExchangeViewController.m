@@ -83,7 +83,7 @@ extern int isLogin;
     [_indicator stopAnimating];
     
     if (![webView.request.URL.absoluteString hasPrefix:INDEX_PAGE]) {
-        _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
+        _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewDidLoad)];
         [self.view addSubview:_webFailView];
     }
 }
