@@ -154,7 +154,7 @@ extern int isLogin;
         for(int i = 0;i < self.jsonArrayTurn.count;i++){
             NSDictionary *dic = [self.jsonArrayTurn objectAtIndex:i];
             NSString *string = [dic objectForKeyedSubscript:@"title"];
-            NSString *url = [dic objectForKey:@"url"];
+            NSString *url = [dic objectForKeyedSubscript:@"url"];
             NSLog(@"turn tab title = %@",string);
             NSLog(@"turn tab url = %@",url);
             [bounceSheet2 addButtonWithTitle:string actionBlock:^{

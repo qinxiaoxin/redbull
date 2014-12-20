@@ -18,11 +18,14 @@
 
 #import "LoginViewController.h"
 
+#import "WebFailView.h"
+
 @interface PersonalDetailViewController ()<UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UINavigationBar *navigationBar;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *indicator;
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) WebFailView *webFailView;
 
 @end
 
@@ -37,6 +40,8 @@ extern int isLogin;
     _navigationBar.backgroundColor = [UIColor colorWithRed:47 / 255.f green:47 / 255.f blue:49 / 255.f alpha:1.f];
 
     _titleLabel.text = self.navigationBarTitle;
+    
+    self.view.backgroundColor = hll_color(243, 243, 243, 1);
     
     _webView.delegate = self;
     [_webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:self.webURL]]];
@@ -80,6 +85,15 @@ extern int isLogin;
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     [_indicator stopAnimating];
+    
+    NSLog(@"webView.request.URL.absoluteString = %@",webView.request.URL.absoluteString);
+    
+    if (![webView.request.URL.absoluteString hasPrefix:INDEX_PAGE]) {
+        _webFailView = [WebFailView reSetWithTarget:self action:@selector(backAction:)];
+        _webFailView.frame = CGRectMake(0, 44, ScreenWidth, ScreenHeight - 44);
+        [_webFailView.reClick removeFromSuperview];
+        [self.view addSubview:_webFailView];
+    }
 }
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType

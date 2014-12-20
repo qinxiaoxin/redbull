@@ -84,8 +84,8 @@ extern int isLogin;
 {
     [_indicator stopAnimating];
     
-    if (![webView.request.URL.absoluteString hasPrefix:INDEX_PAGE]) {
-        _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewDidLoad)];
+    if (![webView.request.URL.absoluteString hasPrefix:ASK_PAGE]) {
+        _webFailView = [WebFailView reSetWithTarget:self action:@selector(viewWillAppear:)];
         [self.view addSubview:_webFailView];
     }
 }

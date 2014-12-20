@@ -13,10 +13,13 @@
     UIImageView *_wifiImageView;
     UILabel *_cusTitleLabel;/**< 网络无法连接*/
     UILabel *_cusSubTitLabel;/**< 请检查你的手机是否联网*/
-    UIButton *_reClick;
+//    UIButton *_reClick;
 }
 
+
 @property (nonatomic ,strong)UIWebView *webView;
+
+@property (nonatomic, strong) UIButton *reClick;
 
 + (id)reSetWithTarget:(id)target
                action:(SEL)action;
