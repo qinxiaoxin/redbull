@@ -16,6 +16,8 @@
 
 #import "CircleView.h"
 
+#import "GGTabBarController.h"
+
 @interface LeftViewController ()
 
 @property (nonatomic,retain) NSString *documentsDirectory;
@@ -162,6 +164,11 @@ extern int isLogin;
     
     DDMenuController *menuController = (DDMenuController *)((AppDelegate *)[[UIApplication sharedApplication] delegate]).menuControler;
     [menuController showRootController:YES];
+    UINavigationController *n = (UINavigationController *)menuController.rootViewController;
+    GGTabBarController *gg = (GGTabBarController *)[n.viewControllers objectAtIndex:0];
+    if ([gg respondsToSelector:@selector(loginClick:)]) {
+        [gg.navigationItem setLeftItemWithTarget:gg action:@selector(loginClick:) image:@"face"];
+    }
 }
 
 /*
