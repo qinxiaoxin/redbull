@@ -17,6 +17,7 @@
 #define FORGETPASSWORD_URL  @"http://www.redbullclub.cn/index.php?s=IOS/forgetPassword"
 #define HTML5_APP_URL_1 @"http://redbullclub.cn/index.php?s=M"
 #define BAIDU_OPEN_API  @"http://openapi.baidu.com/widget/social"
+#define SAVE_ADDRESS    @"http://www.redbullclub.cn/index.php?s=User/doSaveAddressForAppIos"
 
 #define INDEX_PAGE_INDEX  0
 #define ASK_PAGE_INDEX 1

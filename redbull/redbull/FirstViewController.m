@@ -101,11 +101,9 @@ extern int isLogin;
         [_webFailView removeFromSuperview];
     }
     
-    if ([request.URL.absoluteString hasPrefix:BAIDU_OPEN_API]) {
+    if ([request.URL.absoluteString hasPrefix:BAIDU_OPEN_API] || [request.URL.absoluteString hasPrefix:HTML5_APP_URL]) {
         return NO;
-    }
-    
-    if([request.URL.absoluteString hasPrefix:ASK_PAGE]) {
+    }else if([request.URL.absoluteString hasPrefix:ASK_PAGE]) {
         [_mTabBarController  jumpToTabAtIndexNum:ASK_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
         return NO;
     }else if([request.URL.absoluteString hasPrefix:EXCHANGE_PAGE]) {
@@ -113,8 +111,6 @@ extern int isLogin;
         return NO;
     }else if([request.URL.absoluteString hasPrefix:EXCHANGE_DETAIL_PAGE]) {
         [_mTabBarController  jumpToTabAtIndexNum:EXCHANGE_DETAIL_PAGE_INDEX withStrUrl:request.URL.absoluteString] ;
-        return NO;
-    }else if ([request.URL.absoluteString hasPrefix:HTML5_APP_URL]) {
         return NO;
     }
     

@@ -98,11 +98,9 @@ extern int isLogin;
         [_webFailView removeFromSuperview];
     }
     
-    if ([request.URL.absoluteString hasPrefix:BAIDU_OPEN_API]) {
+    if ([request.URL.absoluteString hasPrefix:BAIDU_OPEN_API] || [request.URL.absoluteString hasPrefix:HTML5_APP_URL]) {
         return NO;
-    }
-    
-    if([request.URL.absoluteString hasPrefix:LOGIN_INDEX]){
+    }else if([request.URL.absoluteString hasPrefix:LOGIN_INDEX]){
         LoginViewController *loginViewController = [[LoginViewController alloc] init];
         [loginViewController setValue:[self  mTabBarController] forKey:@"mTabBarController"];
         loginViewController.modalPresentationStyle =UIModalPresentationOverCurrentContext;
@@ -114,6 +112,8 @@ extern int isLogin;
         
         return NO;
         
+    }else if ([request.URL.absoluteString hasPrefix:SAVE_ADDRESS]){
+        [_webView goBack];
     }
     
     return YES;
