@@ -101,7 +101,7 @@ extern int isLogin;
     NSString *requestString = [[request URL] absoluteString];
     NSLog(@"requestString =====> %@",requestString);
     NSString *indexPage = [NSString stringWithFormat:@"%@/",INDEX_PAGE];
-    if ([requestString isEqualToString:HTML5_APP_URL]||[requestString isEqualToString:indexPage]||[requestString isEqualToString:WHAT_LOGIN_INDEX] || [requestString isEqualToString:HTML5_APP_URL_1] || [requestString isEqualToString:SAVE_ADDRESS]){
+    if ([requestString isEqualToString:HTML5_APP_URL]||[requestString isEqualToString:indexPage]||[requestString isEqualToString:WHAT_LOGIN_INDEX] || [requestString isEqualToString:HTML5_APP_URL_1] || [requestString isEqualToString:SAVE_ADDRESS] || [requestString isEqualToString:EXCHANGE_PAGE]){
         
         self.webURL = nil;
        
