@@ -160,9 +160,6 @@ int resendRegisterTime = 60;
     }else if ([validation isEqualToString:@""]){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"验证码不能为空"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
-    }else if (![validation isEqualToString:@""]){//正确的验证码
-        UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"手机验证码错误"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
-        [alert show];
     }else if ([password isEqualToString:@""]){
         UIAlertView *alert = [[UIAlertView alloc]initWithTitle:@"系统提示"message:@"密码不能为空"  delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil];
         [alert show];
