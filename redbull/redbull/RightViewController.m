@@ -42,11 +42,13 @@
     [self setInitDrawLine];
     
     if (![self checkQQ]) {
-        _qqButton.alpha = 0.f;
+        [_qqButton setImage:[UIImage imageNamed:@"s-icon2-none"] forState:UIControlStateNormal];
+        _qqButton.userInteractionEnabled = NO;
     }
     
     if (![WXApi isWXAppInstalled]) {
-        _wechatButton.alpha = 0.f;
+        [_wechatButton setImage:[UIImage imageNamed:@"s-icon3-none"] forState:UIControlStateNormal];
+        _wechatButton.userInteractionEnabled = NO;
     }
     
 }

@@ -43,7 +43,9 @@ extern int isLogin;
     //
     _webView.delegate = self;
     
-    StatementView *sv = [[StatementView alloc] initWithFrame:CGRectMake(self.view.center.x - 100, self.view.center.y - 250, 200, 300)];
+    NSLog(@"%f",self.view.frame.size.width);
+    
+    StatementView *sv = [[StatementView alloc] initWithFrame:CGRectMake(60, self.view.center.y - 250, 200, 300)];
     sv.layer.masksToBounds = YES;
     sv.layer.cornerRadius = 5.f;
     [self.view addSubview:sv];
