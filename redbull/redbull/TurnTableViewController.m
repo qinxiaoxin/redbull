@@ -11,6 +11,8 @@
 #import "LoginViewController.h"
 #import "WebFailView.h"
 
+#import "StatementView.h"
+
 @interface TurnTableViewController ()<UIWebViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
@@ -40,6 +42,11 @@ extern int isLogin;
     
     //
     _webView.delegate = self;
+    
+    StatementView *sv = [[StatementView alloc] initWithFrame:CGRectMake(self.view.center.x - 100, self.view.center.y - 250, 200, 300)];
+    sv.layer.masksToBounds = YES;
+    sv.layer.cornerRadius = 5.f;
+    [self.view addSubview:sv];
     
 }
 
@@ -89,7 +96,7 @@ extern int isLogin;
     }
 }
 
--(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
     NSLog(@"TURN请求地址:%@",request.URL.absoluteString);
     

@@ -43,6 +43,7 @@
 		762FB86A1A25E64600F68BC8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762FB8691A25E64600F68BC8 /* Images.xcassets */; };
 		762FB86D1A25E64600F68BC8 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 762FB86B1A25E64600F68BC8 /* LaunchScreen.xib */; };
 		762FB8791A25E64600F68BC8 /* redbullTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 762FB8781A25E64600F68BC8 /* redbullTests.m */; };
+		7633F9ED1A622B7F00CBE418 /* StatementView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7633F9EC1A622B7F00CBE418 /* StatementView.m */; };
 		763F31571A2C56E1004CE6AE /* Navbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 763F31561A2C56E1004CE6AE /* Navbar.m */; };
 		765E00591A2FEDB600DCCC86 /* PersonalDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 765E00571A2FEDB600DCCC86 /* PersonalDetailViewController.m */; };
 		765E005A1A2FEDB600DCCC86 /* PersonalDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 765E00581A2FEDB600DCCC86 /* PersonalDetailViewController.xib */; };
@@ -167,6 +168,8 @@
 		762FB8721A25E64600F68BC8 /* redbullTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = redbullTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		762FB8771A25E64600F68BC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		762FB8781A25E64600F68BC8 /* redbullTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = redbullTests.m; sourceTree = "<group>"; };
+		7633F9EB1A622B7F00CBE418 /* StatementView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatementView.h; sourceTree = "<group>"; };
+		7633F9EC1A622B7F00CBE418 /* StatementView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatementView.m; sourceTree = "<group>"; };
 		763F31551A2C56E1004CE6AE /* Navbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Navbar.h; sourceTree = "<group>"; };
 		763F31561A2C56E1004CE6AE /* Navbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Navbar.m; sourceTree = "<group>"; };
 		765E00561A2FEDB600DCCC86 /* PersonalDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonalDetailViewController.h; sourceTree = "<group>"; };
@@ -430,6 +433,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7633F9EA1A6226E200CBE418 /* ImportantStatementView */ = {
+			isa = PBXGroup;
+			children = (
+				7633F9EB1A622B7F00CBE418 /* StatementView.h */,
+				7633F9EC1A622B7F00CBE418 /* StatementView.m */,
+			);
+			name = ImportantStatementView;
+			sourceTree = "<group>";
+		};
 		763F314B1A2C0F5C004CE6AE /* Access */ = {
 			isa = PBXGroup;
 			children = (
@@ -535,6 +547,7 @@
 		7677CA0A1A26E8D7005675F0 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7633F9EA1A6226E200CBE418 /* ImportantStatementView */,
 				4BC3E0F61A3EBCF60063C4BF /* BounceSheet */,
 				76FC7B131A3899EE00475AAC /* WebFailView */,
 				30E5F39B1A32D1F6002384AA /* PrivateView */,
@@ -801,6 +814,7 @@
 				4BBDABA61A2D8E3A00DEF6FB /* SBJsonStreamWriterState.m in Sources */,
 				4BC900601A2C592A00A1B24B /* UIKeyboardView.m in Sources */,
 				7677CA161A26F997005675F0 /* GGTabBarController.m in Sources */,
+				7633F9ED1A622B7F00CBE418 /* StatementView.m in Sources */,
 				7677CA3A1A270EC4005675F0 /* Constant.m in Sources */,
 				765E00591A2FEDB600DCCC86 /* PersonalDetailViewController.m in Sources */,
 				4BC9005B1A2C539C00A1B24B /* UIViewExt.m in Sources */,
@@ -957,7 +971,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Wenyue Bao (J7P4MV2B4B)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: RedBull Vitamin Drink Co.,Ltd. (F9CR2NGCY7)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/redbull",
@@ -978,7 +992,7 @@
 					"-fobjc-arc",
 				);
 				PRODUCT_NAME = "红牛能量部落";
-				PROVISIONING_PROFILE = "aa1646d9-7bf5-4b20-8998-3b4e48c491ea";
+				PROVISIONING_PROFILE = "6054df48-e492-4322-bb0d-259ea247d4f5";
 			};
 			name = Debug;
 		};
@@ -1009,7 +1023,7 @@
 					"-fobjc-arc",
 				);
 				PRODUCT_NAME = "红牛能量部落";
-				PROVISIONING_PROFILE = "aa1646d9-7bf5-4b20-8998-3b4e48c491ea";
+				PROVISIONING_PROFILE = "6054df48-e492-4322-bb0d-259ea247d4f5";
 			};
 			name = Release;
 		};

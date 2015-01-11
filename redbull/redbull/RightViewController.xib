@@ -9,7 +9,9 @@
             <connections>
                 <outlet property="drawLine" destination="5jz-Zr-ANX" id="p3f-4q-cAH"/>
                 <outlet property="navView" destination="tsV-y2-isT" id="3aR-Ki-JLs"/>
+                <outlet property="qqButton" destination="COa-CH-CZ1" id="DCi-iA-1Vt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="1IJ-xK-Qa7"/>
+                <outlet property="wechatButton" destination="mfL-MC-1ZF" id="Q46-f0-wPV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -97,11 +99,11 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="COa-CH-CZ1">
                     <rect key="frame" x="201" y="294" width="45" height="44"/>
-                    <state key="normal" image="s-icon7">
+                    <state key="normal" image="s-icon2">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="shareKaixin:" destination="-1" eventType="touchUpInside" id="jpv-QR-8Ic"/>
+                        <action selector="shareTecent:" destination="-1" eventType="touchUpInside" id="ojo-wm-cPe"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHL-Ww-r69">
@@ -127,29 +129,29 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yuh-EB-5bg">
                     <rect key="frame" x="201" y="229" width="45" height="44"/>
-                    <state key="normal" image="s-icon3">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="shareWeChat:" destination="-1" eventType="touchUpInside" id="fe6-4K-EzE"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fx0-y5-2gE">
-                    <rect key="frame" x="148" y="229" width="45" height="44"/>
-                    <state key="normal" image="s-icon2">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="shareTecent:" destination="-1" eventType="touchUpInside" id="IyQ-1u-bKw"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfL-MC-1ZF">
-                    <rect key="frame" x="254" y="294" width="45" height="44"/>
                     <state key="normal" image="s-icon8">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
-                        <action selector="shareTaobao:" destination="-1" eventType="touchUpInside" id="xj1-yp-dMU"/>
+                        <action selector="shareTaobao:" destination="-1" eventType="touchUpInside" id="5iO-ZW-EC5"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fx0-y5-2gE">
+                    <rect key="frame" x="148" y="229" width="45" height="44"/>
+                    <state key="normal" image="s-icon7">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shareKaixin:" destination="-1" eventType="touchUpInside" id="TZy-GM-BpH"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mfL-MC-1ZF">
+                    <rect key="frame" x="254" y="294" width="45" height="44"/>
+                    <state key="normal" image="s-icon3">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="shareWeChat:" destination="-1" eventType="touchUpInside" id="TCX-yX-KLH"/>
                     </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="敢和你的小伙伴们一起挑战" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpz-CL-jGW">

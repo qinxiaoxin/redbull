@@ -20,6 +20,10 @@
 @property (weak, nonatomic) IBOutlet UIView *navView;
 @property (weak, nonatomic) IBOutlet UIImageView *drawLine;
 
+@property (weak, nonatomic) IBOutlet UIButton *qqButton;
+@property (weak, nonatomic) IBOutlet UIButton *wechatButton;
+
+
 - (void)setInitDrawLine;    //一键分享下方的横线
 
 @end
@@ -36,6 +40,14 @@
     self.navView.backgroundColor = [UIColor colorWithRed:47 / 255.f green:47 / 255.f blue:49 / 255.f alpha:1.f];
     
     [self setInitDrawLine];
+    
+    if (![self checkQQ]) {
+        _qqButton.alpha = 0.f;
+    }
+    
+    if (![WXApi isWXAppInstalled]) {
+        _wechatButton.alpha = 0.f;
+    }
     
 }
 
@@ -75,7 +87,7 @@
 
 - (IBAction)shareTecent:(id)sender
 {
-    if(![self checkQQ]) return;
+//    if(![self checkQQ]) return;
     
     NSString *path = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"login_qq.jpg"];
     NSData* data = [NSData dataWithContentsOfFile:path];
@@ -93,15 +105,17 @@
 {
     if(![QQApi isQQInstalled])
     {
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"手机未安装QQ应用" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
-        [alertView show];
+//        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"提示" message:@"手机未安装QQ应用" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+//        [alertView show];
         return NO;
+//        NSString *string = [SHARE_QQ stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
     }
     
     if(![QQApi isQQSupportApi])
     {
-        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"warning" message:@"Open API is not supported by current QQ" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
-        [alertView show];
+//        UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"warning" message:@"Open API is not supported by current QQ" delegate:self cancelButtonTitle:@"ok" otherButtonTitles:nil, nil];
+//        [alertView show];
         return NO;
     }
     
@@ -110,12 +124,13 @@
 
 - (IBAction)shareWeChat:(id)sender
 {
+//    if ([WXApi isWXAppInstalled]) {
     WXMediaMessage *message = [WXMediaMessage message];
     //设置分享标题信息
     message.title = @"能量部落，你的能量超乎你想象";
     
     //设置分享内容信息
-//    message.description = @"能量部落，你的能量超乎你想象";
+    //    message.description = @"能量部落，你的能量超乎你想象";
     
     [message setThumbImage:[UIImage imageNamed:@"face"]];
     
@@ -132,6 +147,11 @@
     req.scene = WXSceneTimeline;
     
     [WXApi sendReq:req];
+//    }else{
+//        NSString *string = [SHARE_QQ stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//        [[UIApplication sharedApplication] openURL:[NSURL URLWithString:string]];
+//    }
+    
 }
 
 - (IBAction)shareRenren:(id)sender
