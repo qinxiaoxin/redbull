@@ -134,8 +134,9 @@ extern int isLogin;
     [qqButton setImage:[UIImage imageNamed:@"login_qq"] forState:UIControlStateNormal];
     [qqButton addTarget:self action:@selector(loginQQ:) forControlEvents:UIControlEventTouchUpInside];
     [logView addSubview:qqButton];
+    qqButton.hidden = YES;
     
-    UIButton *weiboButton = [[UIButton alloc] initWithFrame:CGRectMake(loginBtn.center.x - 25, loginBtn.bottom + 50, 50, 50)];
+    UIButton *weiboButton = [[UIButton alloc] initWithFrame:CGRectMake(registerBtn.right - 15, loginBtn.bottom + 50, 50, 50)];
     weiboButton.backgroundColor = [UIColor clearColor];
     [weiboButton setImage:[UIImage imageNamed:@"login_weibo"] forState:UIControlStateNormal];
     [weiboButton addTarget:self action:@selector(loginWeibo:) forControlEvents:UIControlEventTouchUpInside];

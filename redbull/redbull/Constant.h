@@ -76,7 +76,7 @@
 
 #define JSON_TAB                    @"http://redbullclub.cn/public/nav.json"
 
-#define LOGIN_QQ                    @"http://xui.ptlogin2.qq.com/cgi-bin/xlogin?appid=716027609&pt_3rd_aid=101150460&style=35&s_url=http%3A%2F%2Fconnect.qq.com&refer_cgi=authorize&which=&response_type=code&client_id=101150460&redirect_uri=http://www.redbullclub.cn/index.php/User/oauth2Callback?type=20&state=275eff7e3834e262063bf3147bf3e94e&scope=get_user_info,add_share,add_t,add_pic_t,get_info"
+#define LOGIN_QQ                    @"http://xui.ptlogin2.qq.com/cgi-bin/xlogin?appid=716027609&pt_3rd_aid=101150460&style=35&s_url=http%3A%2F%2Fconnect.qq.com&refer_cgi=authorize&which=&response_type=code&client_id=101150460&redirect_uri=http://www.redbullclub.cn/index.php/User/oauth2Callback?type=20&state=840d97157fe8d45d17fb3b3dd0417b9f&scope=get_user_info,add_share,add_t,add_pic_t,get_info"
 #define LOGIN_WEIBO                 @"https://api.weibo.com/oauth2/authorize?client_id=584608733&redirect_uri=http%3A%2F%2Fredbullclub.cn%2Findex.php%2FUser%2Foauth2Callback%3Ftype%3D2&response_type=code&display=default"
 #define LOGIN_WEIBO_SUCCESS   @"http://redbullclub.cn/index.php/User/oauth2Callback?type=2&code"
 
