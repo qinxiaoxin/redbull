@@ -81,7 +81,7 @@
 #define LOGIN_WEIBO_SUCCESS   @"http://redbullclub.cn/index.php/User/oauth2Callback?type=2&code"
 
 #define STATEMENT_TITLE             @"重要声明"
-#define STATEMENT_DES               @"红牛能量部落在此声明，您通过本软件参加的商业活动，与Apple Inc.无关。商品一经兑换，一律不退还能量值。"
+#define STATEMENT_DES               @"红牛能量部落在此声明，您通过本软件参加的商业活动，与Apple Inc.无关。商品一经兑换，一律不退还能量值。。"
 
 @interface Constant : NSObject
 
